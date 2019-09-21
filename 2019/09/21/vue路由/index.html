@@ -15,17 +15,17 @@
 
 
 
-<meta name="description" content="HTMLHTML 指的是超文本标记语言: HyperText Markup LanguageHTML 不是一种编程语言，而是一种标记语言标记语言是一套标记标签 (markup tag)HTML 使用标记标签来描述网页HTML 文档包含了HTML 标签及文本内容HTML文档也叫做 web 页面 如何区分 HTML 和HTML5?DOCTYPE 声明的方式是区分HTML和HTML5标志的一个重要因素,">
-<meta property="og:type" content="website">
-<meta property="og:title" content="什么是HTML">
-<meta property="og:url" content="http://yoursite.com/home/what.html">
+<meta name="description" content="vue之间路由传参,路由嵌套">
+<meta property="og:type" content="article">
+<meta property="og:title" content="[object Object]">
+<meta property="og:url" content="http://yoursite.com/2019/09/21/vue路由/index.html">
 <meta property="og:site_name" content="个人博客">
-<meta property="og:description" content="HTMLHTML 指的是超文本标记语言: HyperText Markup LanguageHTML 不是一种编程语言，而是一种标记语言标记语言是一套标记标签 (markup tag)HTML 使用标记标签来描述网页HTML 文档包含了HTML 标签及文本内容HTML文档也叫做 web 页面 如何区分 HTML 和HTML5?DOCTYPE 声明的方式是区分HTML和HTML5标志的一个重要因素,">
+<meta property="og:description" content="vue之间路由传参,路由嵌套">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-09-19T01:05:03.021Z">
+<meta property="og:updated_time" content="2019-09-21T09:54:19.991Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="什么是HTML">
-<meta name="twitter:description" content="HTMLHTML 指的是超文本标记语言: HyperText Markup LanguageHTML 不是一种编程语言，而是一种标记语言标记语言是一套标记标签 (markup tag)HTML 使用标记标签来描述网页HTML 文档包含了HTML 标签及文本内容HTML文档也叫做 web 页面 如何区分 HTML 和HTML5?DOCTYPE 声明的方式是区分HTML和HTML5标志的一个重要因素,">
+<meta name="twitter:title" content="[object Object]">
+<meta name="twitter:description" content="vue之间路由传参,路由嵌套">
 
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
@@ -57,7 +57,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>什么是HTML | 个人博客</title>
+<title>[object Object] | 个人博客</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -67,7 +67,7 @@
         fancybox: true,
         animate: true,
         isHome: false,
-        isPost: false,
+        isPost: true,
         isArchive: false,
         isTag: false,
         isCategory: false,
@@ -204,11 +204,11 @@
     </div>
     <link class="menu-list" tags="Tags" friends="Friends" about="About Me"/>
 </nav>
-      <div class="body-wrap"><article id="page-" class="article article-type-page" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-vue路由" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/home/what.html" class="article-date">
-      <time datetime="2019-09-20T06:10:43.874Z" itemprop="datePublished">2019-09-20</time>
+      <a href="/2019/09/21/vue路由/" class="article-date">
+      <time datetime="2019-09-21T09:05:05.567Z" itemprop="datePublished">2019-09-21</time>
 </a>
 
 
@@ -223,7 +223,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      什么是HTML
+      [object Object]
     </h1>
   
 
@@ -240,43 +240,79 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-              <style>
-    .article-meta { display: none; }
-    #container .article .article-title { padding-right: 0; }
-    .article-header {
-        padding: 0;
-        padding-top: 26px;
-        border-left: none;
-        text-align: center;
-    }
-    .article-header:hover { border-left: none; }
-    .article-title { font-size: 1.6em }
-    .article-entry hr { margin: 0;}
-    .article-meta,
-    #container .article-info-post.article-info { display: none;}
-    #container .article .article-title { padding: 0; }
-</style>
+        <p>vue之间路由传参,路由嵌套</p>
+<a id="more"></a>
+<h3 id="创建路由"><a href="#创建路由" class="headerlink" title="创建路由"></a>创建路由</h3><ol>
+<li><p>官网下载router.js引入到文件中</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">  &lt;div id=&quot;app&quot;&gt;</span><br><span class="line">  &lt;router-link to:&apos;/login&apos;&gt;登录&lt;/router-link&gt;</span><br><span class="line">  &lt;router-view&gt;&lt;/router-view&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">  &lt;script&gt;</span><br><span class="line"></span><br><span class="line">  var login = &#123;</span><br><span class="line">      template = `&lt;h1&gt;创建路由&lt;/h1&gt;`</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">var router = new VueRouter(&#123;</span><br><span class="line">      routes :[</span><br><span class="line">         //&#123;path:&apos;/&apos;,redirect:&apos;/login&apos;&#125;, redirect设置默认路由</span><br><span class="line">          &#123;path:&apos;/login&apos;,component:login&#125;</span><br><span class="line">      ],</span><br><span class="line">       linkActiveClass: &apos;custom&apos; </span><br><span class="line">       //linkActiveClass 可改变router-link默认的class的属性值</span><br><span class="line">  &#125;)</span><br><span class="line">      new vue(&#123;</span><br><span class="line">          el: &apos;#app&apos;,</span><br><span class="line">          router</span><br><span class="line">      &#125;)</span><br><span class="line">  &lt;/script&gt;</span><br></pre></td></tr></table></figure>
 
+<ol>
+<li>路由之间的嵌套</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;div id=&quot;app&quot;&gt;</span><br><span class="line">&lt;router-link to:&apos;/login&apos;&gt;登录&lt;/router-link&gt;</span><br><span class="line">&lt;router-view&gt;&lt;/router-view&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;template id=&quot;tem&quot;&gt;</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">        &lt;h1&gt;这是account账户&lt;/h1&gt;</span><br><span class="line">        &lt;router-link to=&quot;/account/login&quot;&gt;登录&lt;/router-link&gt;</span><br><span class="line">        &lt;router-link to=&quot;/account/regster&quot;&gt;注册&lt;/router-link&gt;</span><br><span class="line">    &lt;router-view&gt;&lt;/router-view&gt;</span><br><span class="line"></span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">var account = &#123;</span><br><span class="line">        template: &apos;#tem&apos;</span><br><span class="line">    &#125;</span><br><span class="line">    var login = &#123;</span><br><span class="line">        template:&apos;&lt;h1&gt;登录&lt;/h1&gt;&apos;</span><br><span class="line">    &#125;</span><br><span class="line">    var regster= &#123;</span><br><span class="line">        template:&apos;&lt;h1&gt;注册&lt;/h1&gt;&apos;</span><br><span class="line">    &#125;</span><br><span class="line">var router = new VueRouter(&#123;</span><br><span class="line">    routes:[</span><br><span class="line">        &#123;path:&apos;/account&apos;,</span><br><span class="line">        component:account,</span><br><span class="line">        children:[</span><br><span class="line">            &#123;path:&apos;login&apos;,compent:login&#125;,</span><br><span class="line">            &#123;path:&apos;regster&apos;,compent:regster&#125;</span><br><span class="line">             //使用children属性时,实现子路由,同时子路由path前面不要带/,否则永远以根路径开始请求,</span><br><span class="line">            //这样不方便我们解析URL</span><br><span class="line">        ]</span><br><span class="line">        &#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;)</span><br><span class="line">  new Vue(&#123;</span><br><span class="line">        el: &apos;#app&apos;,</span><br><span class="line">        router</span><br><span class="line"></span><br><span class="line">    &#125;)</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
 
-          
-        <h3 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h3><p>HTML 指的是超文本标记语言: HyperText Markup Language<br>HTML 不是一种编程语言，而是一种标记语言<br>标记语言是一套标记标签 (markup tag)<br>HTML 使用标记标签来描述网页<br>HTML 文档包含了HTML 标签及文本内容<br>HTML文档也叫做 web 页面</p>
-<h3 id="如何区分-HTML-和HTML5"><a href="#如何区分-HTML-和HTML5" class="headerlink" title="如何区分 HTML 和HTML5?"></a>如何区分 HTML 和HTML5?</h3><p>DOCTYPE 声明的方式是区分HTML和HTML5标志的一个重要因素,此外,还可以根据新增的结构,功能元素来加以区分.</p>
-<h3 id="页面导入样式是-使用link和-import有什么区别"><a href="#页面导入样式是-使用link和-import有什么区别" class="headerlink" title="页面导入样式是,使用link和@import有什么区别?"></a>页面导入样式是,使用link和@import有什么区别?</h3><blockquote>
-<p>link 属于HTML标签,除了加载CSS外,还能用于定义RSS,</p>
-<p>定义rel连接属性等作用;而@import是CSS提供的,只能作用于加载CSS</p>
-<p>页面被加载是,link会同时加载,而@import引用的CSS会等到页面被加载完在加载</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;div&gt;</span><br><span class="line">   &lt;p&gt;&lt;/p&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+
       
     </div>
     
   </div>
   
     
+    <div class="copyright">
+        <p><span>Title:</span><a href="/2019/09/21/vue路由/">[object Object]</a></p>
+        <p><span>Author:</span><a href="/" title="Back to Homepage">Mr.Huang</a></p>
+        <p><span>Created:</span>2019-09-21, 17:05:05</p>
+        <p><span>Updated:</span>2019-09-21, 17:54:19</p>
+        <p>
+            <span>Full URL:</span><a class="post-url" href="/2019/09/21/vue路由/" title="[object Object]">http://yoursite.com/2019/09/21/vue路由/</a>
+            <span class="copy-path" data-clipboard-text="From http://yoursite.com/2019/09/21/vue路由/　　By Mr.Huang" title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>License:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"CC BY-NC-SA 4.0"</a> Keep Link &amp; Author if Distribute.
+        </p>
+    </div>
 
+
+
+    <nav id="article-nav">
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2019/09/21/vue传值/">
+                    vue
+                </a>
+            </div>
+        
+    </nav>
 
   
 </article>
+
+    <div id="toc" class="toc-article">
+        <strong class="toc-title">Contents</strong>
+        
+            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#创建路由"><span class="toc-number">1.</span> <span class="toc-text">创建路由</span></a></li></ol>
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-3 i,
+        .toc-level-3 ol {
+            display: none !important;
+        }
+    </style>
+
+    <input type="button" id="tocButton" value="Hide"  title="Show or Hide Table of Contents">
+
+    <script>
+        yiliaConfig.toc = ["Hide", "Show", !!"false"];
+    </script>
 
 
 
@@ -294,7 +330,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"什么是HTML　| 个人博客　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"[object Object]　| 个人博客　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -309,6 +345,24 @@
 
     
 
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/" title="Back to Homepage"><i class="fa fa-home"></i></a>
+        
+
+        <a title="Mini Archives"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2019/09/21/vue传值/" title="Next: vue">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2019/09/21/vue路由/">[object Object]</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/21/vue传值/">vue</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/20/git/">git如何上传到github</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/19/css3/">css3的一些微小效果</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/18/base/">关于HTML的基本知识</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/07/21/what/">什么是HTML</a></li></ul>
 
 
 
