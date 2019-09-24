@@ -17,14 +17,14 @@
 
 <meta name="description" content="vue之间路由传参,路由嵌套">
 <meta property="og:type" content="article">
-<meta property="og:title" content="[object Object]">
+<meta property="og:title" content="vue路由">
 <meta property="og:url" content="http://yoursite.com/2019/09/21/vue路由/index.html">
 <meta property="og:site_name" content="个人博客">
 <meta property="og:description" content="vue之间路由传参,路由嵌套">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-09-21T09:54:19.991Z">
+<meta property="og:updated_time" content="2019-09-21T10:59:01.354Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="[object Object]">
+<meta name="twitter:title" content="vue路由">
 <meta name="twitter:description" content="vue之间路由传参,路由嵌套">
 
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -57,7 +57,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>[object Object] | 个人博客</title>
+<title>vue路由 | 个人博客</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -223,7 +223,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      [object Object]
+      vue路由
     </h1>
   
 
@@ -242,17 +242,10 @@
           
         <p>vue之间路由传参,路由嵌套</p>
 <a id="more"></a>
-<h3 id="创建路由"><a href="#创建路由" class="headerlink" title="创建路由"></a>创建路由</h3><ol>
-<li><p>官网下载router.js引入到文件中</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">  &lt;div id=&quot;app&quot;&gt;</span><br><span class="line">  &lt;router-link to:&apos;/login&apos;&gt;登录&lt;/router-link&gt;</span><br><span class="line">  &lt;router-view&gt;&lt;/router-view&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">  &lt;script&gt;</span><br><span class="line"></span><br><span class="line">  var login = &#123;</span><br><span class="line">      template = `&lt;h1&gt;创建路由&lt;/h1&gt;`</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">var router = new VueRouter(&#123;</span><br><span class="line">      routes :[</span><br><span class="line">         //&#123;path:&apos;/&apos;,redirect:&apos;/login&apos;&#125;, redirect设置默认路由</span><br><span class="line">          &#123;path:&apos;/login&apos;,component:login&#125;</span><br><span class="line">      ],</span><br><span class="line">       linkActiveClass: &apos;custom&apos; </span><br><span class="line">       //linkActiveClass 可改变router-link默认的class的属性值</span><br><span class="line">  &#125;)</span><br><span class="line">      new vue(&#123;</span><br><span class="line">          el: &apos;#app&apos;,</span><br><span class="line">          router</span><br><span class="line">      &#125;)</span><br><span class="line">  &lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="路由传参"><a href="#路由传参" class="headerlink" title="路由传参"></a>路由传参</h3> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">  &lt;div id=&quot;app&quot;&gt;</span><br><span class="line">  &lt;router-link to:&apos;/login&apos;&gt;登录&lt;/router-link&gt;</span><br><span class="line">  &lt;router-view&gt;&lt;/router-view&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">  &lt;script&gt;</span><br><span class="line"></span><br><span class="line">  var login = &#123;</span><br><span class="line">      template = `&lt;h1&gt;创建路由&lt;/h1&gt;`</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">var router = new VueRouter(&#123;</span><br><span class="line">      routes :[</span><br><span class="line">         //&#123;path:&apos;/&apos;,redirect:&apos;/login&apos;&#125;, redirect设置默认路由</span><br><span class="line">          &#123;path:&apos;/login&apos;,component:login&#125;</span><br><span class="line">      ],</span><br><span class="line">       linkActiveClass: &apos;custom&apos; </span><br><span class="line">       //linkActiveClass 可改变router-link默认的class的属性值</span><br><span class="line">  &#125;)</span><br><span class="line">      new vue(&#123;</span><br><span class="line">          el: &apos;#app&apos;,</span><br><span class="line">          router</span><br><span class="line">      &#125;)</span><br><span class="line">  &lt;/script&gt;</span><br></pre></td></tr></table></figure>
 
-<ol>
-<li>路由之间的嵌套</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;div id=&quot;app&quot;&gt;</span><br><span class="line">&lt;router-link to:&apos;/login&apos;&gt;登录&lt;/router-link&gt;</span><br><span class="line">&lt;router-view&gt;&lt;/router-view&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;template id=&quot;tem&quot;&gt;</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">        &lt;h1&gt;这是account账户&lt;/h1&gt;</span><br><span class="line">        &lt;router-link to=&quot;/account/login&quot;&gt;登录&lt;/router-link&gt;</span><br><span class="line">        &lt;router-link to=&quot;/account/regster&quot;&gt;注册&lt;/router-link&gt;</span><br><span class="line">    &lt;router-view&gt;&lt;/router-view&gt;</span><br><span class="line"></span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">var account = &#123;</span><br><span class="line">        template: &apos;#tem&apos;</span><br><span class="line">    &#125;</span><br><span class="line">    var login = &#123;</span><br><span class="line">        template:&apos;&lt;h1&gt;登录&lt;/h1&gt;&apos;</span><br><span class="line">    &#125;</span><br><span class="line">    var regster= &#123;</span><br><span class="line">        template:&apos;&lt;h1&gt;注册&lt;/h1&gt;&apos;</span><br><span class="line">    &#125;</span><br><span class="line">var router = new VueRouter(&#123;</span><br><span class="line">    routes:[</span><br><span class="line">        &#123;path:&apos;/account&apos;,</span><br><span class="line">        component:account,</span><br><span class="line">        children:[</span><br><span class="line">            &#123;path:&apos;login&apos;,compent:login&#125;,</span><br><span class="line">            &#123;path:&apos;regster&apos;,compent:regster&#125;</span><br><span class="line">             //使用children属性时,实现子路由,同时子路由path前面不要带/,否则永远以根路径开始请求,</span><br><span class="line">            //这样不方便我们解析URL</span><br><span class="line">        ]</span><br><span class="line">        &#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;)</span><br><span class="line">  new Vue(&#123;</span><br><span class="line">        el: &apos;#app&apos;,</span><br><span class="line">        router</span><br><span class="line"></span><br><span class="line">    &#125;)</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="路由之间的嵌套"><a href="#路由之间的嵌套" class="headerlink" title="路由之间的嵌套"></a>路由之间的嵌套</h3>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;div id=&quot;app&quot;&gt;</span><br><span class="line">&lt;router-link to:&apos;/login&apos;&gt;登录&lt;/router-link&gt;</span><br><span class="line">&lt;router-view&gt;&lt;/router-view&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;template id=&quot;tem&quot;&gt;</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">        &lt;h1&gt;这是account账户&lt;/h1&gt;</span><br><span class="line">        &lt;router-link to=&quot;/account/login&quot;&gt;登录&lt;/router-link&gt;</span><br><span class="line">        &lt;router-link to=&quot;/account/regster&quot;&gt;注册&lt;/router-link&gt;</span><br><span class="line">    &lt;router-view&gt;&lt;/router-view&gt;</span><br><span class="line"></span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">var account = &#123;</span><br><span class="line">        template: &apos;#tem&apos;</span><br><span class="line">    &#125;</span><br><span class="line">    var login = &#123;</span><br><span class="line">        template:&apos;&lt;h1&gt;登录&lt;/h1&gt;&apos;</span><br><span class="line">    &#125;</span><br><span class="line">    var regster= &#123;</span><br><span class="line">        template:&apos;&lt;h1&gt;注册&lt;/h1&gt;&apos;</span><br><span class="line">    &#125;</span><br><span class="line">var router = new VueRouter(&#123;</span><br><span class="line">    routes:[</span><br><span class="line">        &#123;path:&apos;/account&apos;,</span><br><span class="line">        component:account,</span><br><span class="line">        children:[</span><br><span class="line">            &#123;path:&apos;login&apos;,compent:login&#125;,</span><br><span class="line">            &#123;path:&apos;regster&apos;,compent:regster&#125;</span><br><span class="line">             //使用children属性时,实现子路由,同时子路由path前面不要带/,否则永远以根路径开始请求,</span><br><span class="line">            //这样不方便我们解析URL</span><br><span class="line">        ]</span><br><span class="line">        &#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;)</span><br><span class="line">  new Vue(&#123;</span><br><span class="line">        el: &apos;#app&apos;,</span><br><span class="line">        router</span><br><span class="line"></span><br><span class="line">    &#125;)</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
 
-</li>
-</ol>
 
       
     </div>
@@ -261,12 +254,12 @@
   
     
     <div class="copyright">
-        <p><span>Title:</span><a href="/2019/09/21/vue路由/">[object Object]</a></p>
+        <p><span>Title:</span><a href="/2019/09/21/vue路由/">vue路由</a></p>
         <p><span>Author:</span><a href="/" title="Back to Homepage">Mr.Huang</a></p>
         <p><span>Created:</span>2019-09-21, 17:05:05</p>
-        <p><span>Updated:</span>2019-09-21, 17:54:19</p>
+        <p><span>Updated:</span>2019-09-21, 18:59:01</p>
         <p>
-            <span>Full URL:</span><a class="post-url" href="/2019/09/21/vue路由/" title="[object Object]">http://yoursite.com/2019/09/21/vue路由/</a>
+            <span>Full URL:</span><a class="post-url" href="/2019/09/21/vue路由/" title="vue路由">http://yoursite.com/2019/09/21/vue路由/</a>
             <span class="copy-path" data-clipboard-text="From http://yoursite.com/2019/09/21/vue路由/　　By Mr.Huang" title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
@@ -278,6 +271,12 @@
 
 
     <nav id="article-nav">
+        
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/2019/09/24/CSS3总结/">
+                    CSS3
+                </a>
+            </div>
         
         
             <div id="article-nav-older" class="article-nav-title">
@@ -294,7 +293,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#创建路由"><span class="toc-number">1.</span> <span class="toc-text">创建路由</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#路由传参"><span class="toc-number">1.</span> <span class="toc-text">路由传参</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#路由之间的嵌套"><span class="toc-number">2.</span> <span class="toc-text">路由之间的嵌套</span></a></li></ol>
         
     </div>
     <style>
@@ -330,7 +329,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"[object Object]　| 个人博客　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"vue路由　| 个人博客　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -350,7 +349,9 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/" title="Back to Homepage"><i class="fa fa-home"></i></a>
+            <a href="/2019/09/24/CSS3总结/" title="Pre: CSS3">
+                <i class="fa fa-angle-left"></i>
+            </a>
         
 
         <a title="Mini Archives"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
@@ -362,7 +363,7 @@
         
     </div>
 
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2019/09/21/vue路由/">[object Object]</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/21/vue传值/">vue</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/20/git/">git如何上传到github</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/19/css3/">css3的一些微小效果</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/18/base/">关于HTML的基本知识</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/07/21/what/">什么是HTML</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2019/09/24/CSS3总结/">CSS3</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/21/vue路由/">vue路由</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/21/vue传值/">vue</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/20/git/">git如何上传到github</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/19/hover/">hover的一些微小效果</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/18/base/">关于HTML的基本知识</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/07/21/what/">什么是HTML</a></li></ul>
 
 
 
