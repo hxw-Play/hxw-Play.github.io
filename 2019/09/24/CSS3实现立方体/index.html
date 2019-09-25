@@ -15,17 +15,17 @@
 
 
 
-<meta name="description" content="HTML是一种什么样的语言">
+<meta name="description" content="令人头痛的3D感">
 <meta property="og:type" content="article">
-<meta property="og:title" content="什么是HTML">
-<meta property="og:url" content="http://yoursite.com/2019/07/21/what/index.html">
+<meta property="og:title" content="CSS3实现正方体效果">
+<meta property="og:url" content="http://yoursite.com/2019/09/24/CSS3实现立方体/index.html">
 <meta property="og:site_name" content="个人博客">
-<meta property="og:description" content="HTML是一种什么样的语言">
+<meta property="og:description" content="令人头痛的3D感">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-09-20T12:07:14.056Z">
+<meta property="og:updated_time" content="2019-09-24T11:42:43.360Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="什么是HTML">
-<meta name="twitter:description" content="HTML是一种什么样的语言">
+<meta name="twitter:title" content="CSS3实现正方体效果">
+<meta name="twitter:description" content="令人头痛的3D感">
 
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
@@ -57,7 +57,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>什么是HTML | 个人博客</title>
+<title>CSS3实现正方体效果 | 个人博客</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -204,11 +204,11 @@
     </div>
     <link class="menu-list" tags="Tags" friends="Friends" about="About Me"/>
 </nav>
-      <div class="body-wrap"><article id="post-what" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-CSS3实现立方体" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2019/07/21/what/" class="article-date">
-      <time datetime="2019-07-21T05:35:35.423Z" itemprop="datePublished">2019-07-21</time>
+      <a href="/2019/09/24/CSS3实现立方体/" class="article-date">
+      <time datetime="2019-09-24T11:31:51.148Z" itemprop="datePublished">2019-09-24</time>
 </a>
 
 
@@ -223,7 +223,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      什么是HTML
+      CSS3实现正方体效果
     </h1>
   
 
@@ -240,15 +240,17 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>HTML是一种什么样的语言</p>
+        <p>令人头痛的3D感</p>
 <a id="more"></a>
-<h3 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h3><p>HTML 指的是超文本标记语言: HyperText Markup Language<br>HTML 不是一种编程语言，而是一种标记语言<br>标记语言是一套标记标签 (markup tag)<br>HTML 使用标记标签来描述网页<br>HTML 文档包含了HTML 标签及文本内容<br>HTML文档也叫做 web 页面</p>
-<h3 id="如何区分-HTML-和HTML5"><a href="#如何区分-HTML-和HTML5" class="headerlink" title="如何区分 HTML 和HTML5?"></a>如何区分 HTML 和HTML5?</h3><p>DOCTYPE 声明的方式是区分HTML和HTML5标志的一个重要因素,此外,还可以根据新增的结构,功能元素来加以区分.</p>
-<h3 id="页面导入样式是-使用link和-import有什么区别"><a href="#页面导入样式是-使用link和-import有什么区别" class="headerlink" title="页面导入样式是,使用link和@import有什么区别?"></a>页面导入样式是,使用link和@import有什么区别?</h3><blockquote>
-<p>link 属于HTML标签,除了加载CSS外,还能用于定义RSS,</p>
-<p>定义rel连接属性等作用;而@import是CSS提供的,只能作用于加载CSS</p>
-<p>页面被加载是,link会同时加载,而@import引用的CSS会等到页面被加载完在加载</p>
-</blockquote>
+<h3 id="努力想象3D坐标系"><a href="#努力想象3D坐标系" class="headerlink" title="努力想象3D坐标系"></a>努力想象3D坐标系</h3><ul>
+<li><p>上代码</p>
+</li>
+<li> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">最外面的盒子宽高设置为200px;</span><br><span class="line"></span><br><span class="line">.front&#123;transform:rotateY(0deg) translateZ(100px);&#125; 前面盒子</span><br><span class="line">.back&#123;transform:rotateX(180deg) translateZ(100px);&#125; 后面盒子</span><br><span class="line">.right&#123; transform:rotateY(90deg) translateZ(100px);&#125; 右面盒子</span><br><span class="line">.left&#123;transform:rotateY(-90deg) translateZ(100px);&#125; 左面盒子</span><br><span class="line">.top&#123;transform:rotateX(90deg) translateZ(100px);&#125; 上面盒子</span><br><span class="line">.bottom&#123;transform:rotateX(-90deg) translateZ(100px);&#125; 下面盒子</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>不要问为什么</p>
+</li>
+<li> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line">    &lt;style&gt;</span><br><span class="line">    .main&#123;</span><br><span class="line">        height: 200px;</span><br><span class="line">        width: 200px;</span><br><span class="line">        position: relative;</span><br><span class="line">        transition: all 6s;</span><br><span class="line"></span><br><span class="line">        transform-style: preserve-3d;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">    div&#123;</span><br><span class="line">      width: 200px;</span><br><span class="line">      height: 200px;</span><br><span class="line">      position: absolute; </span><br><span class="line">    &#125;</span><br><span class="line">     .box&#123;</span><br><span class="line">      transform:rotateY(0deg) translateZ(100px);</span><br><span class="line">      background: linear-gradient(to right,red, green, blue);</span><br><span class="line">      &#125;</span><br><span class="line">      .box2&#123;</span><br><span class="line">          transform:rotateX(180deg) translateZ(100px);</span><br><span class="line">          background: radial-gradient(circle at 10px 10px,red,yellow);</span><br><span class="line">      &#125;</span><br><span class="line">      .box3&#123;</span><br><span class="line">          transform:rotateY(90deg) translateZ(100px);</span><br><span class="line">          background: linear-gradient(to right,yellow,red);</span><br><span class="line">      &#125;</span><br><span class="line">      .box4&#123;</span><br><span class="line">          transform:rotateY(-90deg) translateZ(100px);</span><br><span class="line">          background: radial-gradient(circle at 10px 10px,blue,red);</span><br><span class="line">          </span><br><span class="line">      &#125;</span><br><span class="line">      .box5&#123;</span><br><span class="line">          background: radial-gradient(circle at 10px 10px,orange,red);</span><br><span class="line">          </span><br><span class="line">          transform:rotateX(90deg) translateZ(100px);</span><br><span class="line">      &#125;</span><br><span class="line">      .box6&#123;</span><br><span class="line">          background: radial-gradient(circle at 10px 10px,green,red);</span><br><span class="line"></span><br><span class="line">          transform:rotateX(-90deg) translateZ(100px);</span><br><span class="line"></span><br><span class="line">      &#125;</span><br><span class="line">      .main:hover &#123;</span><br><span class="line">          transform: rotateX(360deg)  rotateY(360deg);</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">&lt;/style&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">  &lt;div class=&quot;main&quot;&gt;</span><br><span class="line">  &lt;div class=&quot;box&quot;&gt;&lt;/div&gt;</span><br><span class="line">  &lt;div class=&quot;box2&quot;&gt;&lt;/div&gt;</span><br><span class="line">  &lt;div class=&quot;box3&quot;&gt;&lt;/div&gt;</span><br><span class="line">  &lt;div class=&quot;box4&quot;&gt;&lt;/div&gt;</span><br><span class="line">  &lt;div class=&quot;box5&quot;&gt;&lt;/div&gt;</span><br><span class="line">  &lt;div class=&quot;box6&quot;&gt;&lt;/div&gt;</span><br><span class="line">  &lt;/div&gt;</span><br></pre></td></tr></table></figure></li>
+</ul>
 
       
     </div>
@@ -257,13 +259,13 @@
   
     
     <div class="copyright">
-        <p><span>Title:</span><a href="/2019/07/21/what/">什么是HTML</a></p>
+        <p><span>Title:</span><a href="/2019/09/24/CSS3实现立方体/">CSS3实现正方体效果</a></p>
         <p><span>Author:</span><a href="/" title="Back to Homepage">Mr.Huang</a></p>
-        <p><span>Created:</span>2019-07-21, 13:35:35</p>
-        <p><span>Updated:</span>2019-09-20, 20:07:14</p>
+        <p><span>Created:</span>2019-09-24, 19:31:51</p>
+        <p><span>Updated:</span>2019-09-24, 19:42:43</p>
         <p>
-            <span>Full URL:</span><a class="post-url" href="/2019/07/21/what/" title="什么是HTML">http://yoursite.com/2019/07/21/what/</a>
-            <span class="copy-path" data-clipboard-text="From http://yoursite.com/2019/07/21/what/　　By Mr.Huang" title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
+            <span>Full URL:</span><a class="post-url" href="/2019/09/24/CSS3实现立方体/" title="CSS3实现正方体效果">http://yoursite.com/2019/09/24/CSS3实现立方体/</a>
+            <span class="copy-path" data-clipboard-text="From http://yoursite.com/2019/09/24/CSS3实现立方体/　　By Mr.Huang" title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -275,12 +277,12 @@
 
     <nav id="article-nav">
         
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2019/09/18/base/">
-                    关于HTML的基本知识
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2019/09/24/CSS3总结/">
+                    CSS3
                 </a>
             </div>
-        
         
     </nav>
 
@@ -290,7 +292,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#HTML"><span class="toc-number">1.</span> <span class="toc-text">HTML</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#如何区分-HTML-和HTML5"><span class="toc-number">2.</span> <span class="toc-text">如何区分 HTML 和HTML5?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#页面导入样式是-使用link和-import有什么区别"><span class="toc-number">3.</span> <span class="toc-text">页面导入样式是,使用link和@import有什么区别?</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#努力想象3D坐标系"><span class="toc-number">1.</span> <span class="toc-text">努力想象3D坐标系</span></a></li></ol>
         
     </div>
     <style>
@@ -326,7 +328,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"什么是HTML　| 个人博客　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"CSS3实现正方体效果　| 个人博客　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -346,15 +348,15 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2019/09/18/base/" title="Pre: 关于HTML的基本知识">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="Back to Homepage"><i class="fa fa-home"></i></a>
         
 
         <a title="Mini Archives"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/" title="Back to Homepage"><i class="fa fa-home"></i></a>
+            <a href="/2019/09/24/CSS3总结/" title="Next: CSS3">
+                <i class="fa fa-angle-right"></i>
+            </a>
         
     </div>
 
