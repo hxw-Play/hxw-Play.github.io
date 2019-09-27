@@ -15,17 +15,17 @@
 
 
 
-<meta name="description" content="vue之间路由传参,路由嵌套">
+<meta name="description" content="其他的理解了在发">
 <meta property="og:type" content="article">
-<meta property="og:title" content="vue路由">
-<meta property="og:url" content="http://yoursite.com/2019/09/21/vue路由/index.html">
+<meta property="og:title" content="必会的两种排序方法">
+<meta property="og:url" content="http://yoursite.com/2019/09/27/冒泡排序和选择排序/index.html">
 <meta property="og:site_name" content="个人博客">
-<meta property="og:description" content="vue之间路由传参,路由嵌套">
+<meta property="og:description" content="其他的理解了在发">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-09-21T10:59:01.354Z">
+<meta property="og:updated_time" content="2019-09-27T13:02:54.535Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="vue路由">
-<meta name="twitter:description" content="vue之间路由传参,路由嵌套">
+<meta name="twitter:title" content="必会的两种排序方法">
+<meta name="twitter:description" content="其他的理解了在发">
 
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
@@ -57,7 +57,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>vue路由 | 个人博客</title>
+<title>必会的两种排序方法 | 个人博客</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -204,11 +204,11 @@
     </div>
     <link class="menu-list" tags="Tags" friends="Friends" about="About Me"/>
 </nav>
-      <div class="body-wrap"><article id="post-vue路由" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-冒泡排序和选择排序" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2019/09/21/vue路由/" class="article-date">
-      <time datetime="2019-09-21T09:05:05.567Z" itemprop="datePublished">2019-09-21</time>
+      <a href="/2019/09/27/冒泡排序和选择排序/" class="article-date">
+      <time datetime="2019-09-27T11:01:10.968Z" itemprop="datePublished">2019-09-27</time>
 </a>
 
 
@@ -223,7 +223,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      vue路由
+      必会的两种排序方法
     </h1>
   
 
@@ -240,12 +240,19 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>vue之间路由传参,路由嵌套</p>
+        <p>其他的理解了在发</p>
 <a id="more"></a>
-<h3 id="路由传参"><a href="#路由传参" class="headerlink" title="路由传参"></a>路由传参</h3> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">  &lt;div id=&quot;app&quot;&gt;</span><br><span class="line">  &lt;router-link to:&apos;/login&apos;&gt;登录&lt;/router-link&gt;</span><br><span class="line">  &lt;router-view&gt;&lt;/router-view&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">  &lt;script&gt;</span><br><span class="line"></span><br><span class="line">  var login = &#123;</span><br><span class="line">      template = `&lt;h1&gt;创建路由&lt;/h1&gt;`</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">var router = new VueRouter(&#123;</span><br><span class="line">      routes :[</span><br><span class="line">         //&#123;path:&apos;/&apos;,redirect:&apos;/login&apos;&#125;, redirect设置默认路由</span><br><span class="line">          &#123;path:&apos;/login&apos;,component:login&#125;</span><br><span class="line">      ],</span><br><span class="line">       linkActiveClass: &apos;custom&apos; </span><br><span class="line">       //linkActiveClass 可改变router-link默认的class的属性值</span><br><span class="line">  &#125;)</span><br><span class="line">      new vue(&#123;</span><br><span class="line">          el: &apos;#app&apos;,</span><br><span class="line">          router</span><br><span class="line">      &#125;)</span><br><span class="line">  &lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="原始人冒泡排序"><a href="#原始人冒泡排序" class="headerlink" title="原始人冒泡排序"></a>原始人冒泡排序</h3><ul>
+<li>比较两个数字</li>
+<li>如果左边的数字大，则交换两个数字的位置</li>
+<li>向右移动一个位置，比较下两个数字<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">    var arr = [25,15,30,11,6,8];</span><br><span class="line">    for(var j = 0;j&lt;arr.length;j++)&#123;</span><br><span class="line">        for(var i = 0;i&lt;arr.length-1-j;i++)&#123;</span><br><span class="line">            if(arr[i]&gt;arr[i+1])&#123;</span><br><span class="line">                var temp = arr[i];</span><br><span class="line">                arr[i] = arr[i+1];</span><br><span class="line">                arr[i+1] = temp;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    console.log(arr);</span><br><span class="line">// arr.length-1-j 是已经排序过的没有必要再排一次了</span><br><span class="line"></span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
 
-<h3 id="路由之间的嵌套"><a href="#路由之间的嵌套" class="headerlink" title="路由之间的嵌套"></a>路由之间的嵌套</h3>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;div id=&quot;app&quot;&gt;</span><br><span class="line">&lt;router-link to:&apos;/login&apos;&gt;登录&lt;/router-link&gt;</span><br><span class="line">&lt;router-view&gt;&lt;/router-view&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;template id=&quot;tem&quot;&gt;</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">        &lt;h1&gt;这是account账户&lt;/h1&gt;</span><br><span class="line">        &lt;router-link to=&quot;/account/login&quot;&gt;登录&lt;/router-link&gt;</span><br><span class="line">        &lt;router-link to=&quot;/account/regster&quot;&gt;注册&lt;/router-link&gt;</span><br><span class="line">    &lt;router-view&gt;&lt;/router-view&gt;</span><br><span class="line"></span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">var account = &#123;</span><br><span class="line">        template: &apos;#tem&apos;</span><br><span class="line">    &#125;</span><br><span class="line">    var login = &#123;</span><br><span class="line">        template:&apos;&lt;h1&gt;登录&lt;/h1&gt;&apos;</span><br><span class="line">    &#125;</span><br><span class="line">    var regster= &#123;</span><br><span class="line">        template:&apos;&lt;h1&gt;注册&lt;/h1&gt;&apos;</span><br><span class="line">    &#125;</span><br><span class="line">var router = new VueRouter(&#123;</span><br><span class="line">    routes:[</span><br><span class="line">        &#123;path:&apos;/account&apos;,</span><br><span class="line">        component:account,</span><br><span class="line">        children:[</span><br><span class="line">            &#123;path:&apos;login&apos;,compent:login&#125;,</span><br><span class="line">            &#123;path:&apos;regster&apos;,compent:regster&#125;</span><br><span class="line">             //使用children属性时,实现子路由,同时子路由path前面不要带/,否则永远以根路径开始请求,</span><br><span class="line">            //这样不方便我们解析URL</span><br><span class="line">        ]</span><br><span class="line">        &#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;)</span><br><span class="line">  new Vue(&#123;</span><br><span class="line">        el: &apos;#app&apos;,</span><br><span class="line">        router</span><br><span class="line"></span><br><span class="line">    &#125;)</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
-
+</li>
+</ul>
+<h3 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h3><ul>
+<li>记录所有数据，并找出最小的，并和最左边的数字交换</li>
+<li>最左边数字已经排序好，从第2个数字开始依次重复1步骤的操作<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">    var arr = [12,342,53,6753,131,435];</span><br><span class="line">    for(var j = 0;j&lt;arr.length-1;j++ )&#123;</span><br><span class="line">    var minIndex = j;</span><br><span class="line">    for(var i = j+1;i&lt;arr.length;i++)&#123;</span><br><span class="line">        if(arr[minIndex]&gt;arr[i])&#123;</span><br><span class="line">            minIndex = i;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">    var temp = arr[minIndex];</span><br><span class="line">    arr[j] = arr[minIndex]; </span><br><span class="line">    arr[minIndex]  =arr[j]; </span><br><span class="line">    </span><br><span class="line"> &#125;</span><br><span class="line"> console.log(arr);</span><br><span class="line">声明一个数组索引为0的变量让其与每一个数组进行比较</span><br><span class="line">找到那个比他小的数,调换索引(没有找到,那么他就是最小的数)</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br></pre></td></tr></table></figure></li>
+</ul>
 
       
     </div>
@@ -254,13 +261,13 @@
   
     
     <div class="copyright">
-        <p><span>Title:</span><a href="/2019/09/21/vue路由/">vue路由</a></p>
+        <p><span>Title:</span><a href="/2019/09/27/冒泡排序和选择排序/">必会的两种排序方法</a></p>
         <p><span>Author:</span><a href="/" title="Back to Homepage">Mr.Huang</a></p>
-        <p><span>Created:</span>2019-09-21, 17:05:05</p>
-        <p><span>Updated:</span>2019-09-21, 18:59:01</p>
+        <p><span>Created:</span>2019-09-27, 19:01:10</p>
+        <p><span>Updated:</span>2019-09-27, 21:02:54</p>
         <p>
-            <span>Full URL:</span><a class="post-url" href="/2019/09/21/vue路由/" title="vue路由">http://yoursite.com/2019/09/21/vue路由/</a>
-            <span class="copy-path" data-clipboard-text="From http://yoursite.com/2019/09/21/vue路由/　　By Mr.Huang" title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
+            <span>Full URL:</span><a class="post-url" href="/2019/09/27/冒泡排序和选择排序/" title="必会的两种排序方法">http://yoursite.com/2019/09/27/冒泡排序和选择排序/</a>
+            <span class="copy-path" data-clipboard-text="From http://yoursite.com/2019/09/27/冒泡排序和选择排序/　　By Mr.Huang" title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -272,16 +279,10 @@
 
     <nav id="article-nav">
         
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2019/09/24/CSS3总结/">
-                    CSS3
-                </a>
-            </div>
-        
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2019/09/21/vue传值/">
-                    vue
+                <a href="/2019/09/24/CSS3实现立方体/">
+                    CSS3实现正方体效果
                 </a>
             </div>
         
@@ -293,7 +294,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#路由传参"><span class="toc-number">1.</span> <span class="toc-text">路由传参</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#路由之间的嵌套"><span class="toc-number">2.</span> <span class="toc-text">路由之间的嵌套</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#原始人冒泡排序"><span class="toc-number">1.</span> <span class="toc-text">原始人冒泡排序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#选择排序"><span class="toc-number">2.</span> <span class="toc-text">选择排序</span></a></li></ol>
         
     </div>
     <style>
@@ -329,7 +330,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"vue路由　| 个人博客　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"必会的两种排序方法　| 个人博客　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -349,15 +350,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2019/09/24/CSS3总结/" title="Pre: CSS3">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="Back to Homepage"><i class="fa fa-home"></i></a>
         
 
         <a title="Mini Archives"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2019/09/21/vue传值/" title="Next: vue">
+            <a href="/2019/09/24/CSS3实现立方体/" title="Next: CSS3实现正方体效果">
                 <i class="fa fa-angle-right"></i>
             </a>
         
