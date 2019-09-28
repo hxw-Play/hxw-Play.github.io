@@ -17,14 +17,14 @@
 
 <meta name="description" content="其他的理解了在发">
 <meta property="og:type" content="article">
-<meta property="og:title" content="必会的两种排序方法">
+<meta property="og:title" content="JS必会的两种排序方法">
 <meta property="og:url" content="http://yoursite.com/2019/09/27/冒泡排序和选择排序/index.html">
 <meta property="og:site_name" content="个人博客">
 <meta property="og:description" content="其他的理解了在发">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-09-27T13:02:54.535Z">
+<meta property="og:updated_time" content="2019-09-27T13:07:59.262Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="必会的两种排序方法">
+<meta name="twitter:title" content="JS必会的两种排序方法">
 <meta name="twitter:description" content="其他的理解了在发">
 
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -57,7 +57,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>必会的两种排序方法 | 个人博客</title>
+<title>JS必会的两种排序方法 | 个人博客</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -223,7 +223,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      必会的两种排序方法
+      JS必会的两种排序方法
     </h1>
   
 
@@ -245,15 +245,15 @@
 <h3 id="原始人冒泡排序"><a href="#原始人冒泡排序" class="headerlink" title="原始人冒泡排序"></a>原始人冒泡排序</h3><ul>
 <li>比较两个数字</li>
 <li>如果左边的数字大，则交换两个数字的位置</li>
-<li>向右移动一个位置，比较下两个数字<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">    var arr = [25,15,30,11,6,8];</span><br><span class="line">    for(var j = 0;j&lt;arr.length;j++)&#123;</span><br><span class="line">        for(var i = 0;i&lt;arr.length-1-j;i++)&#123;</span><br><span class="line">            if(arr[i]&gt;arr[i+1])&#123;</span><br><span class="line">                var temp = arr[i];</span><br><span class="line">                arr[i] = arr[i+1];</span><br><span class="line">                arr[i+1] = temp;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    console.log(arr);</span><br><span class="line">// arr.length-1-j 是已经排序过的没有必要再排一次了</span><br><span class="line"></span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
-
-</li>
+<li>向右移动一个位置，比较下两个数字</li>
 </ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">    var arr = [25,15,30,11,6,8];</span><br><span class="line">    for(var j = 0;j&lt;arr.length;j++)&#123;</span><br><span class="line">        for(var i = 0;i&lt;arr.length-1-j;i++)&#123;</span><br><span class="line">            if(arr[i]&gt;arr[i+1])&#123;</span><br><span class="line">                var temp = arr[i];</span><br><span class="line">                arr[i] = arr[i+1];</span><br><span class="line">                arr[i+1] = temp;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    console.log(arr);</span><br><span class="line">// arr.length-1-j 是已经排序过的没有必要再排一次了</span><br><span class="line"></span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
 <h3 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h3><ul>
 <li>记录所有数据，并找出最小的，并和最左边的数字交换</li>
-<li>最左边数字已经排序好，从第2个数字开始依次重复1步骤的操作<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">    var arr = [12,342,53,6753,131,435];</span><br><span class="line">    for(var j = 0;j&lt;arr.length-1;j++ )&#123;</span><br><span class="line">    var minIndex = j;</span><br><span class="line">    for(var i = j+1;i&lt;arr.length;i++)&#123;</span><br><span class="line">        if(arr[minIndex]&gt;arr[i])&#123;</span><br><span class="line">            minIndex = i;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">    var temp = arr[minIndex];</span><br><span class="line">    arr[j] = arr[minIndex]; </span><br><span class="line">    arr[minIndex]  =arr[j]; </span><br><span class="line">    </span><br><span class="line"> &#125;</span><br><span class="line"> console.log(arr);</span><br><span class="line">声明一个数组索引为0的变量让其与每一个数组进行比较</span><br><span class="line">找到那个比他小的数,调换索引(没有找到,那么他就是最小的数)</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br></pre></td></tr></table></figure></li>
+<li>最左边数字已经排序好，从第2个数字开始依次重复1步骤的操作</li>
 </ul>
-
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">    var arr = [12,342,53,6753,131,435];</span><br><span class="line">    for(var j = 0;j&lt;arr.length-1;j++ )&#123;</span><br><span class="line">    var minIndex = j;</span><br><span class="line">    for(var i = j+1;i&lt;arr.length;i++)&#123;</span><br><span class="line">        if(arr[minIndex]&gt;arr[i])&#123;</span><br><span class="line">            minIndex = i;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">    var temp = arr[minIndex];</span><br><span class="line">    arr[j] = arr[minIndex]; </span><br><span class="line">    arr[minIndex]  =arr[j]; </span><br><span class="line">    </span><br><span class="line"> &#125;</span><br><span class="line"> console.log(arr);</span><br><span class="line">声明一个数组索引为0的变量让其与每一个数组进行比较</span><br><span class="line">找到那个比他小的数,调换索引(没有找到,那么他就是最小的数)</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -261,12 +261,12 @@
   
     
     <div class="copyright">
-        <p><span>Title:</span><a href="/2019/09/27/冒泡排序和选择排序/">必会的两种排序方法</a></p>
+        <p><span>Title:</span><a href="/2019/09/27/冒泡排序和选择排序/">JS必会的两种排序方法</a></p>
         <p><span>Author:</span><a href="/" title="Back to Homepage">Mr.Huang</a></p>
         <p><span>Created:</span>2019-09-27, 19:01:10</p>
-        <p><span>Updated:</span>2019-09-27, 21:02:54</p>
+        <p><span>Updated:</span>2019-09-27, 21:07:59</p>
         <p>
-            <span>Full URL:</span><a class="post-url" href="/2019/09/27/冒泡排序和选择排序/" title="必会的两种排序方法">http://yoursite.com/2019/09/27/冒泡排序和选择排序/</a>
+            <span>Full URL:</span><a class="post-url" href="/2019/09/27/冒泡排序和选择排序/" title="JS必会的两种排序方法">http://yoursite.com/2019/09/27/冒泡排序和选择排序/</a>
             <span class="copy-path" data-clipboard-text="From http://yoursite.com/2019/09/27/冒泡排序和选择排序/　　By Mr.Huang" title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
@@ -278,6 +278,12 @@
 
 
     <nav id="article-nav">
+        
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/2019/09/28/两个经典的递归函数/">
+                    JS递归经典案例
+                </a>
+            </div>
         
         
             <div id="article-nav-older" class="article-nav-title">
@@ -330,7 +336,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"必会的两种排序方法　| 个人博客　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"JS必会的两种排序方法　| 个人博客　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -350,7 +356,9 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/" title="Back to Homepage"><i class="fa fa-home"></i></a>
+            <a href="/2019/09/28/两个经典的递归函数/" title="Pre: JS递归经典案例">
+                <i class="fa fa-angle-left"></i>
+            </a>
         
 
         <a title="Mini Archives"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
@@ -362,7 +370,7 @@
         
     </div>
 
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2019/09/27/冒泡排序和选择排序/">必会的两种排序方法</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/24/CSS3实现立方体/">CSS3实现正方体效果</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/24/CSS3总结/">CSS3</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/21/vue路由/">vue路由</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/21/vue传值/">vue</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/20/git/">git如何上传到github</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/19/hover/">hover的一些微小效果</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/18/base/">关于HTML的基本知识</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/07/21/what/">什么是HTML</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2019/09/28/两个经典的递归函数/">JS递归经典案例</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/27/冒泡排序和选择排序/">JS必会的两种排序方法</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/24/CSS3实现立方体/">CSS3实现正方体效果</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/24/CSS3总结/">CSS3</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/21/vue路由/">vue路由</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/21/vue传值/">vue</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/20/git/">git如何上传到github</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/19/hover/">hover的一些微小效果</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/18/base/">关于HTML的基本知识</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/07/21/what/">什么是HTML</a></li></ul>
 
 
 
