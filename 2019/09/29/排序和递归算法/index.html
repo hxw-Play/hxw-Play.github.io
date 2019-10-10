@@ -15,12 +15,12 @@
 
 
 
-<meta name="description" content="排序和递归排序算法 在生活中，我们离不开排序。例如体育课上按身高排的队；又如考试过后按成绩排的名次。在编程中也是如此，例如当开发一个学生管理系统，需要按照学好从小到大进行排序；开发一个平台，需要把同类商品按价格从高到低排序。（当然，一般前端不负责处理业务逻辑。）由此可见，排序无处不在。排序看似简单，但是背后却隐藏了多种多样的算法与思想。   一个算法的好坏是通过 时间复杂度 与 空间复杂度 来衡量">
+<meta name="description" content="在生活中，我们离不开排序。例如体育课上按身高排的队；又如考试过后按成绩排的名次。在编程中也是如此，例如当开发一个学生管理系统，需要按照学好从小到大进行排序；开发一个平台，需要把同类商品按价格从高到低排序。（当然，一般前端不负责处理业务逻辑。）由此可见，排序无处不在。排序看似简单，但是背后却隐藏了多种多样的算法与思想。一个算法的好坏是通过 时间复杂度 与 空间复杂度 来衡量的。简单来说，时间复">
 <meta property="og:type" content="article">
-<meta property="og:title" content="个人博客">
+<meta property="og:title" content="排序和递归">
 <meta property="og:url" content="http://yoursite.com/2019/09/29/排序和递归算法/index.html">
 <meta property="og:site_name" content="个人博客">
-<meta property="og:description" content="排序和递归排序算法 在生活中，我们离不开排序。例如体育课上按身高排的队；又如考试过后按成绩排的名次。在编程中也是如此，例如当开发一个学生管理系统，需要按照学好从小到大进行排序；开发一个平台，需要把同类商品按价格从高到低排序。（当然，一般前端不负责处理业务逻辑。）由此可见，排序无处不在。排序看似简单，但是背后却隐藏了多种多样的算法与思想。   一个算法的好坏是通过 时间复杂度 与 空间复杂度 来衡量">
+<meta property="og:description" content="在生活中，我们离不开排序。例如体育课上按身高排的队；又如考试过后按成绩排的名次。在编程中也是如此，例如当开发一个学生管理系统，需要按照学好从小到大进行排序；开发一个平台，需要把同类商品按价格从高到低排序。（当然，一般前端不负责处理业务逻辑。）由此可见，排序无处不在。排序看似简单，但是背后却隐藏了多种多样的算法与思想。一个算法的好坏是通过 时间复杂度 与 空间复杂度 来衡量的。简单来说，时间复">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://user-gold-cdn.xitu.io/2019/7/2/16bb2880dc1ebaac?imageslim">
 <meta property="og:image" content="https://user-gold-cdn.xitu.io/2019/7/8/16bcf4425ac4d235?imageslim">
@@ -28,10 +28,10 @@
 <meta property="og:image" content="https://user-gold-cdn.xitu.io/2019/7/2/16bb288163c5be34?imageslim">
 <meta property="og:image" content="https://user-gold-cdn.xitu.io/2019/7/2/16bb288174479a44?imageslim">
 <meta property="og:image" content="http://yoursite.com/.com//pow.svg">
-<meta property="og:updated_time" content="2019-09-02T07:52:44.000Z">
+<meta property="og:updated_time" content="2019-09-29T08:04:51.200Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="个人博客">
-<meta name="twitter:description" content="排序和递归排序算法 在生活中，我们离不开排序。例如体育课上按身高排的队；又如考试过后按成绩排的名次。在编程中也是如此，例如当开发一个学生管理系统，需要按照学好从小到大进行排序；开发一个平台，需要把同类商品按价格从高到低排序。（当然，一般前端不负责处理业务逻辑。）由此可见，排序无处不在。排序看似简单，但是背后却隐藏了多种多样的算法与思想。   一个算法的好坏是通过 时间复杂度 与 空间复杂度 来衡量">
+<meta name="twitter:title" content="排序和递归">
+<meta name="twitter:description" content="在生活中，我们离不开排序。例如体育课上按身高排的队；又如考试过后按成绩排的名次。在编程中也是如此，例如当开发一个学生管理系统，需要按照学好从小到大进行排序；开发一个平台，需要把同类商品按价格从高到低排序。（当然，一般前端不负责处理业务逻辑。）由此可见，排序无处不在。排序看似简单，但是背后却隐藏了多种多样的算法与思想。一个算法的好坏是通过 时间复杂度 与 空间复杂度 来衡量的。简单来说，时间复">
 <meta name="twitter:image" content="https://user-gold-cdn.xitu.io/2019/7/2/16bb2880dc1ebaac?imageslim">
 
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -64,7 +64,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>个人博客</title>
+<title>排序和递归 | 个人博客</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -226,15 +226,33 @@
       <input type="hidden" class="isFancy" />
     
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      排序和递归
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+
+        
+        <div class="clearfix"></div>
+      </div>
+      
+    
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h1 id="排序和递归"><a href="#排序和递归" class="headerlink" title="排序和递归"></a>排序和递归</h1><h2 id="排序算法"><a href="#排序算法" class="headerlink" title="排序算法"></a>排序算法</h2><blockquote>
-<p>在生活中，我们离不开排序。例如体育课上按身高排的队；又如考试过后按成绩排的名次。在编程中也是如此，例如当开发一个学生管理系统，需要按照学好从小到大进行排序；开发一个平台，需要把同类商品按价格从高到低排序。（当然，一般前端不负责处理业务逻辑。）由此可见，排序无处不在。排序看似简单，但是背后却隐藏了多种多样的算法与思想。</p>
-</blockquote>
+        <!-- ### 排序算法 -->
+
 <blockquote>
-<p>一个算法的好坏是通过 时间复杂度 与 空间复杂度 来衡量的。简单来说，时间复杂度 就是执行算法的 时间成本 ，空间复杂度 则是执行算法的 空间成本 。</p>
+<p>在生活中，我们离不开排序。例如体育课上按身高排的队；又如考试过后按成绩排的名次。在编程中也是如此，例如当开发一个学生管理系统，需要按照学好从小到大进行排序；开发一个平台，需要把同类商品按价格从高到低排序。（当然，一般前端不负责处理业务逻辑。）由此可见，排序无处不在。排序看似简单，但是背后却隐藏了多种多样的算法与思想。一个算法的好坏是通过 时间复杂度 与 空间复杂度 来衡量的。简单来说，时间复杂度 就是执行算法的 时间成本 ，空间复杂度 则是执行算法的 空间成本 。</p>
 </blockquote>
+<a id="more"></a>
 <h3 id="稳定性"><a href="#稳定性" class="headerlink" title="稳定性"></a>稳定性</h3><p>稳定：如果 a 原本在 b 前面，而 a=b，排序之后 a 仍然在 b 的前面</p>
 <p>不稳定：如果 a 原本在 b 的前面，而 a=b，排序之后 a 可能会出现在 b 的后面</p>
 <h3 id="复杂度"><a href="#复杂度" class="headerlink" title="复杂度"></a>复杂度</h3><p>时间复杂度 与 空间复杂度 都是用 “大 O” 来表示，写作 O(*)。有一点值得注意的是，我们谈论复杂度，一般谈论的都是时间复杂度。</p>
@@ -329,7 +347,7 @@
 <p>最大的嵌套调用次数（包括首次）称为<strong>递归深度</strong>。在我们的例子中，它正好等于 <code>n</code>。</p>
 <p>最大递归深度受限于 JavaScript 引擎。我们可以确信基本是 10000，有些引擎可能允许更大，但是 100000 很可能就超过了限制。有一些自动优化能够缓解这个（「尾部调用优化」），但是它们还没有被完全支持，只能用于简单场景。</p>
 <p>这就限制了递归的应用，但是递归仍然被广泛使用。有很多任务使用递归思路会让代码更简单，更容易维护。</p>
-<h3 id="斐波那契数列"><a href="#斐波那契数列" class="headerlink" title="斐波那契数列"></a>斐波那契数列</h3>
+
       
     </div>
     
@@ -337,12 +355,12 @@
   
     
     <div class="copyright">
-        <p><span>Title:</span><a href="/2019/09/29/排序和递归算法/"></a></p>
+        <p><span>Title:</span><a href="/2019/09/29/排序和递归算法/">排序和递归</a></p>
         <p><span>Author:</span><a href="/" title="Back to Homepage">Mr.Huang</a></p>
         <p><span>Created:</span>2019-09-29, 15:59:01</p>
-        <p><span>Updated:</span>2019-09-02, 15:52:44</p>
+        <p><span>Updated:</span>2019-09-29, 16:04:51</p>
         <p>
-            <span>Full URL:</span><a class="post-url" href="/2019/09/29/排序和递归算法/" title="">http://yoursite.com/2019/09/29/排序和递归算法/</a>
+            <span>Full URL:</span><a class="post-url" href="/2019/09/29/排序和递归算法/" title="排序和递归">http://yoursite.com/2019/09/29/排序和递归算法/</a>
             <span class="copy-path" data-clipboard-text="From http://yoursite.com/2019/09/29/排序和递归算法/　　By Mr.Huang" title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
@@ -354,6 +372,12 @@
 
 
     <nav id="article-nav">
+        
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/2019/10/10/基本数据类型和引用数据类型/">
+                    JS基本数据类型和引用数据类型
+                </a>
+            </div>
         
         
             <div id="article-nav-older" class="article-nav-title">
@@ -370,7 +394,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#排序和递归"><span class="toc-number">1.</span> <span class="toc-text">排序和递归</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#排序算法"><span class="toc-number">1.1.</span> <span class="toc-text">排序算法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#稳定性"><span class="toc-number">1.1.1.</span> <span class="toc-text">稳定性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#复杂度"><span class="toc-number">1.1.2.</span> <span class="toc-text">复杂度</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#常见数组排序方法"><span class="toc-number">1.2.</span> <span class="toc-text">常见数组排序方法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#冒泡排序"><span class="toc-number">1.2.1.</span> <span class="toc-text">冒泡排序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#选择排序"><span class="toc-number">1.2.2.</span> <span class="toc-text">选择排序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#插入排序"><span class="toc-number">1.2.3.</span> <span class="toc-text">插入排序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#堆排序"><span class="toc-number">1.2.4.</span> <span class="toc-text">堆排序</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#递归"><span class="toc-number">1.3.</span> <span class="toc-text">递归</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#两种思考方式"><span class="toc-number">1.3.1.</span> <span class="toc-text">两种思考方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#斐波那契数列"><span class="toc-number">1.3.2.</span> <span class="toc-text">斐波那契数列</span></a></li></ol></li></ol></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#稳定性"><span class="toc-number">1.</span> <span class="toc-text">稳定性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#复杂度"><span class="toc-number">2.</span> <span class="toc-text">复杂度</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#常见数组排序方法"><span class="toc-number"></span> <span class="toc-text">常见数组排序方法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#冒泡排序"><span class="toc-number">1.</span> <span class="toc-text">冒泡排序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#选择排序"><span class="toc-number">2.</span> <span class="toc-text">选择排序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#插入排序"><span class="toc-number">3.</span> <span class="toc-text">插入排序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#堆排序"><span class="toc-number">4.</span> <span class="toc-text">堆排序</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#递归"><span class="toc-number"></span> <span class="toc-text">递归</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#两种思考方式"><span class="toc-number">1.</span> <span class="toc-text">两种思考方式</span></a></li></ol>
         
     </div>
     <style>
@@ -406,7 +430,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"　| 个人博客　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"排序和递归　| 个人博客　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -426,7 +450,9 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/" title="Back to Homepage"><i class="fa fa-home"></i></a>
+            <a href="/2019/10/10/基本数据类型和引用数据类型/" title="Pre: JS基本数据类型和引用数据类型">
+                <i class="fa fa-angle-left"></i>
+            </a>
         
 
         <a title="Mini Archives"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
@@ -438,7 +464,7 @@
         
     </div>
 
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2019/09/29/排序和递归算法/">排序和递归算法</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/28/两个经典的递归函数/">JS递归经典案例</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/27/冒泡排序和选择排序/">JS必会的两种排序方法</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/24/CSS3实现立方体/">CSS3实现正方体效果</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/24/CSS3总结/">CSS3</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/21/vue路由/">vue路由</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/21/vue传值/">vue</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/20/git/">git如何上传到github</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/19/hover/">hover的一些微小效果</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/18/base/">关于HTML的基本知识</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/07/21/what/">什么是HTML</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2019/10/10/基本数据类型和引用数据类型/">JS基本数据类型和引用数据类型</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/29/排序和递归算法/">排序和递归</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/28/两个经典的递归函数/">JS递归经典案例</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/27/冒泡排序和选择排序/">JS必会的两种排序方法</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/24/CSS3实现立方体/">CSS3实现正方体效果</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/24/CSS3总结/">CSS3</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/21/vue路由/">vue路由</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/21/vue传值/">vue</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/20/git/">git如何上传到github</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/19/hover/">hover的一些微小效果</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/18/base/">关于HTML的基本知识</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/07/21/what/">什么是HTML</a></li></ul>
 
 
 
