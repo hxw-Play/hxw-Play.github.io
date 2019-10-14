@@ -15,17 +15,17 @@
 
 
 
-<meta name="description" content="竟然还可以这样玩.">
+<meta name="description" content="jQuery 是一个快速、简洁的 JavaScript 框架，是继 Prototype 之后又一个优秀的 JavaScript 代码库">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JS递归经典案例">
-<meta property="og:url" content="http://yoursite.com/2019/09/28/两个经典的递归函数/index.html">
+<meta property="og:title" content="jQuery基础知识">
+<meta property="og:url" content="http://yoursite.com/2019/10/12/jquery基本知识总结/index.html">
 <meta property="og:site_name" content="个人博客">
-<meta property="og:description" content="竟然还可以这样玩.">
+<meta property="og:description" content="jQuery 是一个快速、简洁的 JavaScript 框架，是继 Prototype 之后又一个优秀的 JavaScript 代码库">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-09-28T13:21:41.365Z">
+<meta property="og:updated_time" content="2019-10-12T11:36:58.903Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JS递归经典案例">
-<meta name="twitter:description" content="竟然还可以这样玩.">
+<meta name="twitter:title" content="jQuery基础知识">
+<meta name="twitter:description" content="jQuery 是一个快速、简洁的 JavaScript 框架，是继 Prototype 之后又一个优秀的 JavaScript 代码库">
 
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
@@ -57,7 +57,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>JS递归经典案例 | 个人博客</title>
+<title>jQuery基础知识 | 个人博客</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -204,11 +204,11 @@
     </div>
     <link class="menu-list" tags="Tags" friends="Friends" about="About Me"/>
 </nav>
-      <div class="body-wrap"><article id="post-两个经典的递归函数" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-jquery基本知识总结" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2019/09/28/两个经典的递归函数/" class="article-date">
-      <time datetime="2019-09-28T12:50:14.909Z" itemprop="datePublished">2019-09-28</time>
+      <a href="/2019/10/12/jquery基本知识总结/" class="article-date">
+      <time datetime="2019-10-12T09:41:19.127Z" itemprop="datePublished">2019-10-12</time>
 </a>
 
 
@@ -223,7 +223,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      JS递归经典案例
+      jQuery基础知识
     </h1>
   
 
@@ -240,16 +240,32 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>竟然还可以这样玩.</p>
+        <p>jQuery 是一个快速、简洁的 JavaScript 框架，是继 Prototype 之后又一个优秀的 JavaScript 代码库</p>
 <a id="more"></a>
-<h3 id="递归实现一个数的阶乘"><a href="#递归实现一个数的阶乘" class="headerlink" title="递归实现一个数的阶乘"></a>递归实现一个数的阶乘</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">function mul(x)&#123;</span><br><span class="line">    if(x===0||x===1)&#123;</span><br><span class="line">        return 1;</span><br><span class="line">    &#125;</span><br><span class="line">    return x*mul(x-1);</span><br><span class="line">&#125;</span><br><span class="line">console.log(mul(3));</span><br><span class="line">3的阶乘结果就出来了 6</span><br><span class="line"></span><br><span class="line">实现1!+2!+3!+.....n! 的之和</span><br><span class="line"> function add(x)&#123;</span><br><span class="line">    if(x===0||x===1)&#123;</span><br><span class="line">        return 1;</span><br><span class="line">    &#125;</span><br><span class="line">    return mul(x)+add(x-1);   //mul()调用上面的那个方法</span><br><span class="line">&#125;</span><br><span class="line">console.log(add(3));</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<h4 id="jQuery入口函数"><a href="#jQuery入口函数" class="headerlink" title="jQuery入口函数"></a>jQuery入口函数</h4><p>$(document.ready(function(){</p>
+<p>}))<br>$(function(){})  推荐这种写法</p>
+<h4 id="jQuery基本选择器"><a href="#jQuery基本选择器" class="headerlink" title="jQuery基本选择器"></a>jQuery基本选择器</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;ul&gt;</span><br><span class="line">&lt;li&gt;&lt;/li&gt;</span><br><span class="line">&lt;li&gt;&lt;/li&gt;</span><br><span class="line">&lt;li&gt;&lt;/li&gt;</span><br><span class="line">&lt;li&gt;&lt;/li&gt;</span><br><span class="line">&lt;/ul&gt;</span><br><span class="line">$(&apos;ul:eq(index)&apos;)匹配一个给定索引值的元素</span><br><span class="line">$(&apos;ul:gt(index)&apos;)匹配所有大于给定索引值的元素 </span><br><span class="line">$(&apos;ul:lt(index)&apos;)匹配所有小于给定索引值的元素 </span><br><span class="line">$(&apos;ul:odd&apos;)匹配所有索引值为奇数的元素 </span><br><span class="line">$(&apos;ul:even&apos;)匹配所有索引值为偶数的元素</span><br><span class="line">$(&apos;li:empty&apos;)匹配所有不包含子元素或者文本的空元素</span><br><span class="line">$(&apos;li:contains(&apos;john&apos;)&apos;)匹配包含给定文本的元素</span><br></pre></td></tr></table></figure>
 
-<h3 id="递归实现斐波那契数列"><a href="#递归实现斐波那契数列" class="headerlink" title="递归实现斐波那契数列"></a>递归实现斐波那契数列</h3><ul>
-<li>1 + 1 + 2 + 3 + 5 + 8 + 13 + 21 + ….<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">function add(x)&#123;</span><br><span class="line">    if (n === 1 || n === 2) &#123;</span><br><span class="line">          return 1;</span><br><span class="line">    &#125;</span><br><span class="line">    return add(x-1) + add(x-2)</span><br><span class="line">&#125;</span><br><span class="line">add(5)</span><br></pre></td></tr></table></figure>
+<h4 id="DOM对象和JQuery对象的相互转换"><a href="#DOM对象和JQuery对象的相互转换" class="headerlink" title="DOM对象和JQuery对象的相互转换"></a>DOM对象和JQuery对象的相互转换</h4><h5 id="jQuery-对象转换为-DOM-对象"><a href="#jQuery-对象转换为-DOM-对象" class="headerlink" title="jQuery 对象转换为 DOM 对象"></a>jQuery 对象转换为 DOM 对象</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$(&apos;#btn&apos;)[0]</span><br><span class="line">$(&apos;#btn&apos;).get(0)</span><br></pre></td></tr></table></figure>
 
-</li>
-</ul>
-<h3 id="n阶楼梯每次走一步或两步-一共有多少种走法"><a href="#n阶楼梯每次走一步或两步-一共有多少种走法" class="headerlink" title="n阶楼梯每次走一步或两步,一共有多少种走法"></a>n阶楼梯每次走一步或两步,一共有多少种走法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">function step(x)&#123;</span><br><span class="line">    if(x===1||x===2)&#123;</span><br><span class="line">        return 1;</span><br><span class="line">    &#125;</span><br><span class="line">    return step(x-1)+step(x-2);</span><br><span class="line">&#125;</span><br><span class="line">step(10)</span><br></pre></td></tr></table></figure>
+<h5 id="DOM-对象转换成-jQuery-对象"><a href="#DOM-对象转换成-jQuery-对象" class="headerlink" title="DOM 对象转换成 jQuery 对象"></a>DOM 对象转换成 jQuery 对象</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var btn = document.getElementById(&apos;btn&apos;);</span><br><span class="line">$(btn) ====&gt; 把 DOM 对象转成了 jQuery 对象</span><br></pre></td></tr></table></figure>
+
+<h4 id="DOM-操作"><a href="#DOM-操作" class="headerlink" title="DOM 操作"></a>DOM 操作</h4><h5 id="属性操作-attr"><a href="#属性操作-attr" class="headerlink" title="属性操作 .attr()"></a>属性操作 .attr()</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(&apos;img&apos;).attr(&#123;</span><br><span class="line">    src:&apos;1.jpg&apos;</span><br><span class="line">&#125;) 添加属性</span><br></pre></td></tr></table></figure>
+
+<h5 id="属性操作-添加删除类’"><a href="#属性操作-添加删除类’" class="headerlink" title="属性操作 添加删除类’"></a>属性操作 添加删除类’</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$(&apos;div&apos;).addClass(&apos;active&apos;)</span><br><span class="line">        removeClass</span><br><span class="line">        hasClass 判断是否有这个类</span><br><span class="line">        toggleClass 判断有无这个类,有则删除无则添加</span><br></pre></td></tr></table></figure>
+
+<h4 id="jQuery动画"><a href="#jQuery动画" class="headerlink" title="jQuery动画"></a>jQuery动画</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">动画显示</span><br><span class="line">$(selector).show/hide(2000/slow,function()&#123;</span><br><span class="line"></span><br><span class="line">&#125;);</span><br><span class="line">其他动画</span><br><span class="line">fadeIn fadeOut slowDown slowUp slowToggle</span><br></pre></td></tr></table></figure>
+
+<h4 id="animate动画"><a href="#animate动画" class="headerlink" title="animate动画"></a>animate动画</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">$(selector).animate(styles,speed,ease,callback)</span><br><span class="line">$(selector).animate(&#123;</span><br><span class="line">    width:300,</span><br><span class="line">    height:200</span><br><span class="line">&#125;,1000,function()&#123;&#125;)</span><br><span class="line">第一个参数表示：要执行动画的 CSS 属性（必选）</span><br><span class="line">第二个参数表示：执行动画时长（可选）</span><br><span class="line">第三个参数表示: 运动函数 &apos;swing&apos;和&apos;linear&apos;</span><br><span class="line">第四个参数表示：动画执行完后立即执行的回调函数（可选）</span><br><span class="line"></span><br><span class="line">停止动画</span><br><span class="line">stop(stopAll,goToEnd)  </span><br><span class="line">stop(false/true,false/true)</span><br><span class="line">参数1:  stopAll:是否全部停止动画(停止队列中所有动画),默认 false</span><br><span class="line">参数2:  goToEnd: 是否将停止的动画,停在当前动画的最后一个状态</span><br></pre></td></tr></table></figure>
+
+<h4 id="添加节点"><a href="#添加节点" class="headerlink" title="添加节点"></a>添加节点</h4><blockquote>
+<p>append() 参数 jq对象 或 标签字符串 或 DOM对象 在被选元素内部从后面插入。<br>        如果是页面中存在的元素，那么调用 append()后，会把这个元素放到相应的目标元素里面去；<br>        但是，原来的这个元素，就不存在了。(剪切)<br>        如果是给多个目标追加元素，那么方法的内部会复制多份这个元素，然后追加到多个目标里面去。<br>$(‘div’)appendTo(‘p’)就是把所有div标签及里面的东西剪切到p标签里面<br>prepend()作用：在被选元素内部从前面追加内容或节点。</p>
+</blockquote>
+<h4 id="清空元素"><a href="#清空元素" class="headerlink" title="清空元素"></a>清空元素</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(selector).empty();</span><br><span class="line">$(selector).html(&apos;&apos;);</span><br><span class="line">$(selector).remove(); //会把自己也删除</span><br></pre></td></tr></table></figure>
+
+<h4 id="on-off方式绑定-解除事件"><a href="#on-off方式绑定-解除事件" class="headerlink" title="on/off方式绑定/解除事件"></a>on/off方式绑定/解除事件</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;ul&gt;</span><br><span class="line">&lt;li&gt;&lt;/li&gt;</span><br><span class="line">&lt;li&gt;&lt;/li&gt;</span><br><span class="line">&lt;li&gt;&lt;/li&gt;</span><br><span class="line">&lt;li&gt;&lt;/li&gt;</span><br><span class="line">&lt;/ul&gt;</span><br><span class="line">$(&apos;ul&apos;).on(&apos;click&apos;,&apos;li&apos;,function()&#123;&#125;) 把click事件给了li,一般用于后来添加的元素,为了与上面绑定的样式一样</span><br><span class="line">[selector] 一般用于事件委托</span><br><span class="line">$(&apos;ul&apos;).off(&apos;click&apos;,&apos;li&apos;,function()&#123;&#125;) 解除li绑定的事件,自身另外绑定的其他事件(mouseenter...)不会失效</span><br></pre></td></tr></table></figure>
+
+
       
     </div>
     
@@ -257,13 +273,13 @@
   
     
     <div class="copyright">
-        <p><span>Title:</span><a href="/2019/09/28/两个经典的递归函数/">JS递归经典案例</a></p>
+        <p><span>Title:</span><a href="/2019/10/12/jquery基本知识总结/">jQuery基础知识</a></p>
         <p><span>Author:</span><a href="/" title="Back to Homepage">Mr.Huang</a></p>
-        <p><span>Created:</span>2019-09-28, 20:50:14</p>
-        <p><span>Updated:</span>2019-09-28, 21:21:41</p>
+        <p><span>Created:</span>2019-10-12, 17:41:19</p>
+        <p><span>Updated:</span>2019-10-12, 19:36:58</p>
         <p>
-            <span>Full URL:</span><a class="post-url" href="/2019/09/28/两个经典的递归函数/" title="JS递归经典案例">http://yoursite.com/2019/09/28/两个经典的递归函数/</a>
-            <span class="copy-path" data-clipboard-text="From http://yoursite.com/2019/09/28/两个经典的递归函数/　　By Mr.Huang" title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
+            <span>Full URL:</span><a class="post-url" href="/2019/10/12/jquery基本知识总结/" title="jQuery基础知识">http://yoursite.com/2019/10/12/jquery基本知识总结/</a>
+            <span class="copy-path" data-clipboard-text="From http://yoursite.com/2019/10/12/jquery基本知识总结/　　By Mr.Huang" title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -276,15 +292,15 @@
     <nav id="article-nav">
         
             <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2019/09/29/排序和递归算法/">
-                    排序和递归
+                <a href="/2019/10/12/jq基础难懂/">
+                    
                 </a>
             </div>
         
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2019/09/27/冒泡排序和选择排序/">
-                    JS必会的两种排序方法
+                <a href="/2019/10/10/基本数据类型和引用数据类型/">
+                    JS基本数据类型和引用数据类型
                 </a>
             </div>
         
@@ -296,7 +312,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#递归实现一个数的阶乘"><span class="toc-number">1.</span> <span class="toc-text">递归实现一个数的阶乘</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#递归实现斐波那契数列"><span class="toc-number">2.</span> <span class="toc-text">递归实现斐波那契数列</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#n阶楼梯每次走一步或两步-一共有多少种走法"><span class="toc-number">3.</span> <span class="toc-text">n阶楼梯每次走一步或两步,一共有多少种走法</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#jQuery入口函数"><span class="toc-number">1.</span> <span class="toc-text">jQuery入口函数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#jQuery基本选择器"><span class="toc-number">2.</span> <span class="toc-text">jQuery基本选择器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#DOM对象和JQuery对象的相互转换"><span class="toc-number">3.</span> <span class="toc-text">DOM对象和JQuery对象的相互转换</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#jQuery-对象转换为-DOM-对象"><span class="toc-number">3.1.</span> <span class="toc-text">jQuery 对象转换为 DOM 对象</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#DOM-对象转换成-jQuery-对象"><span class="toc-number">3.2.</span> <span class="toc-text">DOM 对象转换成 jQuery 对象</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#DOM-操作"><span class="toc-number">4.</span> <span class="toc-text">DOM 操作</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#属性操作-attr"><span class="toc-number">4.1.</span> <span class="toc-text">属性操作 .attr()</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#属性操作-添加删除类’"><span class="toc-number">4.2.</span> <span class="toc-text">属性操作 添加删除类’</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#jQuery动画"><span class="toc-number">5.</span> <span class="toc-text">jQuery动画</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#animate动画"><span class="toc-number">6.</span> <span class="toc-text">animate动画</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#添加节点"><span class="toc-number">7.</span> <span class="toc-text">添加节点</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#清空元素"><span class="toc-number">8.</span> <span class="toc-text">清空元素</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#on-off方式绑定-解除事件"><span class="toc-number">9.</span> <span class="toc-text">on/off方式绑定/解除事件</span></a></li></ol>
         
     </div>
     <style>
@@ -332,7 +348,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"JS递归经典案例　| 个人博客　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"jQuery基础知识　| 个人博客　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -352,7 +368,7 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2019/09/29/排序和递归算法/" title="Pre: 排序和递归">
+            <a href="/2019/10/12/jq基础难懂/" title="Pre: ">
                 <i class="fa fa-angle-left"></i>
             </a>
         
@@ -360,7 +376,7 @@
         <a title="Mini Archives"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2019/09/27/冒泡排序和选择排序/" title="Next: JS必会的两种排序方法">
+            <a href="/2019/10/10/基本数据类型和引用数据类型/" title="Next: JS基本数据类型和引用数据类型">
                 <i class="fa fa-angle-right"></i>
             </a>
         

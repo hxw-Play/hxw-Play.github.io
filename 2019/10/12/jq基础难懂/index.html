@@ -15,17 +15,14 @@
 
 
 
-<meta name="description" content="竟然还可以这样玩.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JS递归经典案例">
-<meta property="og:url" content="http://yoursite.com/2019/09/28/两个经典的递归函数/index.html">
+<meta property="og:title" content="个人博客">
+<meta property="og:url" content="http://yoursite.com/2019/10/12/jq基础难懂/index.html">
 <meta property="og:site_name" content="个人博客">
-<meta property="og:description" content="竟然还可以这样玩.">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-09-28T13:21:41.365Z">
+<meta property="og:updated_time" content="2019-10-12T11:29:46.811Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JS递归经典案例">
-<meta name="twitter:description" content="竟然还可以这样玩.">
+<meta name="twitter:title" content="个人博客">
 
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
@@ -57,7 +54,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>JS递归经典案例 | 个人博客</title>
+<title>个人博客</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -204,11 +201,11 @@
     </div>
     <link class="menu-list" tags="Tags" friends="Friends" about="About Me"/>
 </nav>
-      <div class="body-wrap"><article id="post-两个经典的递归函数" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-jq基础难懂" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2019/09/28/两个经典的递归函数/" class="article-date">
-      <time datetime="2019-09-28T12:50:14.909Z" itemprop="datePublished">2019-09-28</time>
+      <a href="/2019/10/12/jq基础难懂/" class="article-date">
+      <time datetime="2019-10-12T11:29:46.811Z" itemprop="datePublished">2019-10-12</time>
 </a>
 
 
@@ -219,37 +216,10 @@
       <input type="hidden" class="isFancy" />
     
     
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      JS递归经典案例
-    </h1>
-  
-
-      </header>
-      
-      <div class="article-info article-info-post">
-        
-
-        
-        <div class="clearfix"></div>
-      </div>
-      
-    
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>竟然还可以这样玩.</p>
-<a id="more"></a>
-<h3 id="递归实现一个数的阶乘"><a href="#递归实现一个数的阶乘" class="headerlink" title="递归实现一个数的阶乘"></a>递归实现一个数的阶乘</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">function mul(x)&#123;</span><br><span class="line">    if(x===0||x===1)&#123;</span><br><span class="line">        return 1;</span><br><span class="line">    &#125;</span><br><span class="line">    return x*mul(x-1);</span><br><span class="line">&#125;</span><br><span class="line">console.log(mul(3));</span><br><span class="line">3的阶乘结果就出来了 6</span><br><span class="line"></span><br><span class="line">实现1!+2!+3!+.....n! 的之和</span><br><span class="line"> function add(x)&#123;</span><br><span class="line">    if(x===0||x===1)&#123;</span><br><span class="line">        return 1;</span><br><span class="line">    &#125;</span><br><span class="line">    return mul(x)+add(x-1);   //mul()调用上面的那个方法</span><br><span class="line">&#125;</span><br><span class="line">console.log(add(3));</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
-
-<h3 id="递归实现斐波那契数列"><a href="#递归实现斐波那契数列" class="headerlink" title="递归实现斐波那契数列"></a>递归实现斐波那契数列</h3><ul>
-<li>1 + 1 + 2 + 3 + 5 + 8 + 13 + 21 + ….<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">function add(x)&#123;</span><br><span class="line">    if (n === 1 || n === 2) &#123;</span><br><span class="line">          return 1;</span><br><span class="line">    &#125;</span><br><span class="line">    return add(x-1) + add(x-2)</span><br><span class="line">&#125;</span><br><span class="line">add(5)</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h3 id="n阶楼梯每次走一步或两步-一共有多少种走法"><a href="#n阶楼梯每次走一步或两步-一共有多少种走法" class="headerlink" title="n阶楼梯每次走一步或两步,一共有多少种走法"></a>n阶楼梯每次走一步或两步,一共有多少种走法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">function step(x)&#123;</span><br><span class="line">    if(x===1||x===2)&#123;</span><br><span class="line">        return 1;</span><br><span class="line">    &#125;</span><br><span class="line">    return step(x-1)+step(x-2);</span><br><span class="line">&#125;</span><br><span class="line">step(10)</span><br></pre></td></tr></table></figure>
+        
       
     </div>
     
@@ -257,13 +227,13 @@
   
     
     <div class="copyright">
-        <p><span>Title:</span><a href="/2019/09/28/两个经典的递归函数/">JS递归经典案例</a></p>
+        <p><span>Title:</span><a href="/2019/10/12/jq基础难懂/"></a></p>
         <p><span>Author:</span><a href="/" title="Back to Homepage">Mr.Huang</a></p>
-        <p><span>Created:</span>2019-09-28, 20:50:14</p>
-        <p><span>Updated:</span>2019-09-28, 21:21:41</p>
+        <p><span>Created:</span>2019-10-12, 19:29:46</p>
+        <p><span>Updated:</span>2019-10-12, 19:29:46</p>
         <p>
-            <span>Full URL:</span><a class="post-url" href="/2019/09/28/两个经典的递归函数/" title="JS递归经典案例">http://yoursite.com/2019/09/28/两个经典的递归函数/</a>
-            <span class="copy-path" data-clipboard-text="From http://yoursite.com/2019/09/28/两个经典的递归函数/　　By Mr.Huang" title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
+            <span>Full URL:</span><a class="post-url" href="/2019/10/12/jq基础难懂/" title="">http://yoursite.com/2019/10/12/jq基础难懂/</a>
+            <span class="copy-path" data-clipboard-text="From http://yoursite.com/2019/10/12/jq基础难懂/　　By Mr.Huang" title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -276,15 +246,15 @@
     <nav id="article-nav">
         
             <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2019/09/29/排序和递归算法/">
-                    排序和递归
+                <a href="/2019/10/12/jq中target/">
+                    事件对象/阻止冒泡和默认
                 </a>
             </div>
         
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2019/09/27/冒泡排序和选择排序/">
-                    JS必会的两种排序方法
+                <a href="/2019/10/12/jquery基本知识总结/">
+                    jQuery基础知识
                 </a>
             </div>
         
@@ -296,7 +266,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#递归实现一个数的阶乘"><span class="toc-number">1.</span> <span class="toc-text">递归实现一个数的阶乘</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#递归实现斐波那契数列"><span class="toc-number">2.</span> <span class="toc-text">递归实现斐波那契数列</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#n阶楼梯每次走一步或两步-一共有多少种走法"><span class="toc-number">3.</span> <span class="toc-text">n阶楼梯每次走一步或两步,一共有多少种走法</span></a></li></ol>
+            
         
     </div>
     <style>
@@ -332,7 +302,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"JS递归经典案例　| 个人博客　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"　| 个人博客　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -352,7 +322,7 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2019/09/29/排序和递归算法/" title="Pre: 排序和递归">
+            <a href="/2019/10/12/jq中target/" title="Pre: 事件对象/阻止冒泡和默认">
                 <i class="fa fa-angle-left"></i>
             </a>
         
@@ -360,7 +330,7 @@
         <a title="Mini Archives"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2019/09/27/冒泡排序和选择排序/" title="Next: JS必会的两种排序方法">
+            <a href="/2019/10/12/jquery基本知识总结/" title="Next: jQuery基础知识">
                 <i class="fa fa-angle-right"></i>
             </a>
         
