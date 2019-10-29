@@ -15,17 +15,17 @@
 
 
 
-<meta name="description" content="JS中的forEach和jQuery的each123456789101112131415161718192021222324252627282930313233343536373839    &amp;lt;script&amp;gt;   var arr = [&amp;apos;nihao&amp;apos;, &amp;apos;lis&amp;apos;, &amp;apos;zhangsa&amp;apos;];   arr.forEach(fun">
+<meta name="description" content="JS中的forEach和jQuery的each的用法">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Each">
 <meta property="og:url" content="http://yoursite.com/2019/10/12/Each/index.html">
 <meta property="og:site_name" content="个人博客">
-<meta property="og:description" content="JS中的forEach和jQuery的each123456789101112131415161718192021222324252627282930313233343536373839    &amp;lt;script&amp;gt;   var arr = [&amp;apos;nihao&amp;apos;, &amp;apos;lis&amp;apos;, &amp;apos;zhangsa&amp;apos;];   arr.forEach(fun">
+<meta property="og:description" content="JS中的forEach和jQuery的each的用法">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-10-12T14:03:31.100Z">
+<meta property="og:updated_time" content="2019-10-14T04:08:57.897Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Each">
-<meta name="twitter:description" content="JS中的forEach和jQuery的each123456789101112131415161718192021222324252627282930313233343536373839    &amp;lt;script&amp;gt;   var arr = [&amp;apos;nihao&amp;apos;, &amp;apos;lis&amp;apos;, &amp;apos;zhangsa&amp;apos;];   arr.forEach(fun">
+<meta name="twitter:description" content="JS中的forEach和jQuery的each的用法">
 
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
@@ -240,7 +240,8 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <a id="more"></a>
+        <p>JS中的forEach和jQuery的each的用法</p>
+<a id="more"></a>
 <h4 id="JS中的forEach和jQuery的each"><a href="#JS中的forEach和jQuery的each" class="headerlink" title="JS中的forEach和jQuery的each"></a>JS中的forEach和jQuery的each</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"> </span><br><span class="line">   &lt;script&gt;</span><br><span class="line">   var arr = [&apos;nihao&apos;, &apos;lis&apos;, &apos;zhangsa&apos;];</span><br><span class="line">   arr.forEach(function(item,idex,array)&#123;</span><br><span class="line">   item====&gt;指的是arr中的第一个元素的值</span><br><span class="line">   index====&gt;知道是数组的下标</span><br><span class="line">   array====&gt;指的是数组arr</span><br><span class="line">   &#125;)</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">   &lt;ul&gt;</span><br><span class="line">       &lt;li style=&quot;color: green;&quot;&gt;li1&lt;/li&gt;</span><br><span class="line">       &lt;li style=&quot;color: red;&quot;&gt;li2&lt;/li&gt;</span><br><span class="line">       &lt;li&gt;li3&lt;/li&gt;</span><br><span class="line">       &lt;li&gt;li4&lt;/li&gt;</span><br><span class="line">       &lt;li&gt;li5&lt;/li&gt;</span><br><span class="line">   &lt;/ul&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">   $(&apos;li&apos;).each(function(index,ele)&#123;</span><br><span class="line">      console.log(&apos;ele=====&gt;&apos;, ele); //这里的ele是dom对象</span><br><span class="line">      if (index == 3) &#123;</span><br><span class="line">               $(ele).click(function () &#123;</span><br><span class="line">                   console.log($(this).css(&apos;color&apos;)); 获取index为3的color值</span><br><span class="line">               &#125;)</span><br><span class="line">           &#125; else &#123;</span><br><span class="line">               $(ele).click(function () &#123;</span><br><span class="line">                   console.log($(this).css(&apos;height&apos;));</span><br><span class="line"></span><br><span class="line">               &#125;)</span><br><span class="line">           &#125;</span><br><span class="line">   &#125;)</span><br><span class="line"></span><br><span class="line">       // 大部分情况下是不需要使用 each 方法的，因为 jQuery 的隐式迭代特性。</span><br><span class="line">       // 如果要对每个元素做不同的处理，这时候就用到了 each 方法</span><br><span class="line">       // 作用：遍历 jQuery 对象集合，为每个匹配的元素执行一个函数</span><br><span class="line">       // $(selector).each(function(index,element)&#123;&#125;);</span><br><span class="line">       // Element 是一个 js 对象，需要转换成 jquery 对象</span><br></pre></td></tr></table></figure>
       
     </div>
@@ -252,7 +253,7 @@
         <p><span>Title:</span><a href="/2019/10/12/Each/">Each</a></p>
         <p><span>Author:</span><a href="/" title="Back to Homepage">Mr.Huang</a></p>
         <p><span>Created:</span>2019-10-12, 21:02:35</p>
-        <p><span>Updated:</span>2019-10-12, 22:03:31</p>
+        <p><span>Updated:</span>2019-10-14, 12:08:57</p>
         <p>
             <span>Full URL:</span><a class="post-url" href="/2019/10/12/Each/" title="Each">http://yoursite.com/2019/10/12/Each/</a>
             <span class="copy-path" data-clipboard-text="From http://yoursite.com/2019/10/12/Each/　　By Mr.Huang" title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
@@ -266,6 +267,12 @@
 
 
     <nav id="article-nav">
+        
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/2019/10/14/基本数据类型/">
+                    JS基本数据类型和引用数据类型
+                </a>
+            </div>
         
         
             <div id="article-nav-older" class="article-nav-title">
@@ -338,7 +345,9 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/" title="Back to Homepage"><i class="fa fa-home"></i></a>
+            <a href="/2019/10/14/基本数据类型/" title="Pre: JS基本数据类型和引用数据类型">
+                <i class="fa fa-angle-left"></i>
+            </a>
         
 
         <a title="Mini Archives"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
@@ -350,7 +359,7 @@
         
     </div>
 
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2019/10/12/Each/">Each</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/10/12/jq中target/">事件对象/阻止冒泡和默认</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/10/12/jq基础难懂/">jq基础难懂</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/10/12/jquery基本知识总结/">jQuery基础知识</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/10/10/基本数据类型和引用数据类型/">JS基本数据类型和引用数据类型</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/29/排序和递归算法/">排序和递归</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/28/两个经典的递归函数/">JS递归经典案例</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/27/冒泡排序和选择排序/">JS必会的两种排序方法</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/24/CSS3实现立方体/">CSS3实现正方体效果</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/24/CSS3总结/">CSS3</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/21/vue路由/">vue路由</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/21/vue传值/">vue</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/20/git/">git如何上传到github</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/19/hover/">hover的一些微小效果</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/18/base/">关于HTML的基本知识</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/07/21/what/">什么是HTML</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2019/10/29/滚动到底部/">滚动到底部</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/10/14/基本数据类型/">JS基本数据类型和引用数据类型</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/10/12/Each/">Each</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/10/12/jq中target/">事件对象/阻止冒泡和默认</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/10/12/jquery基本知识总结/">jQuery基础知识</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/10/10/基本数据类型和引用数据类型/">JS基本数据类型和引用数据类型</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/29/排序和递归算法/">排序和递归</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/28/两个经典的递归函数/">JS递归经典案例</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/27/冒泡排序和选择排序/">JS必会的两种排序方法</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/24/CSS3实现立方体/">CSS3实现正方体效果</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/24/CSS3总结/">CSS3</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/21/vue路由/">vue路由</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/21/vue传值/">vue</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/20/git/">git如何上传到github</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/19/hover/">hover的一些微小效果</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/18/base/">关于HTML的基本知识</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/07/21/what/">什么是HTML</a></li></ul>
 
 
 

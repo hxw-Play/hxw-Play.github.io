@@ -15,17 +15,17 @@
 
 
 
-<meta name="description" content="event123456789101112131415161718192021&amp;lt;ul&amp;gt;    &amp;lt;li&amp;gt;li-1&amp;lt;/li&amp;gt;    &amp;lt;li&amp;gt;li-2&amp;lt;/li&amp;gt;    &amp;lt;li&amp;gt;li-3&amp;lt;/li&amp;gt;    &amp;lt;li&amp;gt;li-4&amp;lt;/li&amp;gt;&amp;lt;/ul&amp;gt;&amp;lt;button&amp;gt;添加&amp;lt;/but">
+<meta name="description" content="target与this的指向问题及对象默认事件">
 <meta property="og:type" content="article">
 <meta property="og:title" content="事件对象&#x2F;阻止冒泡和默认">
 <meta property="og:url" content="http://yoursite.com/2019/10/12/jq中target/index.html">
 <meta property="og:site_name" content="个人博客">
-<meta property="og:description" content="event123456789101112131415161718192021&amp;lt;ul&amp;gt;    &amp;lt;li&amp;gt;li-1&amp;lt;/li&amp;gt;    &amp;lt;li&amp;gt;li-2&amp;lt;/li&amp;gt;    &amp;lt;li&amp;gt;li-3&amp;lt;/li&amp;gt;    &amp;lt;li&amp;gt;li-4&amp;lt;/li&amp;gt;&amp;lt;/ul&amp;gt;&amp;lt;button&amp;gt;添加&amp;lt;/but">
+<meta property="og:description" content="target与this的指向问题及对象默认事件">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-10-12T12:22:48.656Z">
+<meta property="og:updated_time" content="2019-10-14T04:08:38.047Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="事件对象&#x2F;阻止冒泡和默认">
-<meta name="twitter:description" content="event123456789101112131415161718192021&amp;lt;ul&amp;gt;    &amp;lt;li&amp;gt;li-1&amp;lt;/li&amp;gt;    &amp;lt;li&amp;gt;li-2&amp;lt;/li&amp;gt;    &amp;lt;li&amp;gt;li-3&amp;lt;/li&amp;gt;    &amp;lt;li&amp;gt;li-4&amp;lt;/li&amp;gt;&amp;lt;/ul&amp;gt;&amp;lt;button&amp;gt;添加&amp;lt;/but">
+<meta name="twitter:description" content="target与this的指向问题及对象默认事件">
 
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
@@ -240,7 +240,8 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <a id="more"></a>
+        <p>target与this的指向问题及对象默认事件</p>
+<a id="more"></a>
 <h3 id="event"><a href="#event" class="headerlink" title="event"></a>event</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">&lt;ul&gt;</span><br><span class="line">    &lt;li&gt;li-1&lt;/li&gt;</span><br><span class="line">    &lt;li&gt;li-2&lt;/li&gt;</span><br><span class="line">    &lt;li&gt;li-3&lt;/li&gt;</span><br><span class="line">    &lt;li&gt;li-4&lt;/li&gt;</span><br><span class="line">&lt;/ul&gt;</span><br><span class="line">&lt;button&gt;添加&lt;/button&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">var count = 4;</span><br><span class="line">$(&apos;ul&apos;).click(function()&#123;</span><br><span class="line">    count++</span><br><span class="line">    var str = &apos;&lt;li&gt;li-&quot;+count+&quot;&lt;/li&gt;&apos;</span><br><span class="line">&#125;)</span><br><span class="line">$(&apos;ul&apos;).click(function(event)&#123;</span><br><span class="line">    console.log(&apos;currentTarget&apos;,event.currentTarget) 打印结果为: 添加后的全新的&lt;ul&gt;.......&lt;/ul&gt;</span><br><span class="line">    console.log(&apos;this&apos;,this)                         打印结果为: 添加后的全新的&lt;ul&gt;.......&lt;/ul&gt;</span><br><span class="line">    console.log(&apos;event.target&apos;,event.target)         打印结果为: 添加的那个&lt;li&gt;li-&quot;+count+&quot;&lt;/li&gt;</span><br><span class="line">&#125;)</span><br><span class="line">&lt;/script&gt;</span><br><span class="line">vent.currentTarget 事件绑定的对象(事件源), 和 this 相同</span><br><span class="line">event.target 实际触发事件的对象， 不一定 === this</span><br></pre></td></tr></table></figure>
 
 <h4 id="阻止冒泡"><a href="#阻止冒泡" class="headerlink" title="阻止冒泡"></a>阻止冒泡</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">阻止冒泡事件</span><br><span class="line">&lt;div class=&apos;box&apos;&gt;</span><br><span class="line">    今天天气</span><br><span class="line">    &lt;div class=&apos;innerB&apos;&gt;</span><br><span class="line">    不好</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">    $(&apos;.box&apos;).click(function()&#123;</span><br><span class="line">        alert(&apos;外面的&apos;);</span><br><span class="line">    &#125;)</span><br><span class="line">    $(&apos;.innerB&apos;).click(function(event)&#123;</span><br><span class="line">        alert(&apos;里面的&apos;);</span><br><span class="line">        阻止冒泡事件产生</span><br><span class="line">        event.stopPropagetion()</span><br><span class="line">    &#125;)</span><br><span class="line">    弹出的顺序是 1.里面的   2.外面的</span><br><span class="line">    当里面和外面的元素都绑定了事件的话会产生冒泡事件,会从最里面依次执行</span><br><span class="line">    阻止冒泡event.stopPropagetion()就会只发生里面的事件</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
@@ -256,7 +257,7 @@
         <p><span>Title:</span><a href="/2019/10/12/jq中target/">事件对象/阻止冒泡和默认</a></p>
         <p><span>Author:</span><a href="/" title="Back to Homepage">Mr.Huang</a></p>
         <p><span>Created:</span>2019-10-12, 19:43:06</p>
-        <p><span>Updated:</span>2019-10-12, 20:22:48</p>
+        <p><span>Updated:</span>2019-10-14, 12:08:38</p>
         <p>
             <span>Full URL:</span><a class="post-url" href="/2019/10/12/jq中target/" title="事件对象/阻止冒泡和默认">http://yoursite.com/2019/10/12/jq中target/</a>
             <span class="copy-path" data-clipboard-text="From http://yoursite.com/2019/10/12/jq中target/　　By Mr.Huang" title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
@@ -279,8 +280,8 @@
         
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2019/10/12/jq基础难懂/">
-                    
+                <a href="/2019/10/12/jquery基本知识总结/">
+                    jQuery基础知识
                 </a>
             </div>
         
@@ -356,13 +357,13 @@
         <a title="Mini Archives"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2019/10/12/jq基础难懂/" title="Next: ">
+            <a href="/2019/10/12/jquery基本知识总结/" title="Next: jQuery基础知识">
                 <i class="fa fa-angle-right"></i>
             </a>
         
     </div>
 
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2019/10/12/Each/">Each</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/10/12/jq中target/">事件对象/阻止冒泡和默认</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/10/12/jq基础难懂/">jq基础难懂</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/10/12/jquery基本知识总结/">jQuery基础知识</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/10/10/基本数据类型和引用数据类型/">JS基本数据类型和引用数据类型</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/29/排序和递归算法/">排序和递归</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/28/两个经典的递归函数/">JS递归经典案例</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/27/冒泡排序和选择排序/">JS必会的两种排序方法</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/24/CSS3实现立方体/">CSS3实现正方体效果</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/24/CSS3总结/">CSS3</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/21/vue路由/">vue路由</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/21/vue传值/">vue</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/20/git/">git如何上传到github</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/19/hover/">hover的一些微小效果</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/18/base/">关于HTML的基本知识</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/07/21/what/">什么是HTML</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2019/10/29/滚动到底部/">滚动到底部</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/10/14/基本数据类型/">JS基本数据类型和引用数据类型</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/10/12/Each/">Each</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/10/12/jq中target/">事件对象/阻止冒泡和默认</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/10/12/jquery基本知识总结/">jQuery基础知识</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/10/10/基本数据类型和引用数据类型/">JS基本数据类型和引用数据类型</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/29/排序和递归算法/">排序和递归</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/28/两个经典的递归函数/">JS递归经典案例</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/27/冒泡排序和选择排序/">JS必会的两种排序方法</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/24/CSS3实现立方体/">CSS3实现正方体效果</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/24/CSS3总结/">CSS3</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/21/vue路由/">vue路由</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/21/vue传值/">vue</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/20/git/">git如何上传到github</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/19/hover/">hover的一些微小效果</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/18/base/">关于HTML的基本知识</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/07/21/what/">什么是HTML</a></li></ul>
 
 
 

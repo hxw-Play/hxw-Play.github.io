@@ -15,17 +15,17 @@
 
 
 
-<meta name="description" content="难搞的CSS3">
+<meta name="description" content="数据类型之间的区别">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CSS3">
-<meta property="og:url" content="http://yoursite.com/2019/09/24/CSS3总结/index.html">
+<meta property="og:title" content="JS基本数据类型和引用数据类型">
+<meta property="og:url" content="http://yoursite.com/2019/10/14/基本数据类型/index.html">
 <meta property="og:site_name" content="个人博客">
-<meta property="og:description" content="难搞的CSS3">
+<meta property="og:description" content="数据类型之间的区别">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-09-24T11:31:37.116Z">
+<meta property="og:updated_time" content="2019-10-14T04:21:18.228Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CSS3">
-<meta name="twitter:description" content="难搞的CSS3">
+<meta name="twitter:title" content="JS基本数据类型和引用数据类型">
+<meta name="twitter:description" content="数据类型之间的区别">
 
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
@@ -57,7 +57,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>CSS3 | 个人博客</title>
+<title>JS基本数据类型和引用数据类型 | 个人博客</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -204,11 +204,11 @@
     </div>
     <link class="menu-list" tags="Tags" friends="Friends" about="About Me"/>
 </nav>
-      <div class="body-wrap"><article id="post-CSS3总结" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-基本数据类型" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2019/09/24/CSS3总结/" class="article-date">
-      <time datetime="2019-09-24T11:14:18.617Z" itemprop="datePublished">2019-09-24</time>
+      <a href="/2019/10/14/基本数据类型/" class="article-date">
+      <time datetime="2019-10-14T04:21:18.226Z" itemprop="datePublished">2019-10-14</time>
 </a>
 
 
@@ -223,7 +223,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      CSS3
+      JS基本数据类型和引用数据类型
     </h1>
   
 
@@ -240,19 +240,22 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>难搞的CSS3</p>
+        <p>数据类型之间的区别</p>
 <a id="more"></a>
-<h3 id="CSS3渐变效果"><a href="#CSS3渐变效果" class="headerlink" title="CSS3渐变效果"></a>CSS3渐变效果</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">线性渐变</span><br><span class="line">background: linear-gradient(to right,color1,color2,clor3);</span><br><span class="line"></span><br><span class="line">径向渐变</span><br><span class="line">background: radial-gradient(circle at 10px 10px ,color1,color2,clor3);</span><br></pre></td></tr></table></figure>
-
-<h3 id="过渡"><a href="#过渡" class="headerlink" title="过渡"></a>过渡</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">transtion:all ease 0.5s</span><br></pre></td></tr></table></figure>
-
+<h3 id="基本数据类型"><a href="#基本数据类型" class="headerlink" title="基本数据类型"></a>基本数据类型</h3><blockquote>
+<p>Number Boolean Undefined Null String 基本数据类型是按值访问的,可以直接操作保存在变量中实际的值</p>
+<ol>
+<li>基本数据类型的值是不可变的</li>
+<li>基本数据类型不可以添加属性和方法</li>
+<li>基本数据类型是保存在栈内存中的</li>
+</ol>
 <ul>
-<li>2D转换<blockquote>
-<p> 缩放 scale(x, y) 可以对元素进行水平和垂直方向的缩放，x、y的取值可为小数，不可为负值；<br>移动 translate(x, y) 可以改变元素的位置，x、y可为负值；<br>旋转 rotate(deg) 可以对元素进行旋转，正值为顺时针，负值为逆时针；</p>
-</blockquote>
-</li>
+<li>常用基本数据类型之间的转换<br>Number 转换类型 里面有非数字,数字之间有空格(3 45)或者是NaN的全部转换为NaN,如果是空或者全是空格转化为0 </li>
 </ul>
-<h3 id="3D转换"><a href="#3D转换" class="headerlink" title="3D转换"></a>3D转换</h3>
+<p>Boolean(用来判断false/true) 转换类型 通常情况下 undefined ‘’ NaN null 0 会变成false</p>
+<p>toString 转换类型 null undefined 未赋值的变量会报错 toString String字符串转换NaN 还为NaN</p>
+</blockquote>
+<h3 id="引用数据类型"><a href="#引用数据类型" class="headerlink" title="引用数据类型"></a>引用数据类型</h3>
       
     </div>
     
@@ -260,13 +263,13 @@
   
     
     <div class="copyright">
-        <p><span>Title:</span><a href="/2019/09/24/CSS3总结/">CSS3</a></p>
+        <p><span>Title:</span><a href="/2019/10/14/基本数据类型/">JS基本数据类型和引用数据类型</a></p>
         <p><span>Author:</span><a href="/" title="Back to Homepage">Mr.Huang</a></p>
-        <p><span>Created:</span>2019-09-24, 19:14:18</p>
-        <p><span>Updated:</span>2019-09-24, 19:31:37</p>
+        <p><span>Created:</span>2019-10-14, 12:21:18</p>
+        <p><span>Updated:</span>2019-10-14, 12:21:18</p>
         <p>
-            <span>Full URL:</span><a class="post-url" href="/2019/09/24/CSS3总结/" title="CSS3">http://yoursite.com/2019/09/24/CSS3总结/</a>
-            <span class="copy-path" data-clipboard-text="From http://yoursite.com/2019/09/24/CSS3总结/　　By Mr.Huang" title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
+            <span>Full URL:</span><a class="post-url" href="/2019/10/14/基本数据类型/" title="JS基本数据类型和引用数据类型">http://yoursite.com/2019/10/14/基本数据类型/</a>
+            <span class="copy-path" data-clipboard-text="From http://yoursite.com/2019/10/14/基本数据类型/　　By Mr.Huang" title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -279,15 +282,15 @@
     <nav id="article-nav">
         
             <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2019/09/24/CSS3实现立方体/">
-                    CSS3实现正方体效果
+                <a href="/2019/10/29/滚动到底部/">
+                    滚动到底部
                 </a>
             </div>
         
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2019/09/21/vue路由/">
-                    vue路由
+                <a href="/2019/10/12/Each/">
+                    Each
                 </a>
             </div>
         
@@ -299,7 +302,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#CSS3渐变效果"><span class="toc-number">1.</span> <span class="toc-text">CSS3渐变效果</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#过渡"><span class="toc-number">2.</span> <span class="toc-text">过渡</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3D转换"><span class="toc-number">3.</span> <span class="toc-text">3D转换</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#基本数据类型"><span class="toc-number">1.</span> <span class="toc-text">基本数据类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#引用数据类型"><span class="toc-number">2.</span> <span class="toc-text">引用数据类型</span></a></li></ol>
         
     </div>
     <style>
@@ -335,7 +338,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"CSS3　| 个人博客　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"JS基本数据类型和引用数据类型　| 个人博客　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -355,7 +358,7 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2019/09/24/CSS3实现立方体/" title="Pre: CSS3实现正方体效果">
+            <a href="/2019/10/29/滚动到底部/" title="Pre: 滚动到底部">
                 <i class="fa fa-angle-left"></i>
             </a>
         
@@ -363,7 +366,7 @@
         <a title="Mini Archives"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2019/09/21/vue路由/" title="Next: vue路由">
+            <a href="/2019/10/12/Each/" title="Next: Each">
                 <i class="fa fa-angle-right"></i>
             </a>
         
