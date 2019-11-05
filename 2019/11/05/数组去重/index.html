@@ -15,17 +15,17 @@
 
 
 
-<meta name="description" content="toString12var arr = [1,2,3,[4,3,[23,34,[35]]],36];arr.toString(); //可以使多维数组转换为字符串形式  利用indexOf去重12345678var arr = [1, 2, 3, 4, 1, 2, 3, 1, 32, 4, 1, 3, 4, 34, 5, 43]; var arr1 = []; arr.forEach(funct">
+<meta name="description" content="必会的数组去重">
 <meta property="og:type" content="article">
 <meta property="og:title" content="数组去重">
 <meta property="og:url" content="http://yoursite.com/2019/11/05/数组去重/index.html">
 <meta property="og:site_name" content="个人博客">
-<meta property="og:description" content="toString12var arr = [1,2,3,[4,3,[23,34,[35]]],36];arr.toString(); //可以使多维数组转换为字符串形式  利用indexOf去重12345678var arr = [1, 2, 3, 4, 1, 2, 3, 1, 32, 4, 1, 3, 4, 34, 5, 43]; var arr1 = []; arr.forEach(funct">
+<meta property="og:description" content="必会的数组去重">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-11-05T11:49:12.161Z">
+<meta property="og:updated_time" content="2019-11-05T11:51:24.811Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数组去重">
-<meta name="twitter:description" content="toString12var arr = [1,2,3,[4,3,[23,34,[35]]],36];arr.toString(); //可以使多维数组转换为字符串形式  利用indexOf去重12345678var arr = [1, 2, 3, 4, 1, 2, 3, 1, 32, 4, 1, 3, 4, 34, 5, 43]; var arr1 = []; arr.forEach(funct">
+<meta name="twitter:description" content="必会的数组去重">
 
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
@@ -240,7 +240,8 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <a id="more"></a>
+        <p>必会的数组去重</p>
+<a id="more"></a>
 <h4 id="toString-NaN"><a href="#toString-NaN" class="headerlink" title="toString"></a>toString</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var arr = [1,2,3,[4,3,[23,34,[35]]],36];</span><br><span class="line">arr.toString(); //可以使多维数组转换为字符串形式</span><br></pre></td></tr></table></figure>
 
 <h4 id="利用indexOf去重"><a href="#利用indexOf去重" class="headerlink" title="利用indexOf去重"></a>利用indexOf去重</h4><pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">var arr = [1, 2, 3, 4, 1, 2, 3, 1, 32, 4, 1, 3, 4, 34, 5, 43];</span><br><span class="line"> var arr1 = [];</span><br><span class="line"> arr.forEach(function (item) &#123;</span><br><span class="line">     if( arr1.indexOf(item) === -1)&#123;</span><br><span class="line">     arr1.push(item);</span><br><span class="line"></span><br><span class="line">     &#125;</span><br><span class="line"> &#125;)</span><br></pre></td></tr></table></figure></code></pre><h4 id="对象属性唯一去重"><a href="#对象属性唯一去重" class="headerlink" title="对象属性唯一去重"></a>对象属性唯一去重</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">var arr = [1, 2, 3, 4, 1, 2, 3, 1, 32, 4, 1, 3, 4, 34, 5, 43];</span><br><span class="line">var arr1  = [];</span><br><span class="line">var obj = &#123;&#125;;</span><br><span class="line">for(var i = 0;i&lt;arr.length;i++)&#123;</span><br><span class="line">    if(!obj[arr[i]])&#123;</span><br><span class="line">        obj[arr[i]] = 1;</span><br><span class="line">        arr1.push(arr[i]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -254,7 +255,7 @@
         <p><span>Title:</span><a href="/2019/11/05/数组去重/">数组去重</a></p>
         <p><span>Author:</span><a href="/" title="Back to Homepage">Mr.Huang</a></p>
         <p><span>Created:</span>2019-11-05, 19:39:11</p>
-        <p><span>Updated:</span>2019-11-05, 19:49:12</p>
+        <p><span>Updated:</span>2019-11-05, 19:51:24</p>
         <p>
             <span>Full URL:</span><a class="post-url" href="/2019/11/05/数组去重/" title="数组去重">http://yoursite.com/2019/11/05/数组去重/</a>
             <span class="copy-path" data-clipboard-text="From http://yoursite.com/2019/11/05/数组去重/　　By Mr.Huang" title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
