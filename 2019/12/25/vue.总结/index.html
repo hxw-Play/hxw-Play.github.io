@@ -15,17 +15,17 @@
 
 
 
-<meta name="description" content="vue之间路由传参,路由嵌套">
+<meta name="description" content="VUE">
 <meta property="og:type" content="article">
-<meta property="og:title" content="vue路由">
-<meta property="og:url" content="http://yoursite.com/2019/09/21/vue路由/index.html">
+<meta property="og:title" content="初始vue">
+<meta property="og:url" content="http://yoursite.com/2019/12/25/vue.总结/index.html">
 <meta property="og:site_name" content="个人博客">
-<meta property="og:description" content="vue之间路由传参,路由嵌套">
+<meta property="og:description" content="VUE">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-09-21T10:59:01.354Z">
+<meta property="og:updated_time" content="2019-12-31T09:00:47.612Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="vue路由">
-<meta name="twitter:description" content="vue之间路由传参,路由嵌套">
+<meta name="twitter:title" content="初始vue">
+<meta name="twitter:description" content="VUE">
 
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
@@ -57,7 +57,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>vue路由 | 个人博客</title>
+<title>初始vue | 个人博客</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -204,11 +204,11 @@
     </div>
     <link class="menu-list" tags="Tags" friends="Friends" about="About Me"/>
 </nav>
-      <div class="body-wrap"><article id="post-vue路由" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-vue.总结" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2019/09/21/vue路由/" class="article-date">
-      <time datetime="2019-09-21T09:05:05.567Z" itemprop="datePublished">2019-09-21</time>
+      <a href="/2019/12/25/vue.总结/" class="article-date">
+      <time datetime="2019-12-25T12:40:53.161Z" itemprop="datePublished">2019-12-25</time>
 </a>
 
 
@@ -223,7 +223,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      vue路由
+      初始vue
     </h1>
   
 
@@ -240,12 +240,21 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>vue之间路由传参,路由嵌套</p>
+        <p>VUE</p>
 <a id="more"></a>
-<h3 id="路由传参"><a href="#路由传参" class="headerlink" title="路由传参"></a>路由传参</h3> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">  &lt;div id=&quot;app&quot;&gt;</span><br><span class="line">  &lt;router-link to:&apos;/login&apos;&gt;登录&lt;/router-link&gt;</span><br><span class="line">  &lt;router-view&gt;&lt;/router-view&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">  &lt;script&gt;</span><br><span class="line"></span><br><span class="line">  var login = &#123;</span><br><span class="line">      template = `&lt;h1&gt;创建路由&lt;/h1&gt;`</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">var router = new VueRouter(&#123;</span><br><span class="line">      routes :[</span><br><span class="line">         //&#123;path:&apos;/&apos;,redirect:&apos;/login&apos;&#125;, redirect设置默认路由</span><br><span class="line">          &#123;path:&apos;/login&apos;,component:login&#125;</span><br><span class="line">      ],</span><br><span class="line">       linkActiveClass: &apos;custom&apos; </span><br><span class="line">       //linkActiveClass 可改变router-link默认的class的属性值</span><br><span class="line">  &#125;)</span><br><span class="line">      new vue(&#123;</span><br><span class="line">          el: &apos;#app&apos;,</span><br><span class="line">          router</span><br><span class="line">      &#125;)</span><br><span class="line">  &lt;/script&gt;</span><br></pre></td></tr></table></figure>
 
-<h3 id="路由之间的嵌套"><a href="#路由之间的嵌套" class="headerlink" title="路由之间的嵌套"></a>路由之间的嵌套</h3>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;div id=&quot;app&quot;&gt;</span><br><span class="line">&lt;router-link to:&apos;/login&apos;&gt;登录&lt;/router-link&gt;</span><br><span class="line">&lt;router-view&gt;&lt;/router-view&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;template id=&quot;tem&quot;&gt;</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">        &lt;h1&gt;这是account账户&lt;/h1&gt;</span><br><span class="line">        &lt;router-link to=&quot;/account/login&quot;&gt;登录&lt;/router-link&gt;</span><br><span class="line">        &lt;router-link to=&quot;/account/regster&quot;&gt;注册&lt;/router-link&gt;</span><br><span class="line">    &lt;router-view&gt;&lt;/router-view&gt;</span><br><span class="line"></span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">var account = &#123;</span><br><span class="line">        template: &apos;#tem&apos;</span><br><span class="line">    &#125;</span><br><span class="line">    var login = &#123;</span><br><span class="line">        template:&apos;&lt;h1&gt;登录&lt;/h1&gt;&apos;</span><br><span class="line">    &#125;</span><br><span class="line">    var regster= &#123;</span><br><span class="line">        template:&apos;&lt;h1&gt;注册&lt;/h1&gt;&apos;</span><br><span class="line">    &#125;</span><br><span class="line">var router = new VueRouter(&#123;</span><br><span class="line">    routes:[</span><br><span class="line">        &#123;path:&apos;/account&apos;,</span><br><span class="line">        component:account,</span><br><span class="line">        children:[</span><br><span class="line">            &#123;path:&apos;login&apos;,compent:login&#125;,</span><br><span class="line">            &#123;path:&apos;regster&apos;,compent:regster&#125;</span><br><span class="line">             //使用children属性时,实现子路由,同时子路由path前面不要带/,否则永远以根路径开始请求,</span><br><span class="line">            //这样不方便我们解析URL</span><br><span class="line">        ]</span><br><span class="line">        &#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;)</span><br><span class="line">  new Vue(&#123;</span><br><span class="line">        el: &apos;#app&apos;,</span><br><span class="line">        router</span><br><span class="line"></span><br><span class="line">    &#125;)</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="vue中传值的问题"><a href="#vue中传值的问题" class="headerlink" title="vue中传值的问题"></a>vue中传值的问题</h3><p>如果是父子之间传值子组件通过props接受父组件传过来的值<br>子组件通过this.$emit通知父组件修改值(调用父的方法改值)<br>如果是非父子之间传值 就是通过定义一个祖先,可以存在vuex中或者通过bus传值</p>
+<ul>
+<li>bus传值</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">在app.js中定义全局的bus</span><br><span class="line">     var eventBus = &#123;</span><br><span class="line">        install(Vue,options) &#123;</span><br><span class="line">                Vue.prototype.$bus = vue</span><br><span class="line">            &#125;</span><br><span class="line">            &#125;;</span><br><span class="line">        Vue.use(eventBus);</span><br></pre></td></tr></table></figure>
 
+<p>在组件中使用$emit ,$on,$off分别来分发,监听,取消监听事件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;click&quot; @click.stop.prevent=&quot;doClick(id)&quot;&gt;&lt;/div&gt; </span><br><span class="line">分发事件 通过 </span><br><span class="line">doClick()&#123;</span><br><span class="line">    this.$bus.$emit(&apos;todo&apos;,id)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">监听事件 通过  mounted()&#123;</span><br><span class="line">     this.$bus.$on(&apos;todo&apos;,id=&gt;&#123;</span><br><span class="line">&#125;)</span><br><span class="line">&#125; </span><br><span class="line"></span><br><span class="line">最好在组件销毁前 清除事件监听</span><br><span class="line">beforeDestroy () &#123;</span><br><span class="line">  this.$bus.$off(&apos;todo&apos;);</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+
+<h3 id="vue中的data为什么是一个函数"><a href="#vue中的data为什么是一个函数" class="headerlink" title="vue中的data为什么是一个函数"></a>vue中的data为什么是一个函数</h3><p>如果data为一个对象,对象是引用数据类型每个组件中的data指向同一个地址,当data发生改变其他也会发生改变<br>JavaScript只有函数构成作用域( 对象 以及 if语句没有作用域) 只有是一个函数才能构成调用它的独有的作用域,数据才能够互不影响</p>
+<h3 id="vue一般在什么时候调用数据"><a href="#vue一般在什么时候调用数据" class="headerlink" title="vue一般在什么时候调用数据"></a>vue一般在什么时候调用数据</h3><p>因vue不推荐操作原生DOM<br>一般在created中调取数据 如果有DOM操作的话放在mounted里面,因为在mounted的时候html模板刚读取完毕</p>
+<h3 id="vue-created-mounted"><a href="#vue-created-mounted" class="headerlink" title="vue  created  mounted"></a>vue  created  mounted</h3><p>created 用于初始化数值 然后渲染成视图<br>mounted:在模板渲染成html后调用，通常是初始化页面完成后，再对html的dom节点进行一些需要的操作。</p>
 
       
     </div>
@@ -254,13 +263,13 @@
   
     
     <div class="copyright">
-        <p><span>Title:</span><a href="/2019/09/21/vue路由/">vue路由</a></p>
+        <p><span>Title:</span><a href="/2019/12/25/vue.总结/">初始vue</a></p>
         <p><span>Author:</span><a href="/" title="Back to Homepage">Mr.Huang</a></p>
-        <p><span>Created:</span>2019-09-21, 17:05:05</p>
-        <p><span>Updated:</span>2019-09-21, 18:59:01</p>
+        <p><span>Created:</span>2019-12-25, 20:40:53</p>
+        <p><span>Updated:</span>2019-12-31, 17:00:47</p>
         <p>
-            <span>Full URL:</span><a class="post-url" href="/2019/09/21/vue路由/" title="vue路由">http://yoursite.com/2019/09/21/vue路由/</a>
-            <span class="copy-path" data-clipboard-text="From http://yoursite.com/2019/09/21/vue路由/　　By Mr.Huang" title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
+            <span>Full URL:</span><a class="post-url" href="/2019/12/25/vue.总结/" title="初始vue">http://yoursite.com/2019/12/25/vue.总结/</a>
+            <span class="copy-path" data-clipboard-text="From http://yoursite.com/2019/12/25/vue.总结/　　By Mr.Huang" title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -272,16 +281,10 @@
 
     <nav id="article-nav">
         
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2019/09/24/CSS3总结/">
-                    CSS3
-                </a>
-            </div>
-        
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2019/09/21/vue传值/">
-                    vue
+                <a href="/2019/12/25/小程序总结/">
+                    初始小程序总结
                 </a>
             </div>
         
@@ -293,7 +296,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#路由传参"><span class="toc-number">1.</span> <span class="toc-text">路由传参</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#路由之间的嵌套"><span class="toc-number">2.</span> <span class="toc-text">路由之间的嵌套</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#vue中传值的问题"><span class="toc-number">1.</span> <span class="toc-text">vue中传值的问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#vue中的data为什么是一个函数"><span class="toc-number">2.</span> <span class="toc-text">vue中的data为什么是一个函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#vue一般在什么时候调用数据"><span class="toc-number">3.</span> <span class="toc-text">vue一般在什么时候调用数据</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#vue-created-mounted"><span class="toc-number">4.</span> <span class="toc-text">vue  created  mounted</span></a></li></ol>
         
     </div>
     <style>
@@ -329,7 +332,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"vue路由　| 个人博客　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"初始vue　| 个人博客　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -349,15 +352,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2019/09/24/CSS3总结/" title="Pre: CSS3">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="Back to Homepage"><i class="fa fa-home"></i></a>
         
 
         <a title="Mini Archives"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2019/09/21/vue传值/" title="Next: vue">
+            <a href="/2019/12/25/小程序总结/" title="Next: 初始小程序总结">
                 <i class="fa fa-angle-right"></i>
             </a>
         
