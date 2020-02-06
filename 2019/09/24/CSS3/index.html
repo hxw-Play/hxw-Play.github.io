@@ -15,17 +15,17 @@
 
 
 
-<meta name="description" content="竟然还可以这样玩.">
+<meta name="description" content="难搞的CSS3">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JS递归经典案例">
-<meta property="og:url" content="http://yoursite.com/2019/09/28/两个经典的递归函数/index.html">
+<meta property="og:title" content="CSS3">
+<meta property="og:url" content="http://yoursite.com/2019/09/24/CSS3/index.html">
 <meta property="og:site_name" content="个人博客">
-<meta property="og:description" content="竟然还可以这样玩.">
+<meta property="og:description" content="难搞的CSS3">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-09-28T13:21:41.365Z">
+<meta property="og:updated_time" content="2020-02-06T12:20:29.930Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JS递归经典案例">
-<meta name="twitter:description" content="竟然还可以这样玩.">
+<meta name="twitter:title" content="CSS3">
+<meta name="twitter:description" content="难搞的CSS3">
 
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
@@ -57,7 +57,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>JS递归经典案例 | 个人博客</title>
+<title>CSS3 | 个人博客</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -204,11 +204,11 @@
     </div>
     <link class="menu-list" tags="Tags" friends="Friends" about="About Me"/>
 </nav>
-      <div class="body-wrap"><article id="post-两个经典的递归函数" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-CSS3" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2019/09/28/两个经典的递归函数/" class="article-date">
-      <time datetime="2019-09-28T12:50:14.909Z" itemprop="datePublished">2019-09-28</time>
+      <a href="/2019/09/24/CSS3/" class="article-date">
+      <time datetime="2019-09-24T11:14:18.617Z" itemprop="datePublished">2019-09-24</time>
 </a>
 
 
@@ -223,7 +223,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      JS递归经典案例
+      CSS3
     </h1>
   
 
@@ -240,16 +240,21 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>竟然还可以这样玩.</p>
+        <p>难搞的CSS3</p>
 <a id="more"></a>
-<h3 id="递归实现一个数的阶乘"><a href="#递归实现一个数的阶乘" class="headerlink" title="递归实现一个数的阶乘"></a>递归实现一个数的阶乘</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">function mul(x)&#123;</span><br><span class="line">    if(x===0||x===1)&#123;</span><br><span class="line">        return 1;</span><br><span class="line">    &#125;</span><br><span class="line">    return x*mul(x-1);</span><br><span class="line">&#125;</span><br><span class="line">console.log(mul(3));</span><br><span class="line">3的阶乘结果就出来了 6</span><br><span class="line"></span><br><span class="line">实现1!+2!+3!+.....n! 的之和</span><br><span class="line"> function add(x)&#123;</span><br><span class="line">    if(x===0||x===1)&#123;</span><br><span class="line">        return 1;</span><br><span class="line">    &#125;</span><br><span class="line">    return mul(x)+add(x-1);   //mul()调用上面的那个方法</span><br><span class="line">&#125;</span><br><span class="line">console.log(add(3));</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="CSS3渐变效果"><a href="#CSS3渐变效果" class="headerlink" title="CSS3渐变效果"></a>CSS3渐变效果</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">线性渐变</span><br><span class="line">background: linear-gradient(to right,color1,color2,clor3);</span><br><span class="line"></span><br><span class="line">径向渐变</span><br><span class="line">background: radial-gradient(circle at 10px 10px ,color1,color2,clor3);</span><br></pre></td></tr></table></figure>
 
-<h3 id="递归实现斐波那契数列"><a href="#递归实现斐波那契数列" class="headerlink" title="递归实现斐波那契数列"></a>递归实现斐波那契数列</h3><ul>
-<li>1 + 1 + 2 + 3 + 5 + 8 + 13 + 21 + ….<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">function add(x)&#123;</span><br><span class="line">    if (n === 1 || n === 2) &#123;</span><br><span class="line">          return 1;</span><br><span class="line">    &#125;</span><br><span class="line">    return add(x-1) + add(x-2)</span><br><span class="line">&#125;</span><br><span class="line">add(5)</span><br></pre></td></tr></table></figure>
+<h3 id="过渡"><a href="#过渡" class="headerlink" title="过渡"></a>过渡</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">transtion:all ease 0.5s</span><br></pre></td></tr></table></figure>
 
+<ul>
+<li>2D转换<blockquote>
+<p> 缩放 scale(x, y) 可以对元素进行水平和垂直方向的缩放，x、y的取值可为小数，不可为负值；<br>移动 translate(x, y) 可以改变元素的位置，x、y可为负值；<br>旋转 rotate(deg) 可以对元素进行旋转，正值为顺时针，负值为逆时针；</p>
+</blockquote>
 </li>
 </ul>
-<h3 id="n阶楼梯每次走一步或两步-一共有多少种走法"><a href="#n阶楼梯每次走一步或两步-一共有多少种走法" class="headerlink" title="n阶楼梯每次走一步或两步,一共有多少种走法"></a>n阶楼梯每次走一步或两步,一共有多少种走法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">function step(x)&#123;</span><br><span class="line">    if(x===1||x===2)&#123;</span><br><span class="line">        return 1;</span><br><span class="line">    &#125;</span><br><span class="line">    return step(x-1)+step(x-2);</span><br><span class="line">&#125;</span><br><span class="line">step(10)</span><br></pre></td></tr></table></figure>
+<h3 id="实现一个立方体"><a href="#实现一个立方体" class="headerlink" title="实现一个立方体"></a>实现一个立方体</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br></pre></td><td class="code"><pre><span class="line">&lt;style&gt;</span><br><span class="line">    * &#123;</span><br><span class="line">        margin: 0;</span><br><span class="line">        padding: 0;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /* translate3d(x,y,z) */</span><br><span class="line">    .box &#123;</span><br><span class="line">        position: relative;</span><br><span class="line">        width: 200px;</span><br><span class="line">        height: 200px;</span><br><span class="line">        margin: 100px auto;</span><br><span class="line">        perspective: 1000px;</span><br><span class="line">        transform-style: preserve-3d;</span><br><span class="line">        transition: all 1s ease;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    .side &#123;</span><br><span class="line">        position: absolute;</span><br><span class="line">        left: 0;</span><br><span class="line">        top: 0;</span><br><span class="line">        width: 200px;</span><br><span class="line">        height: 200px;</span><br><span class="line">        border: 1px solid #333;</span><br><span class="line">        opacity: .5;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    .side.front &#123;</span><br><span class="line">        transform: translateZ(100px);</span><br><span class="line">        background-color: blue;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    .side.back &#123;</span><br><span class="line">        transform: translateZ(-100px);</span><br><span class="line">        background-color: pink;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    .side.left &#123;</span><br><span class="line">        transform: translateX(-100px) rotateY(90deg);</span><br><span class="line">        background-color: orange;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    .side.right &#123;</span><br><span class="line">        transform: translateX(100px) rotateY(90deg);</span><br><span class="line">        background-color: red;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    .side.top &#123;</span><br><span class="line">        transform: translateY(-100px) rotateX(90deg);</span><br><span class="line">        background-color: green;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    .side.bottom &#123;</span><br><span class="line">        transform: translateY(100px) rotateX(90deg);</span><br><span class="line">        background-color: yellow;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    .box:hover &#123;</span><br><span class="line">        transform: rotateX(360deg) rotateY(360deg);</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/style&gt;</span><br><span class="line"></span><br><span class="line">&lt;div class=&quot;box&quot;&gt;</span><br><span class="line">    &lt;div class=&quot;side front&quot;&gt;前面&lt;/div&gt;</span><br><span class="line">    &lt;div class=&quot;side back&quot;&gt;后面&lt;/div&gt;</span><br><span class="line">    &lt;div class=&quot;side left&quot;&gt;左面&lt;/div&gt;</span><br><span class="line">    &lt;div class=&quot;side right&quot;&gt;右面&lt;/div&gt;</span><br><span class="line">    &lt;div class=&quot;side top&quot;&gt;上面&lt;/div&gt;</span><br><span class="line">    &lt;div class=&quot;side bottom&quot;&gt;下面&lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+
+
       
     </div>
     
@@ -257,13 +262,13 @@
   
     
     <div class="copyright">
-        <p><span>Title:</span><a href="/2019/09/28/两个经典的递归函数/">JS递归经典案例</a></p>
+        <p><span>Title:</span><a href="/2019/09/24/CSS3/">CSS3</a></p>
         <p><span>Author:</span><a href="/" title="Back to Homepage">Mr.Huang</a></p>
-        <p><span>Created:</span>2019-09-28, 20:50:14</p>
-        <p><span>Updated:</span>2019-09-28, 21:21:41</p>
+        <p><span>Created:</span>2019-09-24, 19:14:18</p>
+        <p><span>Updated:</span>2020-02-06, 20:20:29</p>
         <p>
-            <span>Full URL:</span><a class="post-url" href="/2019/09/28/两个经典的递归函数/" title="JS递归经典案例">http://yoursite.com/2019/09/28/两个经典的递归函数/</a>
-            <span class="copy-path" data-clipboard-text="From http://yoursite.com/2019/09/28/两个经典的递归函数/　　By Mr.Huang" title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
+            <span>Full URL:</span><a class="post-url" href="/2019/09/24/CSS3/" title="CSS3">http://yoursite.com/2019/09/24/CSS3/</a>
+            <span class="copy-path" data-clipboard-text="From http://yoursite.com/2019/09/24/CSS3/　　By Mr.Huang" title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -276,15 +281,15 @@
     <nav id="article-nav">
         
             <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2019/09/29/排序和递归算法/">
-                    排序和递归
+                <a href="/2019/09/24/CSS3实现立方体/">
+                    CSS3实现正方体效果
                 </a>
             </div>
         
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2019/09/27/冒泡排序和选择排序/">
-                    JS必会的两种排序方法
+                <a href="/2019/09/21/vue路由/">
+                    vue路由
                 </a>
             </div>
         
@@ -296,7 +301,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#递归实现一个数的阶乘"><span class="toc-number">1.</span> <span class="toc-text">递归实现一个数的阶乘</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#递归实现斐波那契数列"><span class="toc-number">2.</span> <span class="toc-text">递归实现斐波那契数列</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#n阶楼梯每次走一步或两步-一共有多少种走法"><span class="toc-number">3.</span> <span class="toc-text">n阶楼梯每次走一步或两步,一共有多少种走法</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#CSS3渐变效果"><span class="toc-number">1.</span> <span class="toc-text">CSS3渐变效果</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#过渡"><span class="toc-number">2.</span> <span class="toc-text">过渡</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#实现一个立方体"><span class="toc-number">3.</span> <span class="toc-text">实现一个立方体</span></a></li></ol>
         
     </div>
     <style>
@@ -332,7 +337,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"JS递归经典案例　| 个人博客　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"CSS3　| 个人博客　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -352,7 +357,7 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2019/09/29/排序和递归算法/" title="Pre: 排序和递归">
+            <a href="/2019/09/24/CSS3实现立方体/" title="Pre: CSS3实现正方体效果">
                 <i class="fa fa-angle-left"></i>
             </a>
         
@@ -360,13 +365,13 @@
         <a title="Mini Archives"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2019/09/27/冒泡排序和选择排序/" title="Next: JS必会的两种排序方法">
+            <a href="/2019/09/21/vue路由/" title="Next: vue路由">
                 <i class="fa fa-angle-right"></i>
             </a>
         
     </div>
 
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2019/12/25/vue.总结/">初始vue</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/12/25/小程序总结/">初始小程序总结</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/11/05/数组去重/">数组去重</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/10/29/滚动到底部/">滚动到底部</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/10/14/基本数据类型/">JS基本数据类型和引用数据类型</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/10/12/Each/">Each</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/10/12/jq中target/">事件对象/阻止冒泡和默认</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/10/12/jquery基本知识总结/">jQuery基础知识</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/10/10/基本数据类型和引用数据类型/">JS基本数据类型和引用数据类型</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/29/排序和递归算法/">排序和递归</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/28/两个经典的递归函数/">JS递归经典案例</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/27/冒泡排序和选择排序/">JS必会的两种排序方法</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/24/CSS3实现立方体/">CSS3实现正方体效果</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/24/CSS3总结/">CSS3</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/21/vue路由/">vue路由</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/21/vue传值/">vue</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/20/git/">git如何上传到github</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/19/hover/">hover的一些微小效果</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/18/base/">关于HTML的基本知识</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/07/21/what/">什么是HTML</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2020/02/06/手动封装ajax/">ajax</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/06/什么是原型链/">原型链?</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/06/最简单的双向数据绑定/">最简单的双向数据绑定</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/01/02/js总结/">js</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/12/25/vue.总结/">初始vue</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/12/25/初始小程序/">初始小程序</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/10/29/滚动到底部/">滚动到底部</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/10/12/Each/">Each</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/10/12/jq中target/">事件对象/阻止冒泡和默认</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/10/12/jquery基本知识总结/">jQuery基础知识</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/10/10/基本数据类型和引用数据类型/">JS基本数据类型和引用数据类型</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/29/排序和递归算法/">排序和递归</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/27/冒泡排序和选择排序/">JS必会的两种排序方法</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/24/CSS3实现立方体/">CSS3实现正方体效果</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/24/CSS3/">CSS3</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/21/vue路由/">vue路由</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/21/vue传值/">vue</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/20/git/">git如何上传到github</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/19/hover/">hover的一些微小效果</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/18/base/">关于HTML的基本知识</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/07/21/what/">什么是HTML</a></li></ul>
 
 
 

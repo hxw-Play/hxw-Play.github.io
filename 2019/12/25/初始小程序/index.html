@@ -15,17 +15,17 @@
 
 
 
-<meta name="description" content="必会的数组去重">
+<meta name="description" content="初始小程序">
 <meta property="og:type" content="article">
-<meta property="og:title" content="数组去重">
-<meta property="og:url" content="http://yoursite.com/2019/11/05/数组去重/index.html">
+<meta property="og:title" content="初始小程序">
+<meta property="og:url" content="http://yoursite.com/2019/12/25/初始小程序/index.html">
 <meta property="og:site_name" content="个人博客">
-<meta property="og:description" content="必会的数组去重">
+<meta property="og:description" content="初始小程序">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-11-05T11:53:38.621Z">
+<meta property="og:updated_time" content="2020-02-06T12:04:20.349Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="数组去重">
-<meta name="twitter:description" content="必会的数组去重">
+<meta name="twitter:title" content="初始小程序">
+<meta name="twitter:description" content="初始小程序">
 
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
@@ -57,7 +57,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>数组去重 | 个人博客</title>
+<title>初始小程序 | 个人博客</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -204,11 +204,11 @@
     </div>
     <link class="menu-list" tags="Tags" friends="Friends" about="About Me"/>
 </nav>
-      <div class="body-wrap"><article id="post-数组去重" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-初始小程序" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2019/11/05/数组去重/" class="article-date">
-      <time datetime="2019-11-05T11:39:11.660Z" itemprop="datePublished">2019-11-05</time>
+      <a href="/2019/12/25/初始小程序/" class="article-date">
+      <time datetime="2019-12-25T09:13:58.705Z" itemprop="datePublished">2019-12-25</time>
 </a>
 
 
@@ -223,7 +223,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      数组去重
+      初始小程序
     </h1>
   
 
@@ -240,13 +240,13 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>必会的数组去重</p>
+        <p>初始小程序 </p>
 <a id="more"></a>
-<h4 id="toString-NaN"><a href="#toString-NaN" class="headerlink" title="toString"></a>toString</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var arr = [1,2,3,[4,3,[23,34,[35]]],36];</span><br><span class="line">arr.toString(); //可以使多维数组转换为字符串形式</span><br></pre></td></tr></table></figure>
+<h3 id="小程序图片高度自适应问题"><a href="#小程序图片高度自适应问题" class="headerlink" title="小程序图片高度自适应问题"></a>小程序图片高度自适应问题</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">本来以为不给父级设置高度下面的图片就能自适应 但是不行 需要给小程序里面的标签的image设置 mode 属性</span><br><span class="line">    &lt;image src=&quot;&#123;&#123;item.cover&#125;&#125;&quot; class=&apos;wedding_img&apos; mode=&quot;widthFix&quot; /&gt;</span><br></pre></td></tr></table></figure>
 
-<h4 id="利用indexOf去重"><a href="#利用indexOf去重" class="headerlink" title="利用indexOf去重"></a>利用indexOf去重</h4><pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">var arr = [1, 2, 3, 4, 1, 2, 3, 1, 32, 4, 1, 3, 4, 34, 5, 43];</span><br><span class="line"> var arr1 = [];</span><br><span class="line"> arr.forEach(function (item) &#123;</span><br><span class="line">     if( arr1.indexOf(item) === -1)&#123;</span><br><span class="line">     arr1.push(item);</span><br><span class="line"></span><br><span class="line">     &#125;</span><br><span class="line"> &#125;)</span><br></pre></td></tr></table></figure></code></pre><h4 id="对象属性唯一去重"><a href="#对象属性唯一去重" class="headerlink" title="对象属性唯一去重"></a>对象属性唯一去重</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">var arr = [1, 2, 3, 4, 1, 2, 3, 1, 32, 4, 1, 3, 4, 34, 5, 43];</span><br><span class="line">var arr1  = [];</span><br><span class="line">var obj = &#123;&#125;;</span><br><span class="line">for(var i = 0;i&lt;arr.length;i++)&#123;</span><br><span class="line">    if(!obj[arr[i]])&#123;</span><br><span class="line">        obj[arr[i]] = 1;</span><br><span class="line">        arr1.push(arr[i]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="给背景添加颜色"><a href="#给背景添加颜色" class="headerlink" title="给背景添加颜色"></a>给背景添加颜色</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">page&#123;</span><br><span class="line">    background-color:xxxx</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-
+<h3 id="获取用户信息"><a href="#获取用户信息" class="headerlink" title="获取用户信息"></a>获取用户信息</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">wx.getUserInfo(&#123;</span><br><span class="line">    success:res=&gt;&#123;</span><br><span class="line">        this.setData(&#123;</span><br><span class="line">            nickName:res.UserInfo.nickName,</span><br><span class="line">            avatarUrl:res.UserInfo.avatarUrl</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -254,13 +254,13 @@
   
     
     <div class="copyright">
-        <p><span>Title:</span><a href="/2019/11/05/数组去重/">数组去重</a></p>
+        <p><span>Title:</span><a href="/2019/12/25/初始小程序/">初始小程序</a></p>
         <p><span>Author:</span><a href="/" title="Back to Homepage">Mr.Huang</a></p>
-        <p><span>Created:</span>2019-11-05, 19:39:11</p>
-        <p><span>Updated:</span>2019-11-05, 19:53:38</p>
+        <p><span>Created:</span>2019-12-25, 17:13:58</p>
+        <p><span>Updated:</span>2020-02-06, 20:04:20</p>
         <p>
-            <span>Full URL:</span><a class="post-url" href="/2019/11/05/数组去重/" title="数组去重">http://yoursite.com/2019/11/05/数组去重/</a>
-            <span class="copy-path" data-clipboard-text="From http://yoursite.com/2019/11/05/数组去重/　　By Mr.Huang" title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
+            <span>Full URL:</span><a class="post-url" href="/2019/12/25/初始小程序/" title="初始小程序">http://yoursite.com/2019/12/25/初始小程序/</a>
+            <span class="copy-path" data-clipboard-text="From http://yoursite.com/2019/12/25/初始小程序/　　By Mr.Huang" title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -273,8 +273,8 @@
     <nav id="article-nav">
         
             <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2019/12/25/小程序总结/">
-                    初始小程序总结
+                <a href="/2019/12/25/vue.总结/">
+                    初始vue
                 </a>
             </div>
         
@@ -293,7 +293,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#toString-NaN"><span class="toc-number">1.</span> <span class="toc-text">toString</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#利用indexOf去重"><span class="toc-number">2.</span> <span class="toc-text">利用indexOf去重</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#对象属性唯一去重"><span class="toc-number">3.</span> <span class="toc-text">对象属性唯一去重</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#小程序图片高度自适应问题"><span class="toc-number">1.</span> <span class="toc-text">小程序图片高度自适应问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#给背景添加颜色"><span class="toc-number">2.</span> <span class="toc-text">给背景添加颜色</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#获取用户信息"><span class="toc-number">3.</span> <span class="toc-text">获取用户信息</span></a></li></ol>
         
     </div>
     <style>
@@ -329,7 +329,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"数组去重　| 个人博客　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"初始小程序　| 个人博客　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -349,7 +349,7 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2019/12/25/小程序总结/" title="Pre: 初始小程序总结">
+            <a href="/2019/12/25/vue.总结/" title="Pre: 初始vue">
                 <i class="fa fa-angle-left"></i>
             </a>
         
@@ -363,7 +363,7 @@
         
     </div>
 
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2019/12/25/vue.总结/">初始vue</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/12/25/小程序总结/">初始小程序总结</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/11/05/数组去重/">数组去重</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/10/29/滚动到底部/">滚动到底部</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/10/14/基本数据类型/">JS基本数据类型和引用数据类型</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/10/12/Each/">Each</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/10/12/jq中target/">事件对象/阻止冒泡和默认</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/10/12/jquery基本知识总结/">jQuery基础知识</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/10/10/基本数据类型和引用数据类型/">JS基本数据类型和引用数据类型</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/29/排序和递归算法/">排序和递归</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/28/两个经典的递归函数/">JS递归经典案例</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/27/冒泡排序和选择排序/">JS必会的两种排序方法</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/24/CSS3实现立方体/">CSS3实现正方体效果</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/24/CSS3总结/">CSS3</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/21/vue路由/">vue路由</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/21/vue传值/">vue</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/20/git/">git如何上传到github</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/19/hover/">hover的一些微小效果</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/18/base/">关于HTML的基本知识</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/07/21/what/">什么是HTML</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2020/02/06/手动封装ajax/">ajax</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/06/什么是原型链/">原型链?</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/06/最简单的双向数据绑定/">最简单的双向数据绑定</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/01/02/js总结/">js</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/12/25/vue.总结/">初始vue</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/12/25/初始小程序/">初始小程序</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/10/29/滚动到底部/">滚动到底部</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/10/12/Each/">Each</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/10/12/jq中target/">事件对象/阻止冒泡和默认</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/10/12/jquery基本知识总结/">jQuery基础知识</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/10/10/基本数据类型和引用数据类型/">JS基本数据类型和引用数据类型</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/29/排序和递归算法/">排序和递归</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/27/冒泡排序和选择排序/">JS必会的两种排序方法</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/24/CSS3实现立方体/">CSS3实现正方体效果</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/24/CSS3/">CSS3</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/21/vue路由/">vue路由</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/21/vue传值/">vue</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/20/git/">git如何上传到github</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/19/hover/">hover的一些微小效果</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/18/base/">关于HTML的基本知识</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/07/21/what/">什么是HTML</a></li></ul>
 
 
 
