@@ -15,17 +15,17 @@
 
 
 
-<meta name="description" content="关于vue父向子传值问题">
+<meta name="description" content="vue">
 <meta property="og:type" content="article">
-<meta property="og:title" content="vue">
-<meta property="og:url" content="http://yoursite.com/2019/09/21/vue传值/index.html">
+<meta property="og:title" content="vue路由钩子函数">
+<meta property="og:url" content="http://yoursite.com/2020/02/14/vue路由钩子函数/index.html">
 <meta property="og:site_name" content="个人博客">
-<meta property="og:description" content="关于vue父向子传值问题">
+<meta property="og:description" content="vue">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-09-21T02:02:54.014Z">
+<meta property="og:updated_time" content="2020-02-14T14:34:16.446Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="vue">
-<meta name="twitter:description" content="关于vue父向子传值问题">
+<meta name="twitter:title" content="vue路由钩子函数">
+<meta name="twitter:description" content="vue">
 
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
@@ -57,7 +57,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>vue | 个人博客</title>
+<title>vue路由钩子函数 | 个人博客</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -204,11 +204,11 @@
     </div>
     <link class="menu-list" tags="Tags" friends="Friends" about="About Me"/>
 </nav>
-      <div class="body-wrap"><article id="post-vue传值" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-vue路由钩子函数" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2019/09/21/vue传值/" class="article-date">
-      <time datetime="2019-09-21T00:59:26.366Z" itemprop="datePublished">2019-09-21</time>
+      <a href="/2020/02/14/vue路由钩子函数/" class="article-date">
+      <time datetime="2020-02-14T13:07:46.804Z" itemprop="datePublished">2020-02-14</time>
 </a>
 
 
@@ -223,7 +223,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      vue
+      vue路由钩子函数
     </h1>
   
 
@@ -240,11 +240,26 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <pre><code>关于vue父向子传值问题</code></pre><a id="more"></a>
-<h3 id="props的用法"><a href="#props的用法" class="headerlink" title="props的用法"></a>props的用法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=&quot;app&quot;&gt;</span><br><span class="line">    &lt;first :fromparent=&apos;parent&apos;&gt;&lt;/first&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;template id=&apos;child&apos;&gt;</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">        &lt;p&gt;&#123;&#123;child&#125;&#125;我是一个子组件&#123;&#123;fromparent&#125;&#125;&lt;/p&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">var child = &#123;</span><br><span class="line">    template = &apos;#child&apos;,</span><br><span class="line">    data()&#123;</span><br><span class="line">        return&#123;</span><br><span class="line">            child:&apos;我是两年半的实习生&apos;      </span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    props:[&apos;fromparent&apos;]</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">    new Vue(&#123;</span><br><span class="line">        el:&apos;#app&apos;,</span><br><span class="line">        data:&#123;</span><br><span class="line">            parent:&apos;我是你的爸爸&apos;</span><br><span class="line">        &#125;,</span><br><span class="line">        compontes:&#123;</span><br><span class="line">            first</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+        <p>vue</p>
+<a id="more"></a>
 
-<h3 id="子调用父方法this-emit-‘event’-arguments"><a href="#子调用父方法this-emit-‘event’-arguments" class="headerlink" title="子调用父方法this.$emit(‘event’,[arguments])"></a>子调用父方法this.$emit(‘event’,[arguments])</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=&apos;#app&apos;&gt;</span><br><span class="line">    &lt;child @fun = &apos;parent&apos;&gt;&lt;/child&gt;        //@fun 里面的fun是自定义的</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">  &lt;template id=&apos;child&apos;&gt;</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">        &lt;input type = &apos;button&apos; value=&apos;调用父方法&apos; @click = &apos;childclick&apos;&gt;</span><br><span class="line">     &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">var child = (</span><br><span class="line">    template:&apos;child&apos;,</span><br><span class="line">    data()&#123;</span><br><span class="line">        return&#123;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    methods:&#123;</span><br><span class="line">        childclick()&#123;</span><br><span class="line">                this.$emit(&apos;fun&apos;)</span><br><span class="line">                //子调用父方法一定要写到子里面 ,用别人的值,方法要写到自身身上</span><br><span class="line">                **this.$emit(&apos;fun&apos;,[....argu])传参要从第二个传值,不带引号**</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">)</span><br><span class="line">    new Vue(&#123;</span><br><span class="line">        el:&apos;#app&apos;,</span><br><span class="line">        data:&#123;</span><br><span class="line"></span><br><span class="line">        &#125;,</span><br><span class="line">        components:&#123;</span><br><span class="line">            child</span><br><span class="line">        &#125;</span><br><span class="line">        methods:&#123;</span><br><span class="line">            parent()&#123;</span><br><span class="line">                console.log(&apos;调用了父方法&apos;)</span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;)</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="vue-组件级路由钩子函数介绍-及实际应用"><a href="#vue-组件级路由钩子函数介绍-及实际应用" class="headerlink" title="vue 组件级路由钩子函数介绍,及实际应用"></a>vue 组件级路由钩子函数介绍,及实际应用</h3><ol>
+<li><p>全局钩子<br><strong>router.beforEach</strong>的函数有三个参数<br>to:router 即将进入的路由对象<br>from:当前导航即将离开的路由<br>next:Function,进行管道中的一个钩子,如果执行完了,则导航的状态就是 confirmed(确认的);否则为 false,终止导航.<br>用于权限验证</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">router.beforeEach((to, from, next) =&gt; &#123;</span><br><span class="line">    const role = localStorage.getItem(&apos;ms_username&apos;);</span><br><span class="line">    if(!role &amp;&amp; to.path !== &apos;/login&apos;)&#123;</span><br><span class="line">        next(&apos;/login&apos;);</span><br><span class="line">    &#125;else if(to.meta.permission)&#123;</span><br><span class="line">        // 如果是管理员权限则可进入，这里只是简单的模拟管理员权限而已</span><br><span class="line">        role === &apos;admin&apos; ? next() : next(&apos;/403&apos;);</span><br><span class="line">    &#125;else&#123;</span><br><span class="line">        // 简单的判断IE10及以下不进入富文本编辑器，该组件不兼容</span><br><span class="line">        if(navigator.userAgent.indexOf(&apos;MSIE&apos;) &gt; -1 &amp;&amp; to.path === &apos;/editor&apos;)&#123;</span><br><span class="line">            Vue.prototype.$alert(&apos;vue-quill-editor组件不兼容IE10及以下浏览器，请使用更高版本的浏</span><br><span class="line">            览器查看&apos;, &apos;浏览器不兼容通知&apos;, &#123;</span><br><span class="line">                confirmButtonText: &apos;确定&apos;</span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;else&#123;</span><br><span class="line">            next();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 
+<p><strong>router.afterEach</strong> 的函数的有两个参数<br>to:router 即将进入的路由对象<br>from:当前导航即将离开的路由</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">    router.afterEach((to, from) =&gt; &#123; // 举例: 通过跳转后改变document.title</span><br><span class="line">　if( to.meta.title )&#123;</span><br><span class="line">　　　window.document.title = to.meta.title //每个路由下title</span><br><span class="line">　&#125;else&#123;</span><br><span class="line">　　　window.document.title = &apos;默认的title&apos;</span><br><span class="line">　&#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>针对单个路由钩子函数<br><strong>beforeEnter</strong> 可以在路由配置上直接定义 beforeEnter 钩子也可以在这里配置路由跳转权限问题</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">const router = new VueRouter(&#123;</span><br><span class="line">routes: [</span><br><span class="line">    &#123;</span><br><span class="line">    path: &apos;/foo&apos;,</span><br><span class="line">    component: Foo,</span><br><span class="line">    beforeEnter: (to, from, next) =&gt; &#123;</span><br><span class="line">    console.log(&apos;beforeEnter&apos;)</span><br><span class="line">　　　　next() //正常跳转，不写的话，不会跳转</span><br><span class="line">    &#125;</span><br><span class="line">    &#125;</span><br><span class="line">]</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>组件级钩子函数<br> <strong>beforeRouteEnter</strong>    <strong>beforeRouteUpdate</strong>    <strong>beforeRouteLeave</strong></p>
+<pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">    export default &#123;</span><br><span class="line">    data()&#123;</span><br><span class="line">        return &#123;</span><br><span class="line">            test:&apos;改变之前&apos;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    beforeCreate()&#123;//组件生命周期函数</span><br><span class="line">        console.log(&apos;beforeCreate&apos;)</span><br><span class="line">    &#125;,</span><br><span class="line">    //当进入组件之前，执行 beforRouteEnter 路由钩子函数</span><br><span class="line">    beforeRouteEnter(to,from,next)&#123;</span><br><span class="line">        console.log(&apos;beforRouteEnter&apos;)</span><br><span class="line">        console.log(this) // 结果为undefined，因为在执行beforRouteEnter时候，组件还没有被创建出来；</span><br><span class="line">                            先执行beforRouteEnter，再执行beforeCreate</span><br><span class="line">        next((vm)=&gt;&#123; //参数vm就是当前组件的实例。</span><br><span class="line">            vm.test = &apos;我被改变了&apos;</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;,</span><br><span class="line">    beforeRouteUpdate(to,from,next)&#123;</span><br><span class="line">    // 在当前路由改变，但是该组件被复用时调用</span><br><span class="line">    // 举例来说，对于一个带有动态参数的路径 /foo/:id，在 /foo/1 和 /foo/2 之间跳转的时候，</span><br><span class="line">    // 由于会渲染同样的 Foo 组件，因此组件实例会被复用。而这个钩子就会在这个情况下被调用。</span><br><span class="line">    // 可以访问组件实例 `this`</span><br><span class="line">        console.log(&apos;beforeRouteUpdate&apos;)</span><br><span class="line">        next()</span><br><span class="line">    &#125;,</span><br><span class="line">    beforeRouteLeave(to,from,next)&#123;//离开组件的时候触发</span><br><span class="line">        // 导航离开该组件的对应路由时调用</span><br><span class="line">        // 可以访问组件实例 `this`</span><br><span class="line">        //什么都不写的时候，不会离开(走下一步)</span><br><span class="line">        next()</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></code></pre></li>
+<li><p>实际应用<br>1)  清除当前组件中的定时器</p>
+<pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">当一个组件中有一个定时器中,在路由进行切换的时候,可使用beforeRouteLeave</span><br><span class="line">beforeRouteLeave(to,from,next)&#123;</span><br><span class="line">    window.clearInterval(this.timer)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></code></pre></li>
+</ol>
+<p>2)  当页面中有未关闭的窗口,或未保存的内容时,阻止页面跳转<br>        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">beforeRouteLeave(to,from,next)&#123;</span><br><span class="line">     //判断是否弹出框的状态和保存信息与否</span><br><span class="line">    if (this.dialogVisibility === true) &#123;</span><br><span class="line">    this.dialogVisibility = false //关闭弹出框</span><br><span class="line">    next(false) //回到当前页面, 阻止页面跳转</span><br><span class="line">    &#125;else if(this.saveMessage === false) &#123;</span><br><span class="line">    //弹出警告</span><br><span class="line">    next(false) //回到当前页面, 阻止页面跳转</span><br><span class="line">    &#125;else &#123;</span><br><span class="line">    next() //否则允许跳转</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>3)  当页面中有未关闭的窗口,或未保存的内容时,阻止页面跳转<br>        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">beforeRouteLeave (to, from, next) &#123;</span><br><span class="line">localStorage.setItem(name, content); //保存到localStorage中</span><br><span class="line">next()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -253,13 +268,13 @@
   
     
     <div class="copyright">
-        <p><span>Title:</span><a href="/2019/09/21/vue传值/">vue</a></p>
+        <p><span>Title:</span><a href="/2020/02/14/vue路由钩子函数/">vue路由钩子函数</a></p>
         <p><span>Author:</span><a href="/" title="Back to Homepage">Mr.Huang</a></p>
-        <p><span>Created:</span>2019-09-21, 08:59:26</p>
-        <p><span>Updated:</span>2019-09-21, 10:02:54</p>
+        <p><span>Created:</span>2020-02-14, 21:07:46</p>
+        <p><span>Updated:</span>2020-02-14, 22:34:16</p>
         <p>
-            <span>Full URL:</span><a class="post-url" href="/2019/09/21/vue传值/" title="vue">http://yoursite.com/2019/09/21/vue传值/</a>
-            <span class="copy-path" data-clipboard-text="From http://yoursite.com/2019/09/21/vue传值/　　By Mr.Huang" title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
+            <span>Full URL:</span><a class="post-url" href="/2020/02/14/vue路由钩子函数/" title="vue路由钩子函数">http://yoursite.com/2020/02/14/vue路由钩子函数/</a>
+            <span class="copy-path" data-clipboard-text="From http://yoursite.com/2020/02/14/vue路由钩子函数/　　By Mr.Huang" title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -272,15 +287,15 @@
     <nav id="article-nav">
         
             <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2019/09/24/CSS3/">
-                    CSS3
+                <a href="/2020/02/16/webpack/">
+                    webpack
                 </a>
             </div>
         
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2019/09/20/git/">
-                    git如何上传到github
+                <a href="/2020/02/14/存储以及cookie/">
+                    localStorage ,sessionStorage ,Cookie
                 </a>
             </div>
         
@@ -292,7 +307,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#props的用法"><span class="toc-number">1.</span> <span class="toc-text">props的用法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#子调用父方法this-emit-‘event’-arguments"><span class="toc-number">2.</span> <span class="toc-text">子调用父方法this.$emit(‘event’,[arguments])</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#vue-组件级路由钩子函数介绍-及实际应用"><span class="toc-number">1.</span> <span class="toc-text">vue 组件级路由钩子函数介绍,及实际应用</span></a></li></ol>
         
     </div>
     <style>
@@ -328,7 +343,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"vue　| 个人博客　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"vue路由钩子函数　| 个人博客　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -348,7 +363,7 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2019/09/24/CSS3/" title="Pre: CSS3">
+            <a href="/2020/02/16/webpack/" title="Pre: webpack">
                 <i class="fa fa-angle-left"></i>
             </a>
         
@@ -356,7 +371,7 @@
         <a title="Mini Archives"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2019/09/20/git/" title="Next: git如何上传到github">
+            <a href="/2020/02/14/存储以及cookie/" title="Next: localStorage ,sessionStorage ,Cookie">
                 <i class="fa fa-angle-right"></i>
             </a>
         

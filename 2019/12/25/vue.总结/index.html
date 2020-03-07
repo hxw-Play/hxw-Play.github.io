@@ -22,7 +22,7 @@
 <meta property="og:site_name" content="个人博客">
 <meta property="og:description" content="VUE">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-12-31T09:00:47.612Z">
+<meta property="og:updated_time" content="2020-02-08T14:49:55.909Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="初始vue">
 <meta name="twitter:description" content="VUE">
@@ -255,6 +255,20 @@
 <h3 id="vue中的data为什么是一个函数"><a href="#vue中的data为什么是一个函数" class="headerlink" title="vue中的data为什么是一个函数"></a>vue中的data为什么是一个函数</h3><p>如果data为一个对象,对象是引用数据类型每个组件中的data指向同一个地址,当data发生改变其他也会发生改变<br>JavaScript只有函数构成作用域( 对象 以及 if语句没有作用域) 只有是一个函数才能构成调用它的独有的作用域,数据才能够互不影响</p>
 <h3 id="vue一般在什么时候调用数据"><a href="#vue一般在什么时候调用数据" class="headerlink" title="vue一般在什么时候调用数据"></a>vue一般在什么时候调用数据</h3><p>因vue不推荐操作原生DOM<br>一般在created中调取数据 如果有DOM操作的话放在mounted里面,因为在mounted的时候html模板刚读取完毕</p>
 <h3 id="vue-created-mounted"><a href="#vue-created-mounted" class="headerlink" title="vue  created  mounted"></a>vue  created  mounted</h3><p>created 用于初始化数值 然后渲染成视图<br>mounted:在模板渲染成html后调用，通常是初始化页面完成后，再对html的dom节点进行一些需要的操作。</p>
+<h3 id="vue-v-if-和v-show的区别及使用"><a href="#vue-v-if-和v-show的区别及使用" class="headerlink" title="vue  v-if 和v-show的区别及使用"></a>vue  v-if 和v-show的区别及使用</h3><ul>
+<li>v-if和v-show都是控制元素的隐藏于显示</li>
+</ul>
+<ul>
+<li>v-show本质就是标签display设置为none，v-show都会编译，初始值为false，只是将display设为none，但它也编译了</li>
+<li>v-if是动态的向DOM树内添加或者删除DOM元素 如果是false就不会编译</li>
+</ul>
+<ul>
+<li>应用场景</li>
+</ul>
+<ul>
+<li>v-show 一般用于 tab切换 切换比较频繁</li>
+<li>v-if  惰性1次或0次时使用</li>
+</ul>
 
       
     </div>
@@ -266,7 +280,7 @@
         <p><span>Title:</span><a href="/2019/12/25/vue.总结/">初始vue</a></p>
         <p><span>Author:</span><a href="/" title="Back to Homepage">Mr.Huang</a></p>
         <p><span>Created:</span>2019-12-25, 20:40:53</p>
-        <p><span>Updated:</span>2019-12-31, 17:00:47</p>
+        <p><span>Updated:</span>2020-02-08, 22:49:55</p>
         <p>
             <span>Full URL:</span><a class="post-url" href="/2019/12/25/vue.总结/" title="初始vue">http://yoursite.com/2019/12/25/vue.总结/</a>
             <span class="copy-path" data-clipboard-text="From http://yoursite.com/2019/12/25/vue.总结/　　By Mr.Huang" title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
@@ -302,7 +316,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#vue中传值的问题"><span class="toc-number">1.</span> <span class="toc-text">vue中传值的问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#vue中的data为什么是一个函数"><span class="toc-number">2.</span> <span class="toc-text">vue中的data为什么是一个函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#vue一般在什么时候调用数据"><span class="toc-number">3.</span> <span class="toc-text">vue一般在什么时候调用数据</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#vue-created-mounted"><span class="toc-number">4.</span> <span class="toc-text">vue  created  mounted</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#vue中传值的问题"><span class="toc-number">1.</span> <span class="toc-text">vue中传值的问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#vue中的data为什么是一个函数"><span class="toc-number">2.</span> <span class="toc-text">vue中的data为什么是一个函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#vue一般在什么时候调用数据"><span class="toc-number">3.</span> <span class="toc-text">vue一般在什么时候调用数据</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#vue-created-mounted"><span class="toc-number">4.</span> <span class="toc-text">vue  created  mounted</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#vue-v-if-和v-show的区别及使用"><span class="toc-number">5.</span> <span class="toc-text">vue  v-if 和v-show的区别及使用</span></a></li></ol>
         
     </div>
     <style>
@@ -372,7 +386,7 @@
         
     </div>
 
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2020/02/06/手动封装ajax/">ajax</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/06/什么是原型链/">原型链?</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/06/最简单的双向数据绑定/">最简单的双向数据绑定</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/01/02/js总结/">js</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/12/25/vue.总结/">初始vue</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/12/25/初始小程序/">初始小程序</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/10/29/滚动到底部/">滚动到底部</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/10/12/Each/">Each</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/10/12/jq中target/">事件对象/阻止冒泡和默认</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/10/12/jquery基本知识总结/">jQuery基础知识</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/10/10/基本数据类型和引用数据类型/">JS基本数据类型和引用数据类型</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/29/排序和递归算法/">排序和递归</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/27/冒泡排序和选择排序/">JS必会的两种排序方法</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/24/CSS3实现立方体/">CSS3实现正方体效果</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/24/CSS3/">CSS3</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/21/vue路由/">vue路由</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/21/vue传值/">vue</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/20/git/">git如何上传到github</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/19/hover/">hover的一些微小效果</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/18/base/">关于HTML的基本知识</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/07/21/what/">什么是HTML</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2020/03/07/upload上传/">upload</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/25/get post/">get和post</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/21/双向数据绑定/">vue双向数据绑定</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/16/webpack/">webpack</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/14/vue路由钩子函数/">vue路由钩子函数</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/14/存储以及cookie/">localStorage ,sessionStorage ,Cookie</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/08/登录权限验证/">登录权限验证</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/07/跨域处理/">跨域</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/06/手动封装ajax/">ajax</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/06/什么是原型链/">原型链?</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/06/最简单的双向数据绑定/">最简单的双向数据绑定</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/01/02/js总结/">js</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/12/25/vue.总结/">初始vue</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/12/25/初始小程序/">初始小程序</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/10/29/滚动到底部/">滚动到底部</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/10/12/Each/">Each</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/10/12/jq中target/">事件对象/阻止冒泡和默认</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/10/12/jquery基本知识总结/">jQuery基础知识</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/10/10/基本数据类型和引用数据类型/">JS基本数据类型和引用数据类型</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/29/排序和递归算法/">排序和递归</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/27/冒泡排序和选择排序/">JS必会的两种排序方法</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/24/CSS3实现立方体/">CSS3实现正方体效果</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/24/CSS3/">CSS3</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/21/vue传值/">vue</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/20/git/">git如何上传到github</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/19/hover/">hover的一些微小效果</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/18/base/">关于HTML的基本知识</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/07/21/what/">什么是HTML</a></li></ul>
 
 
 

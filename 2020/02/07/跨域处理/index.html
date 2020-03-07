@@ -15,17 +15,17 @@
 
 
 
-<meta name="description" content="关于vue父向子传值问题">
+<meta name="description" content="跨域">
 <meta property="og:type" content="article">
-<meta property="og:title" content="vue">
-<meta property="og:url" content="http://yoursite.com/2019/09/21/vue传值/index.html">
+<meta property="og:title" content="跨域">
+<meta property="og:url" content="http://yoursite.com/2020/02/07/跨域处理/index.html">
 <meta property="og:site_name" content="个人博客">
-<meta property="og:description" content="关于vue父向子传值问题">
+<meta property="og:description" content="跨域">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-09-21T02:02:54.014Z">
+<meta property="og:updated_time" content="2020-02-07T07:32:41.686Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="vue">
-<meta name="twitter:description" content="关于vue父向子传值问题">
+<meta name="twitter:title" content="跨域">
+<meta name="twitter:description" content="跨域">
 
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
@@ -57,7 +57,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>vue | 个人博客</title>
+<title>跨域 | 个人博客</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -204,11 +204,11 @@
     </div>
     <link class="menu-list" tags="Tags" friends="Friends" about="About Me"/>
 </nav>
-      <div class="body-wrap"><article id="post-vue传值" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-跨域处理" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2019/09/21/vue传值/" class="article-date">
-      <time datetime="2019-09-21T00:59:26.366Z" itemprop="datePublished">2019-09-21</time>
+      <a href="/2020/02/07/跨域处理/" class="article-date">
+      <time datetime="2020-02-07T06:56:29.391Z" itemprop="datePublished">2020-02-07</time>
 </a>
 
 
@@ -223,7 +223,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      vue
+      跨域
     </h1>
   
 
@@ -240,10 +240,16 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <pre><code>关于vue父向子传值问题</code></pre><a id="more"></a>
-<h3 id="props的用法"><a href="#props的用法" class="headerlink" title="props的用法"></a>props的用法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=&quot;app&quot;&gt;</span><br><span class="line">    &lt;first :fromparent=&apos;parent&apos;&gt;&lt;/first&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;template id=&apos;child&apos;&gt;</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">        &lt;p&gt;&#123;&#123;child&#125;&#125;我是一个子组件&#123;&#123;fromparent&#125;&#125;&lt;/p&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">var child = &#123;</span><br><span class="line">    template = &apos;#child&apos;,</span><br><span class="line">    data()&#123;</span><br><span class="line">        return&#123;</span><br><span class="line">            child:&apos;我是两年半的实习生&apos;      </span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    props:[&apos;fromparent&apos;]</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">    new Vue(&#123;</span><br><span class="line">        el:&apos;#app&apos;,</span><br><span class="line">        data:&#123;</span><br><span class="line">            parent:&apos;我是你的爸爸&apos;</span><br><span class="line">        &#125;,</span><br><span class="line">        compontes:&#123;</span><br><span class="line">            first</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+        <p>跨域</p>
+<a id="more"></a>
 
-<h3 id="子调用父方法this-emit-‘event’-arguments"><a href="#子调用父方法this-emit-‘event’-arguments" class="headerlink" title="子调用父方法this.$emit(‘event’,[arguments])"></a>子调用父方法this.$emit(‘event’,[arguments])</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=&apos;#app&apos;&gt;</span><br><span class="line">    &lt;child @fun = &apos;parent&apos;&gt;&lt;/child&gt;        //@fun 里面的fun是自定义的</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">  &lt;template id=&apos;child&apos;&gt;</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">        &lt;input type = &apos;button&apos; value=&apos;调用父方法&apos; @click = &apos;childclick&apos;&gt;</span><br><span class="line">     &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">var child = (</span><br><span class="line">    template:&apos;child&apos;,</span><br><span class="line">    data()&#123;</span><br><span class="line">        return&#123;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    methods:&#123;</span><br><span class="line">        childclick()&#123;</span><br><span class="line">                this.$emit(&apos;fun&apos;)</span><br><span class="line">                //子调用父方法一定要写到子里面 ,用别人的值,方法要写到自身身上</span><br><span class="line">                **this.$emit(&apos;fun&apos;,[....argu])传参要从第二个传值,不带引号**</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">)</span><br><span class="line">    new Vue(&#123;</span><br><span class="line">        el:&apos;#app&apos;,</span><br><span class="line">        data:&#123;</span><br><span class="line"></span><br><span class="line">        &#125;,</span><br><span class="line">        components:&#123;</span><br><span class="line">            child</span><br><span class="line">        &#125;</span><br><span class="line">        methods:&#123;</span><br><span class="line">            parent()&#123;</span><br><span class="line">                console.log(&apos;调用了父方法&apos;)</span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;)</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="jsonp"><a href="#jsonp" class="headerlink" title="jsonp"></a>jsonp</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">JSONP只支持`GET`请求，CORS支持所有类型的HTTP请求。JSONP的优势在于支持老式浏览器，以及可以向不支持CORS的网站请求数据</span><br><span class="line"></span><br><span class="line">//服务端返回如下（后端返回执行函数）：</span><br><span class="line">jsonPCallback(&#123;</span><br><span class="line">    &quot;status&quot;: true,</span><br><span class="line">    &quot;user&quot;: &quot;admin&quot;</span><br><span class="line">&#125;)</span><br><span class="line">// js写法</span><br><span class="line">var scriptEle = document.createElement(&apos;script&apos;);</span><br><span class="line">scriptEle.src = &quot;http://192.168.0.120:3000/users?callback=jsonpCallBack&quot;;</span><br><span class="line">document.body.appendChild(scriptEle);</span><br><span class="line">//浏览器机制会执行这个函数</span><br><span class="line">function jsonpCallBack(res) &#123;</span><br><span class="line">    console.log(res);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="cors"><a href="#cors" class="headerlink" title="cors"></a>cors</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">在服务端   	res.header(&apos;Access-Control-Allow-Origin&apos;, &apos;地址&apos;);</span><br><span class="line">router.get(&quot;/&quot;, function(req,res,next)&#123;</span><br><span class="line">    // 设置允许访问的头为：*  即任何地址都可访问 但是发送请求不能携带cookie</span><br><span class="line">    res.header(&apos;Access-Control-Allow-Origin&apos;, &apos;*&apos;);</span><br><span class="line">    // Access-Control-Allow-Headers ,可根据浏览器的F12查看,把对应的粘贴在这里就行</span><br><span class="line">    // res.header(&apos;Access-Control-Allow-Headers&apos;, &apos;Content-Type&apos;);</span><br><span class="line">    // res.header(&apos;Access-Control-Allow-Methods&apos;, &apos;*&apos;);</span><br><span class="line">    // res.header(&apos;Content-Type&apos;, &apos;application/json;charset=utf-8&apos;);</span><br><span class="line">    next();</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h3 id="proxy-代理"><a href="#proxy-代理" class="headerlink" title="proxy 代理"></a>proxy 代理</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">在webpack中的webpack-dev-server中添加</span><br><span class="line">      proxy: &#123;</span><br><span class="line">      // 配置代理 希望拦截当前的host地址 替换为目标地址</span><br><span class="line">      // key: &#123;&#125;   ;  key为拦截的规则,可以是正则表达式 表示以什么开头</span><br><span class="line">      &apos;/admin&apos;: &#123;</span><br><span class="line">        target: `要代理的地址`,</span><br><span class="line">        changeOrigin: true, // 如果是跨域 需要添加</span><br><span class="line">        pathRewrite: &#123;</span><br><span class="line">          // [&apos;/admin&apos;]: &apos;/abc&apos;   /admin/xx/xx ==&gt; /abc/xx/xx</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="nginx-后端处理"><a href="#nginx-后端处理" class="headerlink" title="nginx 后端处理"></a>nginx 后端处理</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">server</span><br><span class="line">&#123;</span><br><span class="line"> listen 3002;</span><br><span class="line"> server_name localhost;</span><br><span class="line"> location /ok &#123;</span><br><span class="line"> proxy_pass http://localhost:3000;</span><br><span class="line"> # 指定允许跨域的方法，*代表所有</span><br><span class="line"> add_header Access-Control-Allow-Methods *;</span><br><span class="line"> # 预检命令的缓存，如果不缓存每次会发送两次请求</span><br><span class="line"> add_header Access-Control-Max-Age 3600;</span><br><span class="line"> # 带cookie请求需要加上这个字段，并设置为true</span><br><span class="line"> add_header Access-Control-Allow-Credentials true;</span><br><span class="line"> # 表示允许这个域跨域调用（客户端发送请求的域名和端口）</span><br><span class="line"> # $http_origin动态获取请求客户端请求的域 不用*的原因是带cookie的请求不支持*号</span><br><span class="line"> add_header Access-Control-Allow-Origin $http_origin;</span><br><span class="line"> # 表示请求头的字段 动态获取</span><br><span class="line"> add_header Access-Control-Allow-Headers</span><br><span class="line"> $http_access_control_request_headers;</span><br><span class="line"> # OPTIONS预检命令，预检命令通过时才发送请求</span><br><span class="line"> # 检查请求的类型是不是预检命令</span><br><span class="line"> if ($request_method = OPTIONS)&#123;</span><br><span class="line"> return 200;</span><br><span class="line"> &#125;</span><br><span class="line"> &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
       
@@ -253,13 +259,13 @@
   
     
     <div class="copyright">
-        <p><span>Title:</span><a href="/2019/09/21/vue传值/">vue</a></p>
+        <p><span>Title:</span><a href="/2020/02/07/跨域处理/">跨域</a></p>
         <p><span>Author:</span><a href="/" title="Back to Homepage">Mr.Huang</a></p>
-        <p><span>Created:</span>2019-09-21, 08:59:26</p>
-        <p><span>Updated:</span>2019-09-21, 10:02:54</p>
+        <p><span>Created:</span>2020-02-07, 14:56:29</p>
+        <p><span>Updated:</span>2020-02-07, 15:32:41</p>
         <p>
-            <span>Full URL:</span><a class="post-url" href="/2019/09/21/vue传值/" title="vue">http://yoursite.com/2019/09/21/vue传值/</a>
-            <span class="copy-path" data-clipboard-text="From http://yoursite.com/2019/09/21/vue传值/　　By Mr.Huang" title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
+            <span>Full URL:</span><a class="post-url" href="/2020/02/07/跨域处理/" title="跨域">http://yoursite.com/2020/02/07/跨域处理/</a>
+            <span class="copy-path" data-clipboard-text="From http://yoursite.com/2020/02/07/跨域处理/　　By Mr.Huang" title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -272,15 +278,15 @@
     <nav id="article-nav">
         
             <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2019/09/24/CSS3/">
-                    CSS3
+                <a href="/2020/02/08/登录权限验证/">
+                    登录权限验证
                 </a>
             </div>
         
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2019/09/20/git/">
-                    git如何上传到github
+                <a href="/2020/02/06/手动封装ajax/">
+                    ajax
                 </a>
             </div>
         
@@ -292,7 +298,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#props的用法"><span class="toc-number">1.</span> <span class="toc-text">props的用法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#子调用父方法this-emit-‘event’-arguments"><span class="toc-number">2.</span> <span class="toc-text">子调用父方法this.$emit(‘event’,[arguments])</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#jsonp"><span class="toc-number">1.</span> <span class="toc-text">jsonp</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#cors"><span class="toc-number">2.</span> <span class="toc-text">cors</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#proxy-代理"><span class="toc-number">3.</span> <span class="toc-text">proxy 代理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#nginx-后端处理"><span class="toc-number">4.</span> <span class="toc-text">nginx 后端处理</span></a></li></ol>
         
     </div>
     <style>
@@ -328,7 +334,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"vue　| 个人博客　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"跨域　| 个人博客　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -348,7 +354,7 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2019/09/24/CSS3/" title="Pre: CSS3">
+            <a href="/2020/02/08/登录权限验证/" title="Pre: 登录权限验证">
                 <i class="fa fa-angle-left"></i>
             </a>
         
@@ -356,7 +362,7 @@
         <a title="Mini Archives"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2019/09/20/git/" title="Next: git如何上传到github">
+            <a href="/2020/02/06/手动封装ajax/" title="Next: ajax">
                 <i class="fa fa-angle-right"></i>
             </a>
         
