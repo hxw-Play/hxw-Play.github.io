@@ -22,17 +22,16 @@
 <meta property="og:site_name" content="个人博客">
 <meta property="og:description" content="在生活中，我们离不开排序。例如体育课上按身高排的队；又如考试过后按成绩排的名次。在编程中也是如此，例如当开发一个学生管理系统，需要按照学好从小到大进行排序；开发一个平台，需要把同类商品按价格从高到低排序。（当然，一般前端不负责处理业务逻辑。）由此可见，排序无处不在。排序看似简单，但是背后却隐藏了多种多样的算法与思想。一个算法的好坏是通过 时间复杂度 与 空间复杂度 来衡量的。简单来说，时间复">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="https://user-gold-cdn.xitu.io/2019/7/2/16bb2880dc1ebaac?imageslim">
 <meta property="og:image" content="https://user-gold-cdn.xitu.io/2019/7/8/16bcf4425ac4d235?imageslim">
 <meta property="og:image" content="https://user-gold-cdn.xitu.io/2019/7/8/16bcf447e9291320?imageslim">
 <meta property="og:image" content="https://user-gold-cdn.xitu.io/2019/7/2/16bb288163c5be34?imageslim">
 <meta property="og:image" content="https://user-gold-cdn.xitu.io/2019/7/2/16bb288174479a44?imageslim">
 <meta property="og:image" content="http://yoursite.com/.com//pow.svg">
-<meta property="og:updated_time" content="2019-09-29T08:04:51.200Z">
+<meta property="og:updated_time" content="2020-03-21T02:33:55.997Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="排序和递归">
 <meta name="twitter:description" content="在生活中，我们离不开排序。例如体育课上按身高排的队；又如考试过后按成绩排的名次。在编程中也是如此，例如当开发一个学生管理系统，需要按照学好从小到大进行排序；开发一个平台，需要把同类商品按价格从高到低排序。（当然，一般前端不负责处理业务逻辑。）由此可见，排序无处不在。排序看似简单，但是背后却隐藏了多种多样的算法与思想。一个算法的好坏是通过 时间复杂度 与 空间复杂度 来衡量的。简单来说，时间复">
-<meta name="twitter:image" content="https://user-gold-cdn.xitu.io/2019/7/2/16bb2880dc1ebaac?imageslim">
+<meta name="twitter:image" content="https://user-gold-cdn.xitu.io/2019/7/8/16bcf4425ac4d235?imageslim">
 
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
@@ -266,7 +265,6 @@
 <li>持续每次对越来越少的元素重复上面的步骤，直到没有任何一对数字需要比较。</li>
 <li>之所以叫冒泡排序，每一轮两两比较之后，都会冒出一个本轮最大的数，将其移动到本轮尾部。</li>
 </ol>
-<p><img src="https://user-gold-cdn.xitu.io/2019/7/2/16bb2880dc1ebaac?imageslim" alt></p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 需要几个轮次 6个数排序 最大需要5轮</span></span><br><span class="line"><span class="comment">// 外层循环控制轮次</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">1</span>; i &lt; arr.length; i++) &#123;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">var</span> j = <span class="number">0</span>; j &lt; arr.length - i; j++) &#123;</span><br><span class="line">		<span class="comment">// 经过这样for循环,我们能找到本轮最大的数,并排在本轮尾部</span></span><br><span class="line">		<span class="keyword">if</span> (arr[j] &gt; arr[j + <span class="number">1</span>]) &#123;</span><br><span class="line">			<span class="comment">// 交换位置</span></span><br><span class="line">			<span class="keyword">var</span> temp = arr[j];</span><br><span class="line">			arr[j] = arr[j + <span class="number">1</span>];</span><br><span class="line">			arr[j + <span class="number">1</span>] = temp;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(arr); <span class="comment">// [1, 5, 12, 32, 40, 41]</span></span><br></pre></td></tr></table></figure>
 
 <h3 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h3><p>选择排序是一种简单直观的排序算法。它的工作原理是每一次从待排序的数据元素中选出最小（或最大）的一个元素，存放在序列的起始位置，然后，再从剩余未排序元素中继续寻找最小（大）元素，然后放到已排序序列的末尾。以此类推，直到全部待排序的数据元素排完。</p>
@@ -358,7 +356,7 @@
         <p><span>Title:</span><a href="/2019/09/29/排序和递归算法/">排序和递归</a></p>
         <p><span>Author:</span><a href="/" title="Back to Homepage">Mr.Huang</a></p>
         <p><span>Created:</span>2019-09-29, 15:59:01</p>
-        <p><span>Updated:</span>2019-09-29, 16:04:51</p>
+        <p><span>Updated:</span>2020-03-21, 10:33:55</p>
         <p>
             <span>Full URL:</span><a class="post-url" href="/2019/09/29/排序和递归算法/" title="排序和递归">http://yoursite.com/2019/09/29/排序和递归算法/</a>
             <span class="copy-path" data-clipboard-text="From http://yoursite.com/2019/09/29/排序和递归算法/　　By Mr.Huang" title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
@@ -381,8 +379,8 @@
         
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2019/09/27/冒泡排序和选择排序/">
-                    JS必会的两种排序方法
+                <a href="/2019/09/24/CSS3实现立方体/">
+                    CSS3实现正方体效果
                 </a>
             </div>
         
@@ -458,13 +456,13 @@
         <a title="Mini Archives"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2019/09/27/冒泡排序和选择排序/" title="Next: JS必会的两种排序方法">
+            <a href="/2019/09/24/CSS3实现立方体/" title="Next: CSS3实现正方体效果">
                 <i class="fa fa-angle-right"></i>
             </a>
         
     </div>
 
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2020/03/07/upload上传/">upload</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/25/get post/">get和post</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/21/双向数据绑定/">vue双向数据绑定</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/16/webpack/">webpack</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/14/vue路由钩子函数/">vue路由钩子函数</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/14/存储以及cookie/">localStorage ,sessionStorage ,Cookie</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/08/登录权限验证/">登录权限验证</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/07/跨域处理/">跨域</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/06/手动封装ajax/">ajax</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/06/什么是原型链/">原型链?</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/06/最简单的双向数据绑定/">最简单的双向数据绑定</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/01/02/js总结/">js</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/12/25/vue.总结/">初始vue</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/12/25/初始小程序/">初始小程序</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/10/29/滚动到底部/">滚动到底部</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/10/12/Each/">Each</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/10/12/jq中target/">事件对象/阻止冒泡和默认</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/10/12/jquery基本知识总结/">jQuery基础知识</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/10/10/基本数据类型和引用数据类型/">JS基本数据类型和引用数据类型</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/29/排序和递归算法/">排序和递归</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/27/冒泡排序和选择排序/">JS必会的两种排序方法</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/24/CSS3实现立方体/">CSS3实现正方体效果</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/24/CSS3/">CSS3</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/21/vue传值/">vue</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/20/git/">git如何上传到github</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/19/hover/">hover的一些微小效果</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/18/base/">关于HTML的基本知识</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/07/21/what/">什么是HTML</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2020/03/07/upload上传/">upload</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/25/get post/">get和post</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/21/双向数据绑定/">vue双向数据绑定</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/16/webpack/">webpack</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/14/vue路由钩子函数/">vue路由钩子函数</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/14/存储以及cookie/">localStorage ,sessionStorage ,Cookie</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/08/登录权限验证/">登录权限验证</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/07/跨域处理/">跨域</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/06/手动封装ajax/">ajax</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/06/什么是原型链/">原型链?</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/06/最简单的双向数据绑定/">最简单的双向数据绑定</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/01/02/js总结/">js</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/12/25/vue.总结/">初始vue</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/12/25/初始小程序/">初始小程序</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/10/29/滚动到底部/">滚动到底部</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/10/12/Each/">Each</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/10/12/jq中target/">事件对象/阻止冒泡和默认</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/10/12/jquery基本知识总结/">jQuery基础知识</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/10/10/基本数据类型和引用数据类型/">JS基本数据类型和引用数据类型</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/29/排序和递归算法/">排序和递归</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/24/CSS3实现立方体/">CSS3实现正方体效果</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/24/CSS3/">CSS3</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/21/vue传值/">vue</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/20/git/">git如何上传到github</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/19/hover/">hover的一些微小效果</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/18/base/">关于HTML的基本知识</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/07/21/what/">什么是HTML</a></li></ul>
 
 
 
