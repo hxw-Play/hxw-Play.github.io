@@ -15,17 +15,17 @@
 
 
 
-<meta name="description" content="JS中的forEach和jQuery的each的用法">
+<meta name="description" content="vue中.sync的用法">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Each">
-<meta property="og:url" content="http://yoursite.com/2019/10/12/Each/index.html">
+<meta property="og:title" content="vue">
+<meta property="og:url" content="http://yoursite.com/2021/01/30/vue中.sync的用法/index.html">
 <meta property="og:site_name" content="个人博客">
-<meta property="og:description" content="JS中的forEach和jQuery的each的用法">
+<meta property="og:description" content="vue中.sync的用法">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-10-14T04:08:57.897Z">
+<meta property="og:updated_time" content="2021-01-30T03:55:17.167Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Each">
-<meta name="twitter:description" content="JS中的forEach和jQuery的each的用法">
+<meta name="twitter:title" content="vue">
+<meta name="twitter:description" content="vue中.sync的用法">
 
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
@@ -57,7 +57,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>Each | 个人博客</title>
+<title>vue | 个人博客</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -204,11 +204,11 @@
     </div>
     <link class="menu-list" tags="Tags" friends="Friends" about="About Me"/>
 </nav>
-      <div class="body-wrap"><article id="post-Each" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-vue中.sync的用法" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2019/10/12/Each/" class="article-date">
-      <time datetime="2019-10-12T13:02:35.990Z" itemprop="datePublished">2019-10-12</time>
+      <a href="/2021/01/30/vue中.sync的用法/" class="article-date">
+      <time datetime="2021-01-30T03:55:30.711Z" itemprop="datePublished">2021-01-30</time>
 </a>
 
 
@@ -223,7 +223,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Each
+      vue
     </h1>
   
 
@@ -240,9 +240,10 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>JS中的forEach和jQuery的each的用法</p>
+        <p>vue中.sync的用法</p>
 <a id="more"></a>
-<h4 id="JS中的forEach和jQuery的each"><a href="#JS中的forEach和jQuery的each" class="headerlink" title="JS中的forEach和jQuery的each"></a>JS中的forEach和jQuery的each</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"> </span><br><span class="line">   &lt;script&gt;</span><br><span class="line">   var arr = [&apos;nihao&apos;, &apos;lis&apos;, &apos;zhangsa&apos;];</span><br><span class="line">   arr.forEach(function(item,idex,array)&#123;</span><br><span class="line">   item====&gt;指的是arr中的第一个元素的值</span><br><span class="line">   index====&gt;知道是数组的下标</span><br><span class="line">   array====&gt;指的是数组arr</span><br><span class="line">   &#125;)</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">   &lt;ul&gt;</span><br><span class="line">       &lt;li style=&quot;color: green;&quot;&gt;li1&lt;/li&gt;</span><br><span class="line">       &lt;li style=&quot;color: red;&quot;&gt;li2&lt;/li&gt;</span><br><span class="line">       &lt;li&gt;li3&lt;/li&gt;</span><br><span class="line">       &lt;li&gt;li4&lt;/li&gt;</span><br><span class="line">       &lt;li&gt;li5&lt;/li&gt;</span><br><span class="line">   &lt;/ul&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">   $(&apos;li&apos;).each(function(index,ele)&#123;</span><br><span class="line">      console.log(&apos;ele=====&gt;&apos;, ele); //这里的ele是dom对象</span><br><span class="line">      if (index == 3) &#123;</span><br><span class="line">               $(ele).click(function () &#123;</span><br><span class="line">                   console.log($(this).css(&apos;color&apos;)); 获取index为3的color值</span><br><span class="line">               &#125;)</span><br><span class="line">           &#125; else &#123;</span><br><span class="line">               $(ele).click(function () &#123;</span><br><span class="line">                   console.log($(this).css(&apos;height&apos;));</span><br><span class="line"></span><br><span class="line">               &#125;)</span><br><span class="line">           &#125;</span><br><span class="line">   &#125;)</span><br><span class="line"></span><br><span class="line">       // 大部分情况下是不需要使用 each 方法的，因为 jQuery 的隐式迭代特性。</span><br><span class="line">       // 如果要对每个元素做不同的处理，这时候就用到了 each 方法</span><br><span class="line">       // 作用：遍历 jQuery 对象集合，为每个匹配的元素执行一个函数</span><br><span class="line">       // $(selector).each(function(index,element)&#123;&#125;);</span><br><span class="line">       // Element 是一个 js 对象，需要转换成 jquery 对象</span><br></pre></td></tr></table></figure>
+
+<h3 id="sync的用法"><a href="#sync的用法" class="headerlink" title=".sync的用法"></a>.sync的用法</h3><pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=&quot;app&quot;&gt;</span><br><span class="line">    &lt;h1 v-show=&quot;isShow&quot;&gt;我是父组件&lt;/h1&gt;</span><br><span class="line">    &lt;button&gt;点我&lt;/button&gt;</span><br><span class="line">    &lt;br&gt;</span><br><span class="line">    &lt;br&gt;</span><br><span class="line">    &lt;child :show.sync=&apos;isShow&apos;&gt;&lt;/child&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;script src=&quot;./js/vue.min.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">    Vue.component(&apos;child&apos;, &#123;</span><br><span class="line">        props: &#123;</span><br><span class="line">            show: &#123;</span><br><span class="line">                type: Boolean,</span><br><span class="line">                default: false</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;,</span><br><span class="line">        template: `</span><br><span class="line">        &lt;div&gt;</span><br><span class="line">            &lt;div&gt;我是子组件&lt;/div&gt;</span><br><span class="line">            &lt;h1&gt;&#123;&#123;  show &#125;&#125;&lt;/h1&gt;</span><br><span class="line">            &lt;button @click=&quot;handleClick&quot;&gt;.sync改变父组件的状态&lt;/button&gt;&lt;/div&gt;</span><br><span class="line">           </span><br><span class="line">        `,</span><br><span class="line">        methods: &#123;</span><br><span class="line">            handleClick() &#123;</span><br><span class="line">                this.$emit(&apos;update:show&apos;, !this.show)</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">    var vm = new Vue(&#123;</span><br><span class="line">        el: &apos;#app&apos;,</span><br><span class="line">        data() &#123;</span><br><span class="line">            return &#123;</span><br><span class="line">                isShow: true</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;,</span><br><span class="line">    &#125;)</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure></code></pre>
       
     </div>
     
@@ -250,13 +251,13 @@
   
     
     <div class="copyright">
-        <p><span>Title:</span><a href="/2019/10/12/Each/">Each</a></p>
+        <p><span>Title:</span><a href="/2021/01/30/vue中.sync的用法/">vue</a></p>
         <p><span>Author:</span><a href="/" title="Back to Homepage">Mr.Huang</a></p>
-        <p><span>Created:</span>2019-10-12, 21:02:35</p>
-        <p><span>Updated:</span>2019-10-14, 12:08:57</p>
+        <p><span>Created:</span>2021-01-30, 11:55:30</p>
+        <p><span>Updated:</span>2021-01-30, 11:55:17</p>
         <p>
-            <span>Full URL:</span><a class="post-url" href="/2019/10/12/Each/" title="Each">http://yoursite.com/2019/10/12/Each/</a>
-            <span class="copy-path" data-clipboard-text="From http://yoursite.com/2019/10/12/Each/　　By Mr.Huang" title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
+            <span>Full URL:</span><a class="post-url" href="/2021/01/30/vue中.sync的用法/" title="vue">http://yoursite.com/2021/01/30/vue中.sync的用法/</a>
+            <span class="copy-path" data-clipboard-text="From http://yoursite.com/2021/01/30/vue中.sync的用法/　　By Mr.Huang" title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -268,16 +269,10 @@
 
     <nav id="article-nav">
         
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2019/10/29/滚动到底部/">
-                    滚动到底部
-                </a>
-            </div>
-        
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2019/10/12/jq中target/">
-                    事件对象/阻止冒泡和默认
+                <a href="/2021/01/26/react学习/">
+                    react的基础学习
                 </a>
             </div>
         
@@ -289,7 +284,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#JS中的forEach和jQuery的each"><span class="toc-number">1.</span> <span class="toc-text">JS中的forEach和jQuery的each</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#sync的用法"><span class="toc-number">1.</span> <span class="toc-text">.sync的用法</span></a></li></ol>
         
     </div>
     <style>
@@ -325,7 +320,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"Each　| 个人博客　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"vue　| 个人博客　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -345,15 +340,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2019/10/29/滚动到底部/" title="Pre: 滚动到底部">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="Back to Homepage"><i class="fa fa-home"></i></a>
         
 
         <a title="Mini Archives"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2019/10/12/jq中target/" title="Next: 事件对象/阻止冒泡和默认">
+            <a href="/2021/01/26/react学习/" title="Next: react的基础学习">
                 <i class="fa fa-angle-right"></i>
             </a>
         
