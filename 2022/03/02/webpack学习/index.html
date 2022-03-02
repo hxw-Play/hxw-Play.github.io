@@ -15,17 +15,17 @@
 
 
 
-<meta name="description" content="webpack 基本配置 1234567891011121314151617181920212223242526272829303132333435363738394041424344  mode: &amp;quot;development&amp;quot;,  entry: &amp;quot;./src/main.js&amp;quot;,  devtool:false,  output: &amp;#123;    filen">
+<meta name="description" content="webpack的基本配置">
 <meta property="og:type" content="article">
-<meta property="og:title" content="个人博客">
+<meta property="og:title" content="webpack">
 <meta property="og:url" content="http://yoursite.com/2022/03/02/webpack学习/index.html">
 <meta property="og:site_name" content="个人博客">
-<meta property="og:description" content="webpack 基本配置 1234567891011121314151617181920212223242526272829303132333435363738394041424344  mode: &amp;quot;development&amp;quot;,  entry: &amp;quot;./src/main.js&amp;quot;,  devtool:false,  output: &amp;#123;    filen">
+<meta property="og:description" content="webpack的基本配置">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2022-03-02T01:59:39.990Z">
+<meta property="og:updated_time" content="2022-03-02T02:03:49.551Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="个人博客">
-<meta name="twitter:description" content="webpack 基本配置 1234567891011121314151617181920212223242526272829303132333435363738394041424344  mode: &amp;quot;development&amp;quot;,  entry: &amp;quot;./src/main.js&amp;quot;,  devtool:false,  output: &amp;#123;    filen">
+<meta name="twitter:title" content="webpack">
+<meta name="twitter:description" content="webpack的基本配置">
 
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
@@ -57,7 +57,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>个人博客</title>
+<title>webpack | 个人博客</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -219,10 +219,32 @@
       <input type="hidden" class="isFancy" />
     
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      webpack
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+
+        
+        <div class="clearfix"></div>
+      </div>
+      
+    
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h2 id="webpack"><a href="#webpack" class="headerlink" title="webpack"></a>webpack</h2><ul>
+        <p>webpack的基本配置</p>
+<a id="more"></a>
+
+
+<h3 id="webpack"><a href="#webpack" class="headerlink" title="webpack"></a>webpack</h3><ul>
 <li><p>基本配置</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line">  mode: &quot;development&quot;,</span><br><span class="line">  entry: &quot;./src/main.js&quot;,</span><br><span class="line">  devtool:false,</span><br><span class="line">  output: &#123;</span><br><span class="line">    filename: &quot;js/[name]bundle.js&quot;,</span><br><span class="line">     //chunkFilename我的理解是未被列在entry中，却又需要被打包出来的文件命名配  置。比如异步加载</span><br><span class="line">    chunkFilename:&apos;[name].[hash:6].chunk.js&apos;, </span><br><span class="line">    path: path.resolve(__dirname, &quot;./build&quot;),</span><br><span class="line">    publicPath:&apos;./&apos;,</span><br><span class="line">  &#125;,</span><br><span class="line">  resolve:&#123;</span><br><span class="line">    extensions:[&apos;.js&apos;,&apos;.json&apos;,&apos;.wasm&apos;,&apos;.mjs&apos;],   //处理不带引入文件后缀问题</span><br><span class="line">    alias:&#123;</span><br><span class="line">      &apos;@&apos;:path.resolve(__dirname,&apos;./src&apos;)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">   externals: &#123;</span><br><span class="line">    //可以用cdn 引入Vue Vue-router  去除外部的inport Vue from &apos;vue&apos; 以及 Vue.use(****)</span><br><span class="line">    vue: &quot;Vue&quot;,</span><br><span class="line">    &quot;vue-router&quot;: &quot;VueRouter&quot;,</span><br><span class="line">  &#125;,</span><br><span class="line">  optimization:&#123;     </span><br><span class="line">    minimize: true,       //去除webpack自带的打包.txt后缀</span><br><span class="line">    minimizer: [new TerserPlugin(),new HtmlMinimizerPlugin()],</span><br><span class="line">    // minimize:true,</span><br><span class="line">    // minimizer:[</span><br><span class="line">    //   new TerserPlugin(&#123;</span><br><span class="line">    //     extractComponents:false</span><br><span class="line">    //   &#125;)</span><br><span class="line">    // ],</span><br><span class="line">    splitChunks:&#123;</span><br><span class="line">      chunks:&apos;all&apos;,</span><br><span class="line">      // minChunks:1,</span><br><span class="line">      cacheGroups:&#123;</span><br><span class="line">        vendor:&#123;</span><br><span class="line">          test:/[\\/]node_modules[\\/]/,</span><br><span class="line">          filename:&quot;[id]_vendor.js&quot;</span><br><span class="line">        &#125;,</span><br><span class="line">        default:&#123;</span><br><span class="line">          filename:&apos;common_[id].js&apos;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
 </li>
@@ -249,12 +271,12 @@ url-loader        //用于处理把文件多少的转化为base64格式
   
     
     <div class="copyright">
-        <p><span>Title:</span><a href="/2022/03/02/webpack学习/"></a></p>
+        <p><span>Title:</span><a href="/2022/03/02/webpack学习/">webpack</a></p>
         <p><span>Author:</span><a href="/" title="Back to Homepage">Mr.Huang</a></p>
         <p><span>Created:</span>2022-03-02, 10:00:04</p>
-        <p><span>Updated:</span>2022-03-02, 09:59:39</p>
+        <p><span>Updated:</span>2022-03-02, 10:03:49</p>
         <p>
-            <span>Full URL:</span><a class="post-url" href="/2022/03/02/webpack学习/" title="">http://yoursite.com/2022/03/02/webpack学习/</a>
+            <span>Full URL:</span><a class="post-url" href="/2022/03/02/webpack学习/" title="webpack">http://yoursite.com/2022/03/02/webpack学习/</a>
             <span class="copy-path" data-clipboard-text="From http://yoursite.com/2022/03/02/webpack学习/　　By Mr.Huang" title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
@@ -282,7 +304,7 @@ url-loader        //用于处理把文件多少的转化为base64格式
     <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#webpack"><span class="toc-number">1.</span> <span class="toc-text">webpack</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#webpack"><span class="toc-number">1.</span> <span class="toc-text">webpack</span></a></li></ol>
         
     </div>
     <style>
@@ -318,7 +340,7 @@ url-loader        //用于处理把文件多少的转化为base64格式
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"　| 个人博客　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"webpack　| 个人博客　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -350,7 +372,7 @@ url-loader        //用于处理把文件多少的转化为base64格式
         
     </div>
 
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2022/03/02/webpack学习/">webpack学习</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/12/28/浏览器缓存/">浏览器的缓存</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/12/23/Vue-Video-发布订阅/">一个关于video播放暂停的发布订阅模式</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/12/23/Vue-count-down/">一个倒计时组件</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/11/04/Vue-use/">Vue.use()的理解</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/11/02/vue-extend/">Vue.extend的理解</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/10/25/百度地图/">百度地图</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/01/30/vue中.sync的用法/">vue</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/01/26/react学习/">react的基础学习</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/10/09/笔记/">总结</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/08/29/后台管理系统权限/">elementUI + vue全家桶  权限</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/03/07/upload上传/">upload</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/21/双向数据绑定/">vue双向数据绑定</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/16/webpack/">webpack</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/14/vue路由钩子函数/">vue路由钩子函数</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/14/存储以及cookie/">localStorage ,sessionStorage ,Cookie</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/08/登录权限验证/">登录权限验证</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/07/跨域处理/">跨域</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/06/手动封装ajax/">ajax</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/06/什么是原型链/">原型链?</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/06/最简单的双向数据绑定/">最简单的双向数据绑定</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/01/02/js总结/">js</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/10/29/滚动到底部/">滚动到底部</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/29/排序和递归算法/">排序和递归</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/24/CSS3/">CSS3</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/21/vue传值/">vue</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/20/git/">git如何上传到github</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/18/base/">关于HTML的基本知识</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2022/03/02/webpack学习/">webpack</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/12/28/浏览器缓存/">浏览器的缓存</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/12/23/Vue-Video-发布订阅/">一个关于video播放暂停的发布订阅模式</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/12/23/Vue-count-down/">一个倒计时组件</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/11/04/Vue-use/">Vue.use()的理解</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/11/02/vue-extend/">Vue.extend的理解</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/10/25/百度地图/">百度地图</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/01/30/vue中.sync的用法/">vue</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/01/26/react学习/">react的基础学习</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/10/09/笔记/">总结</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/08/29/后台管理系统权限/">elementUI + vue全家桶  权限</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/03/07/upload上传/">upload</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/21/双向数据绑定/">vue双向数据绑定</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/16/webpack/">webpack</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/14/vue路由钩子函数/">vue路由钩子函数</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/14/存储以及cookie/">localStorage ,sessionStorage ,Cookie</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/08/登录权限验证/">登录权限验证</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/07/跨域处理/">跨域</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/06/手动封装ajax/">ajax</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/06/什么是原型链/">原型链?</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/06/最简单的双向数据绑定/">最简单的双向数据绑定</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/01/02/js总结/">js</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/10/29/滚动到底部/">滚动到底部</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/29/排序和递归算法/">排序和递归</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/24/CSS3/">CSS3</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/21/vue传值/">vue</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/20/git/">git如何上传到github</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/18/base/">关于HTML的基本知识</a></li></ul>
 
 
 
