@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.9.0">
+
+    <!--[if lt IE 9]>
+        <style>body {display: none; background: none !important} </style>
+        <meta http-equiv="Refresh" Content="0; url=//outdatedbrowser.com/" />
+    <![endif]-->
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="author" content="Mr.Huang">
+
+
+
+<meta name="description" content="简单的大文件上传">
+<meta property="og:type" content="article">
+<meta property="og:title" content="简单的大文件上传">
+<meta property="og:url" content="http://yoursite.com/2022/03/18/简单的大文件上传/index.html">
+<meta property="og:site_name" content="个人博客">
+<meta property="og:description" content="简单的大文件上传">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2022-03-18T03:40:32.013Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="简单的大文件上传">
+<meta name="twitter:description" content="简单的大文件上传">
+
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+
+    <link rel="alternate" href="/atom.xml" title="个人博客" type="application/atom+xml">
+
+
+
+    <link rel="shortcut icon" href="/favicon.png">
+
+
+
+    <link href="//cdn.bootcss.com/animate.css/3.5.1/animate.min.css" rel="stylesheet">
+
+
+
+    <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
+
+
+
+    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+    <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+
+<link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+
+<title>简单的大文件上传 | 个人博客</title>
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+<script>
+    var yiliaConfig = {
+        fancybox: true,
+        animate: true,
+        isHome: false,
+        isPost: true,
+        isArchive: false,
+        isTag: false,
+        isCategory: false,
+        fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
+        scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
+        search: true
+    }
+</script>
+
+
+    <script> yiliaConfig.jquery_ui = [false]; </script>
+
+
+
+    <script> yiliaConfig.rootUrl = "\/";</script>
+
+
+
+
+
+
+</head></html>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            <img src="/img/avatar.png" class="animated zoomIn">
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">Mr.Huang</a></h1>
+        </hgroup>
+
+        
+        <p class="header-subtitle">君子好学,自强不息</p>
+        
+
+        
+            <form id="search-form">
+            <input type="text" id="local-search-input" name="q" placeholder="search..." class="search form-control" autocomplete="off" autocorrect="off" searchonload="false" />
+            <i class="fa fa-times" onclick="resetSearch()"></i>
+            </form>
+            <div id="local-search-result"></div>
+            <p class='no-result'>No results found <i class='fa fa-spinner fa-pulse'></i></p>
+        
+
+
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/">主页</a></li>
+                        
+                            <li><a href="/archives/">所有文章</a></li>
+                        
+                            <li><a href="/tags/">标签云</a></li>
+                        
+                            <li><a href="/about/">关于我</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" href="mailto:123@123.com" title="Email"></a>
+                            
+                                <a class="fa GitHub" href="#" title="GitHub"></a>
+                            
+                                <a class="fa RSS" href="/atom.xml" title="RSS"></a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                
+                
+
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">Mr.Huang</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                <img src="/img/avatar.png" class="animated zoomIn">
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">Mr.Huang</a></h1>
+            </hgroup>
+            
+            <p class="header-subtitle">君子好学,自强不息</p>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/">主页</a></li>
+                
+                    <li><a href="/archives/">所有文章</a></li>
+                
+                    <li><a href="/tags/">标签云</a></li>
+                
+                    <li><a href="/about/">关于我</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" target="_blank" href="mailto:123@123.com" title="Email"></a>
+                            
+                                <a class="fa GitHub" target="_blank" href="#" title="GitHub"></a>
+                            
+                                <a class="fa RSS" target="_blank" href="/atom.xml" title="RSS"></a>
+                            
+                        </ul>
+            </nav>
+        </header>                
+    </div>
+    <link class="menu-list" tags="Tags" friends="Friends" about="About Me"/>
+</nav>
+      <div class="body-wrap"><article id="post-简单的大文件上传" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2022/03/18/简单的大文件上传/" class="article-date">
+      <time datetime="2022-03-18T03:41:03.400Z" itemprop="datePublished">2022-03-18</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      简单的大文件上传
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+
+        
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>简单的大文件上传</p>
+<a id="more"></a>
+<h2 id="简单的大文件上传"><a href="#简单的大文件上传" class="headerlink" title="简单的大文件上传"></a>简单的大文件上传</h2><h3 id="前端html"><a href="#前端html" class="headerlink" title="前端html"></a>前端html</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">  &lt;html lang=&quot;en&quot;&gt;</span><br><span class="line">  &lt;head&gt;</span><br><span class="line">      &lt;meta charset=&quot;UTF-8&quot;&gt;</span><br><span class="line">      &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;</span><br><span class="line">      &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;</span><br><span class="line">      &lt;title&gt;Document&lt;/title&gt;</span><br><span class="line">  &lt;/head&gt;</span><br><span class="line">  &lt;body&gt;</span><br><span class="line">      &lt;progress id=&quot;progress&quot; value=&apos;0&apos;&gt;&lt;/progress&gt;</span><br><span class="line">      &lt;h1&gt;哈哈哈&lt;/h1&gt;</span><br><span class="line">      &lt;input type=&quot;file&quot; name=&quot;uploader&quot; id=&quot;uploader&quot;&gt;</span><br><span class="line">      &lt;p id=&quot;output&quot;&gt;&lt;/p&gt;</span><br><span class="line">      &lt;script src=&quot;https://cdn.bootcdn.net/ajax/libs/crypto-js/4.1.1/crypto-js.min.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">      &lt;script src=&quot;https://cdn.bootcdn.net/ajax/libs/axios/0.21.1/axios.min.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">      &lt;script src=&quot;./index.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">      &lt;/body&gt;</span><br><span class="line">  &lt;/html&gt;</span><br><span class="line">  const uploader = document.getElementById(&quot;uploader&quot;);</span><br><span class="line">  const output = document.getElementById(&quot;output&quot;);</span><br><span class="line">  const progress = document.getElementById(&quot;progress&quot;);</span><br><span class="line">  async function read(file) &#123;</span><br><span class="line">  const reader = new FileReader();</span><br><span class="line">  return new Promise((resolve, reject) =&gt; &#123;</span><br><span class="line">      reader.onload = function () &#123;</span><br><span class="line">      resolve(reader.result);</span><br><span class="line">      &#125;;</span><br><span class="line">      reader.onerror = function () &#123;</span><br><span class="line">      reject(&quot;err&quot;);</span><br><span class="line">      &#125;;</span><br><span class="line">      reader.readAsBinaryString(file);</span><br><span class="line">  &#125;);</span><br><span class="line">  &#125;</span><br><span class="line">  uploader.addEventListener(&quot;change&quot;, async (event) =&gt; &#123;</span><br><span class="line">  const &#123; files &#125; = event.target;</span><br><span class="line">  const [file] = files;</span><br><span class="line">  if (!file) return;</span><br><span class="line">  uploader.value = null;</span><br><span class="line">  const content = await read(file);</span><br><span class="line">  const hash = CryptoJS.MD5(content);</span><br><span class="line">  const &#123; size, name, type &#125; = file;</span><br><span class="line">  progress.max = size;</span><br><span class="line">  const chunkSize = 64 * 1024;</span><br><span class="line">  let uploaded = 0;</span><br><span class="line">  let local = localStorage.getItem(hash);</span><br><span class="line">  if (local) &#123;</span><br><span class="line">      uploaded = Number(local);</span><br><span class="line">  &#125;</span><br><span class="line">  let pool = []; //并发池</span><br><span class="line">  let max = 3; //最大并发量</span><br><span class="line">  while (uploaded &lt; size) &#123;</span><br><span class="line">      const chunk = file.slice(uploaded, uploaded + chunkSize, type);</span><br><span class="line">      const formData = new FormData();</span><br><span class="line">      formData.append(&quot;name&quot;, name);</span><br><span class="line">      formData.append(&quot;type&quot;, type);</span><br><span class="line">      formData.append(&quot;size&quot;, size);</span><br><span class="line">      formData.append(&quot;file&quot;, chunk);</span><br><span class="line">      formData.append(&quot;hash&quot;, hash);</span><br><span class="line">      formData.append(&quot;offset&quot;, uploaded);</span><br><span class="line">      // let task = axios.post(&quot;/api/upload&quot;, formData);</span><br><span class="line">      // task.then((data) =&gt; &#123;</span><br><span class="line"></span><br><span class="line">      //   //请求结束后将该Promise任务从并发池中移除</span><br><span class="line">      //   // let index = pool.findIndex((t) =&gt; t === task);</span><br><span class="line">      //   // pool.splice(index);</span><br><span class="line">      //   pool =  pool.filter((t) =&gt; t != task);</span><br><span class="line">      // &#125;);</span><br><span class="line">      // pool.push(task);</span><br><span class="line">      // console.log(pool.length)</span><br><span class="line">      // await Promise.race(pool);</span><br><span class="line"></span><br><span class="line">      try &#123;</span><br><span class="line">      // await axios.post(&quot;/api/upload&quot;, formData);</span><br><span class="line">      // 上传切片</span><br><span class="line">      let task = axios.post(&quot;/api/upload&quot;, formData);</span><br><span class="line">      task.then((data) =&gt; &#123;</span><br><span class="line">          //请求结束后将该Promise任务从并发池中移除</span><br><span class="line">          let index = pool.findIndex((t) =&gt; t === task);</span><br><span class="line">          pool.splice(index);</span><br><span class="line">      &#125;);</span><br><span class="line">      pool.push(task);</span><br><span class="line">      if (pool.length === max) &#123;</span><br><span class="line">          //每当并发池跑完一个任务，就再塞入一个任务</span><br><span class="line">          await Promise.race(pool);</span><br><span class="line">      &#125;</span><br><span class="line">      &#125; catch (e) &#123;</span><br><span class="line">      output.innerText = &quot;上传失败&quot; + e.message;</span><br><span class="line">      &#125;</span><br><span class="line">      uploaded += chunk.size;</span><br><span class="line">      localStorage.setItem(&quot;hash&quot;, uploaded);</span><br><span class="line">      progress.value = uploaded;</span><br><span class="line">  &#125;</span><br><span class="line">  output.innerText = &quot;上传成功&quot;;</span><br><span class="line">  localStorage.setItem(&quot;hash&quot;, 0);</span><br><span class="line">  &#125;);</span><br></pre></td></tr></table></figure>
+
+<h2 id="后台express"><a href="#后台express" class="headerlink" title="后台express"></a>后台express</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line">const express = require(&quot;express&quot;);</span><br><span class="line">const uploader = require(&quot;express-fileupload&quot;);</span><br><span class="line">const &#123; resolve, extname &#125; = require(&quot;path&quot;);</span><br><span class="line"></span><br><span class="line">const &#123;</span><br><span class="line">promises: &#123; writeFile, appendFile &#125;,</span><br><span class="line">existsSync,</span><br><span class="line">&#125; = require(&quot;fs&quot;);</span><br><span class="line"></span><br><span class="line">const app = express();</span><br><span class="line">const port = 3000;</span><br><span class="line">app.use(express.static(&quot;pubilc&quot;));</span><br><span class="line">app.use(express.json());</span><br><span class="line">app.use(express.urlencoded(&#123; urlencoded: true &#125;));</span><br><span class="line">app.use(uploader());</span><br><span class="line"></span><br><span class="line">app.post(&quot;/api/upload&quot;, async (req, res) =&gt; &#123;</span><br><span class="line">const &#123; name, type, size, offset, hash &#125; = req.body;</span><br><span class="line">// console.log(size);</span><br><span class="line">// console.log(offset);</span><br><span class="line">// console.log(hash);</span><br><span class="line">const &#123; file &#125; = req.files;</span><br><span class="line">const ext = extname(name);</span><br><span class="line">const filename = resolve(__dirname, `./pubilc/$&#123;hash&#125;$&#123;ext&#125;`);</span><br><span class="line"></span><br><span class="line">if (offset) &#123;</span><br><span class="line">    if (!existsSync(filename)) &#123;</span><br><span class="line">    console.log(1111);</span><br><span class="line">    await writeFile(filename, file.data);</span><br><span class="line">    res.send(&#123;</span><br><span class="line">        message: &quot;created&quot;,</span><br><span class="line">    &#125;);</span><br><span class="line">    // res.status(400).send(&#123;</span><br><span class="line">    //   message: &quot;文件不存在&quot;,</span><br><span class="line">    // &#125;);</span><br><span class="line">    return;</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">    await appendFile(filename, file.data);</span><br><span class="line">    res.send(&#123;</span><br><span class="line">        message: &quot;追加&quot;,</span><br><span class="line">    &#125;);</span><br><span class="line">    return;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">&#125;);</span><br><span class="line">app.get(&quot;/api/get&quot;, (req, res) =&gt; &#123;</span><br><span class="line">res.send(&#123;</span><br><span class="line">    msg: &quot;success&quot;,</span><br><span class="line">&#125;);</span><br><span class="line">&#125;);</span><br><span class="line">app.listen(port, () =&gt; &#123;</span><br><span class="line">console.log(&quot;启动express项目&quot;, port);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>Title:</span><a href="/2022/03/18/简单的大文件上传/">简单的大文件上传</a></p>
+        <p><span>Author:</span><a href="/" title="Back to Homepage">Mr.Huang</a></p>
+        <p><span>Created:</span>2022-03-18, 11:41:03</p>
+        <p><span>Updated:</span>2022-03-18, 11:40:32</p>
+        <p>
+            <span>Full URL:</span><a class="post-url" href="/2022/03/18/简单的大文件上传/" title="简单的大文件上传">http://yoursite.com/2022/03/18/简单的大文件上传/</a>
+            <span class="copy-path" data-clipboard-text="From http://yoursite.com/2022/03/18/简单的大文件上传/　　By Mr.Huang" title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>License:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"CC BY-NC-SA 4.0"</a> Keep Link &amp; Author if Distribute.
+        </p>
+    </div>
+
+
+
+    <nav id="article-nav">
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2022/03/18/并发/">
+                    一个简单的上传控制并发
+                </a>
+            </div>
+        
+    </nav>
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+        <strong class="toc-title">Contents</strong>
+        
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#简单的大文件上传"><span class="toc-number">1.</span> <span class="toc-text">简单的大文件上传</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#前端html"><span class="toc-number">1.1.</span> <span class="toc-text">前端html</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#后台express"><span class="toc-number">2.</span> <span class="toc-text">后台express</span></a></li></ol>
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-3 i,
+        .toc-level-3 ol {
+            display: none !important;
+        }
+    </style>
+
+    <input type="button" id="tocButton" value="Hide"  title="Show or Hide Table of Contents">
+
+    <script>
+        yiliaConfig.toc = ["Hide", "Show", !!"false"];
+    </script>
+
+
+
+    
+<div class="share">
+    
+        <div class="bdsharebuttonbox">
+            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
+            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
+            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></i></a>
+        </div>
+        <script>
+            window._bd_share_config={
+                "common":{"bdSnsKey":{},"bdText":"简单的大文件上传　| 个人博客　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
+    
+
+    
+</div>
+
+
+
+
+
+
+
+    
+
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/" title="Back to Homepage"><i class="fa fa-home"></i></a>
+        
+
+        <a title="Mini Archives"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2022/03/18/并发/" title="Next: 一个简单的上传控制并发">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2022/03/18/简单的大文件上传/">简单的大文件上传</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/03/18/并发/">一个简单的上传控制并发</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/03/02/webpack学习/">webpack</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/12/28/浏览器缓存/">浏览器的缓存</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/12/23/Vue-Video-发布订阅/">一个关于video播放暂停的发布订阅模式</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/12/23/Vue-count-down/">一个倒计时组件</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/11/04/Vue-use/">Vue.use()的理解</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/11/02/vue-extend/">Vue.extend的理解</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/10/25/百度地图/">百度地图</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/01/30/vue中.sync的用法/">vue</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/01/26/react学习/">react的基础学习</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/10/09/笔记/">总结</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/08/29/后台管理系统权限/">elementUI + vue全家桶  权限</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/03/07/upload上传/">upload</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/21/双向数据绑定/">vue双向数据绑定</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/14/vue路由钩子函数/">vue路由钩子函数</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/14/存储以及cookie/">localStorage ,sessionStorage ,Cookie</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/08/登录权限验证/">登录权限验证</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/07/跨域处理/">跨域</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/06/手动封装ajax/">ajax</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/06/什么是原型链/">原型链?</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/06/最简单的双向数据绑定/">最简单的双向数据绑定</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/01/02/js总结/">js</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/10/29/滚动到底部/">滚动到底部</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/29/排序和递归算法/">排序和递归</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/24/CSS3/">CSS3</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/21/vue传值/">vue</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/20/git/">git如何上传到github</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/18/base/">关于HTML的基本知识</a></li></ul>
+
+
+
+
+    <script>
+        
+    </script>
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                <i class="fa fa-copyright"></i> 
+                2016-2022 Mr.Huang
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank" title="A fast, simple &amp; powerful blog framework">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="Another simple and elegant theme for Hexo  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" title="Site Visitors"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>| </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit"  title="Page Hits"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+    </div>
+    
+<script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var iPad = window.navigator.userAgent.indexOf('iPad');
+            if (iPad > -1 || $(".left-col").css("display") === "none") {
+                var bgColorList = ["#9db3f4", "#414141", "#e5a859", "#f5dfc6", "#c084a0", "#847e72", "#cd8390", "#996731"];
+                var bgColor = Math.ceil(Math.random() * (bgColorList.length - 1));
+                $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
+            }
+            else {
+                var backgroundnum = 5;
+                var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+                $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
+            }
+        })
+    </script>
+
+
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#" title="Back to Top"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide();" title="Comments"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="Go to Bottom"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    // Open in New Window
+    
+        var oOpenInNew = {
+            
+            
+            
+            
+            
+            
+             archives: ".archive-article-title", 
+             miniArchives: "a.post-list-link", 
+            
+             friends: "#js-friends a", 
+             socail: ".social a" 
+        }
+        for (var x in oOpenInNew) {
+            $(oOpenInNew[x]).attr("target", "_blank");
+        }
+    
+</script>
+
+    <script>
+        var originTitle = document.title;
+        var titleTime;
+        document.addEventListener("visibilitychange", function() {
+            if (document.hidden) {
+                document.title = "(つェ⊂) 我藏好了哦~ " + originTitle;
+                clearTimeout(titleTime);
+            }
+            else {
+                document.title = "(*´∇｀*) 被你发现啦~ " + originTitle;
+                titleTime = setTimeout(function() {
+                    document.title = originTitle;
+                }, 2000);
+            }
+        })
+    </script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+  </div>
+</body>
+</html>
