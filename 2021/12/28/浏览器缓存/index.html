@@ -15,17 +15,17 @@
 
 
 
-<meta name="description" content="浏览器的强缓存和协商缓存">
+<meta name="description" content="浏览器的强缓存和协商缓存 vue-cli缓存策略">
 <meta property="og:type" content="article">
 <meta property="og:title" content="浏览器的缓存">
 <meta property="og:url" content="http://yoursite.com/2021/12/28/浏览器缓存/index.html">
 <meta property="og:site_name" content="个人博客">
-<meta property="og:description" content="浏览器的强缓存和协商缓存">
+<meta property="og:description" content="浏览器的强缓存和协商缓存 vue-cli缓存策略">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2021-12-28T02:39:20.318Z">
+<meta property="og:updated_time" content="2022-03-30T02:47:23.803Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="浏览器的缓存">
-<meta name="twitter:description" content="浏览器的强缓存和协商缓存">
+<meta name="twitter:description" content="浏览器的强缓存和协商缓存 vue-cli缓存策略">
 
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
@@ -240,7 +240,7 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>浏览器的强缓存和协商缓存</p>
+        <p>浏览器的强缓存和协商缓存 vue-cli缓存策略  </p>
 <a id="more"></a>
 
 <h3 id="浏览器的缓存-html-css-js-png-jpg………"><a href="#浏览器的缓存-html-css-js-png-jpg………" class="headerlink" title="浏览器的缓存(html,css,js,png,jpg………)"></a>浏览器的缓存(html,css,js,png,jpg………)</h3><ul>
@@ -266,6 +266,10 @@
 
 </li>
 </ul>
+<h3 id="vue-cli缓存策略"><a href="#vue-cli缓存策略" class="headerlink" title="vue-cli缓存策略"></a>vue-cli缓存策略</h3><ul>
+<li>由于打包后的js、css和图片，一般名称都带有hash值，名称中的hash变了，自然会拉取新文件，所以我们可以将这类文件设置为强制缓存，只要文件名不变，就一直缓存，比如缓存100天或者一年。</li>
+<li>而html文件则不能设为强制缓存，一般html名称是没法带hash值的，所以html如果设置了强制缓存，则永远也没法更新，html不更新，其引用的js、css等名称也不会更新，则整个服务都没有更新，只能让用户清除缓存了。所以针对html文件，我们可以设置协商缓存或者直接不使用缓存，本身html文件都比较小，我是直接使用了不缓存</li>
+</ul>
 
       
     </div>
@@ -277,7 +281,7 @@
         <p><span>Title:</span><a href="/2021/12/28/浏览器缓存/">浏览器的缓存</a></p>
         <p><span>Author:</span><a href="/" title="Back to Homepage">Mr.Huang</a></p>
         <p><span>Created:</span>2021-12-28, 10:39:40</p>
-        <p><span>Updated:</span>2021-12-28, 10:39:20</p>
+        <p><span>Updated:</span>2022-03-30, 10:47:23</p>
         <p>
             <span>Full URL:</span><a class="post-url" href="/2021/12/28/浏览器缓存/" title="浏览器的缓存">http://yoursite.com/2021/12/28/浏览器缓存/</a>
             <span class="copy-path" data-clipboard-text="From http://yoursite.com/2021/12/28/浏览器缓存/　　By Mr.Huang" title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
@@ -313,7 +317,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#浏览器的缓存-html-css-js-png-jpg………"><span class="toc-number">1.</span> <span class="toc-text">浏览器的缓存(html,css,js,png,jpg………)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#基于-koa-实现的缓存策略"><span class="toc-number">2.</span> <span class="toc-text">基于 koa 实现的缓存策略</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#浏览器的缓存-html-css-js-png-jpg………"><span class="toc-number">1.</span> <span class="toc-text">浏览器的缓存(html,css,js,png,jpg………)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#基于-koa-实现的缓存策略"><span class="toc-number">2.</span> <span class="toc-text">基于 koa 实现的缓存策略</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#vue-cli缓存策略"><span class="toc-number">3.</span> <span class="toc-text">vue-cli缓存策略</span></a></li></ol>
         
     </div>
     <style>
@@ -383,7 +387,7 @@
         
     </div>
 
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2022/03/18/简单的大文件上传/">简单的大文件上传</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/03/18/并发/">一个简单的上传控制并发</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/03/02/webpack学习/">webpack</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/12/28/浏览器缓存/">浏览器的缓存</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/12/23/Vue-Video-发布订阅/">一个关于video播放暂停的发布订阅模式</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/12/23/Vue-count-down/">一个倒计时组件</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/11/04/Vue-use/">Vue.use()的理解</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/11/02/vue-extend/">Vue.extend的理解</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/10/25/百度地图/">百度地图</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/01/30/vue中.sync的用法/">vue</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/01/26/react学习/">react的基础学习</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/10/09/笔记/">总结</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/08/29/后台管理系统权限/">elementUI + vue全家桶  权限</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/03/07/upload上传/">upload</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/21/双向数据绑定/">vue双向数据绑定</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/14/vue路由钩子函数/">vue路由钩子函数</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/14/存储以及cookie/">localStorage ,sessionStorage ,Cookie</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/08/登录权限验证/">登录权限验证</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/07/跨域处理/">跨域</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/06/手动封装ajax/">ajax</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/06/什么是原型链/">原型链?</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/06/最简单的双向数据绑定/">最简单的双向数据绑定</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/01/02/js总结/">js</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/10/29/滚动到底部/">滚动到底部</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/29/排序和递归算法/">排序和递归</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/24/CSS3/">CSS3</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/21/vue传值/">vue</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/20/git/">git如何上传到github</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/18/base/">关于HTML的基本知识</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2022/05/24/uniapp自定义导航栏/">uniapp自定义导航栏</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/03/18/简单的大文件上传/">简单的大文件上传</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/03/18/并发/">一个简单的上传控制并发</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/03/02/webpack学习/">webpack</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/12/28/浏览器缓存/">浏览器的缓存</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/12/23/Vue-Video-发布订阅/">一个关于video播放暂停的发布订阅模式</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/12/23/Vue-count-down/">一个倒计时组件</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/11/04/Vue-use/">Vue.use()的理解</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/11/02/vue-extend/">Vue.extend的理解</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/10/25/百度地图/">百度地图</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/01/30/vue中.sync的用法/">vue</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/01/26/react学习/">react的基础学习</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/10/09/笔记/">总结</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/08/29/后台管理系统权限/">elementUI + vue全家桶  权限</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/03/07/upload上传/">upload</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/21/双向数据绑定/">vue双向数据绑定</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/14/vue路由钩子函数/">vue路由钩子函数</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/14/存储以及cookie/">localStorage ,sessionStorage ,Cookie</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/08/登录权限验证/">登录权限验证</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/07/跨域处理/">跨域</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/06/手动封装ajax/">ajax</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/06/什么是原型链/">原型链?</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/06/最简单的双向数据绑定/">最简单的双向数据绑定</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/01/02/js总结/">js</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/10/29/滚动到底部/">滚动到底部</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/29/排序和递归算法/">排序和递归</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/24/CSS3/">CSS3</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/21/vue传值/">vue</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/20/git/">git如何上传到github</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/18/base/">关于HTML的基本知识</a></li></ul>
 
 
 
