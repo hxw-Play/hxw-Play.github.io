@@ -15,17 +15,17 @@
 
 
 
-<meta name="description" content="各种活动页面都会有倒计时功能,记录一下">
+<meta name="description" content="websocket的基本事件有onopen、onmessage、onerror、onclose这四个事件，onopen是连接已打开，且可以通信，onmessage是收到消息，onerror是websocket发生错误，onclose是websocket连接关闭。在这以上的四个事件中，我们做各种事件处理">
 <meta property="og:type" content="article">
-<meta property="og:title" content="一个倒计时组件">
-<meta property="og:url" content="http://yoursite.com/2021/12/23/Vue-count-down/index.html">
+<meta property="og:title" content="websocket断线重连机制">
+<meta property="og:url" content="http://yoursite.com/2022/06/22/websocket断线重连/index.html">
 <meta property="og:site_name" content="个人博客">
-<meta property="og:description" content="各种活动页面都会有倒计时功能,记录一下">
+<meta property="og:description" content="websocket的基本事件有onopen、onmessage、onerror、onclose这四个事件，onopen是连接已打开，且可以通信，onmessage是收到消息，onerror是websocket发生错误，onclose是websocket连接关闭。在这以上的四个事件中，我们做各种事件处理">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2021-12-23T03:07:39.460Z">
+<meta property="og:updated_time" content="2022-06-22T06:10:16.418Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="一个倒计时组件">
-<meta name="twitter:description" content="各种活动页面都会有倒计时功能,记录一下">
+<meta name="twitter:title" content="websocket断线重连机制">
+<meta name="twitter:description" content="websocket的基本事件有onopen、onmessage、onerror、onclose这四个事件，onopen是连接已打开，且可以通信，onmessage是收到消息，onerror是websocket发生错误，onclose是websocket连接关闭。在这以上的四个事件中，我们做各种事件处理">
 
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
@@ -57,7 +57,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>一个倒计时组件 | 个人博客</title>
+<title>websocket断线重连机制 | 个人博客</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -204,11 +204,11 @@
     </div>
     <link class="menu-list" tags="Tags" friends="Friends" about="About Me"/>
 </nav>
-      <div class="body-wrap"><article id="post-Vue-count-down" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-websocket断线重连" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2021/12/23/Vue-count-down/" class="article-date">
-      <time datetime="2021-12-23T03:01:27.958Z" itemprop="datePublished">2021-12-23</time>
+      <a href="/2022/06/22/websocket断线重连/" class="article-date">
+      <time datetime="2022-06-22T06:10:29.961Z" itemprop="datePublished">2022-06-22</time>
 </a>
 
 
@@ -223,7 +223,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      一个倒计时组件
+      websocket断线重连机制
     </h1>
   
 
@@ -240,18 +240,11 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>各种活动页面都会有倒计时功能,记录一下</p>
+        <p> <strong>websocket的基本事件有onopen、onmessage、onerror、onclose这四个事件，onopen是连接已打开，且可以通信，onmessage是收到消息，onerror是websocket发生错误，onclose是websocket连接关闭。在这以上的四个事件中，我们做各种事件处理</strong></p>
 <a id="more"></a>
 
-<ul>
-<li><p>利用slot-scope的方式暴露出去值</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br></pre></td><td class="code"><pre><span class="line">  &lt;template&gt;</span><br><span class="line">  &lt;div class=&quot;_base-count-down no-rtl&quot;&gt;</span><br><span class="line">    &lt;div class=&quot;content&quot;&gt;</span><br><span class="line">      &lt;slot</span><br><span class="line">        v-bind=&quot;&#123;</span><br><span class="line">          d: days,</span><br><span class="line">          h: hours,</span><br><span class="line">          m: mins,</span><br><span class="line">          s: seconds,</span><br><span class="line">          hh: `00$&#123;hours&#125;`.slice(-2),</span><br><span class="line">          mm: `00$&#123;mins&#125;`.slice(-2),</span><br><span class="line">          ss: `00$&#123;seconds&#125;`.slice(-2),</span><br><span class="line">        &#125;&quot;</span><br><span class="line">      &gt;&lt;/slot&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line"></span><br><span class="line">export default &#123;</span><br><span class="line">  data: () =&gt; (&#123;</span><br><span class="line">    days: &quot;0&quot;,</span><br><span class="line">    hours: &quot;00&quot;,</span><br><span class="line">    mins: &quot;00&quot;,</span><br><span class="line">    seconds: &quot;00&quot;,</span><br><span class="line">    timer: null,</span><br><span class="line">    curTime: 0,</span><br><span class="line">  &#125;),</span><br><span class="line">  props: &#123;</span><br><span class="line">    time: &#123;</span><br><span class="line">      type: [Number, String],</span><br><span class="line">      default: 3600,</span><br><span class="line">    &#125;,</span><br><span class="line">    refreshCounter: &#123;</span><br><span class="line">      type: [Number, String],</span><br><span class="line">      default: 0,</span><br><span class="line">    &#125;,</span><br><span class="line">    end: &#123;</span><br><span class="line">      type: [Number, String],</span><br><span class="line">      default: 0,</span><br><span class="line">    &#125;,</span><br><span class="line">    isMiniSecond: &#123;</span><br><span class="line">      type: Boolean,</span><br><span class="line">      default: false,</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">  computed: &#123;</span><br><span class="line">    duration() &#123;</span><br><span class="line">      if (this.end) &#123;</span><br><span class="line">        let end = String(this.end).length &gt;= 13 ? +this.end : +this.end * 1000;</span><br><span class="line">        end -= Date.now();</span><br><span class="line">        return end;</span><br><span class="line">      &#125;</span><br><span class="line">      const time = this.isMiniSecond</span><br><span class="line">        ? Math.round(+this.time / 1000)</span><br><span class="line">        : Math.round(+this.time);</span><br><span class="line">      return time;</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">  mounted() &#123;</span><br><span class="line">    this.countDown();</span><br><span class="line">  &#125;,</span><br><span class="line">  watch: &#123;</span><br><span class="line">    duration() &#123;</span><br><span class="line">      this.countDown();</span><br><span class="line">    &#125;,</span><br><span class="line">    refreshCounter() &#123;</span><br><span class="line">      this.countDown();</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">  methods: &#123;</span><br><span class="line">    durationFormatter(time) &#123;</span><br><span class="line">      if (!time) return &#123; ss: 0 &#125;;</span><br><span class="line">      let t = time;</span><br><span class="line">      const ss = t % 60;</span><br><span class="line">      t = (t - ss) / 60;</span><br><span class="line">      if (t &lt; 1) return &#123; ss &#125;;</span><br><span class="line">      const mm = t % 60;</span><br><span class="line">      t = (t - mm) / 60;</span><br><span class="line">      if (t &lt; 1) return &#123; mm, ss &#125;;</span><br><span class="line">      const hh = t % 24;</span><br><span class="line">      t = (t - hh) / 24;</span><br><span class="line">      if (t &lt; 1) return &#123; hh, mm, ss &#125;;</span><br><span class="line">      const dd = t;</span><br><span class="line">      return &#123; dd, hh, mm, ss &#125;;</span><br><span class="line">    &#125;,</span><br><span class="line">    countDown() &#123;</span><br><span class="line">      this.curTime = Date.now();</span><br><span class="line">      this.getTime(this.duration);</span><br><span class="line">    &#125;,</span><br><span class="line">    getTime(time) &#123;</span><br><span class="line">      this.timer &amp;&amp; clearTimeout(this.timer);</span><br><span class="line">      if (time &lt; 0) &#123;</span><br><span class="line">        return;</span><br><span class="line">      &#125;</span><br><span class="line">      const &#123; dd, hh, mm, ss &#125; = this.durationFormatter(time);</span><br><span class="line">      this.days = dd || 0;</span><br><span class="line">      // this.hours = `00$&#123;hh || &apos;&apos;&#125;`.slice(-2);</span><br><span class="line">      // this.mins = `00$&#123;mm || &apos;&apos;&#125;`.slice(-2);</span><br><span class="line">      // this.seconds = `00$&#123;ss || &apos;&apos;&#125;`.slice(-2);</span><br><span class="line">      this.hours = hh || 0;</span><br><span class="line">      this.mins = mm || 0;</span><br><span class="line">      this.seconds = ss || 0;</span><br><span class="line">      this.timer = setTimeout(() =&gt; &#123;</span><br><span class="line">        const now = Date.now();</span><br><span class="line">        const diffTime = Math.floor((now - this.curTime) / 1000);</span><br><span class="line">        const step = diffTime &gt; 1 ? diffTime : 1; // 页面退到后台的时候不会计时，对比时间差，大于1s的重置倒计时</span><br><span class="line">        this.curTime = now;</span><br><span class="line">        this.getTime(time - step);</span><br><span class="line">      &#125;, 1000);</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>调用倒计时组件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div&gt;</span><br><span class="line">    hom</span><br><span class="line">    &lt;cut-down&gt;</span><br><span class="line">      &lt;template v-slot:default=&quot;slotProps&quot;&gt;</span><br><span class="line">        &#123;&#123; slotProps &#125;&#125;</span><br><span class="line">      &lt;/template&gt;</span><br><span class="line">    &lt;/cut-down&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">import CutDown from &quot;@/components/CountDown.vue&quot;;</span><br><span class="line">export default &#123;</span><br><span class="line">  props: &#123;&#125;,</span><br><span class="line">  data() &#123;</span><br><span class="line">    return &#123;&#125;;</span><br><span class="line">  &#125;,</span><br><span class="line">  components: &#123;</span><br><span class="line">    CutDown,</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line">&lt;style scoped lang=&quot;scss&quot;&gt;&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="websocket断线重连机制"><a href="#websocket断线重连机制" class="headerlink" title="websocket断线重连机制"></a>websocket断线重连机制</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">var</span> ws;<span class="comment">//websocket实例</span></span><br><span class="line"><span class="keyword">var</span> lockReconnect = <span class="literal">false</span>;<span class="comment">//避免重复连接</span></span><br><span class="line"><span class="keyword">var</span> wsUrl = <span class="string">"ws://"</span>+<span class="string">'xxxxxxx'</span>;</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">createWebSocket</span>(<span class="params">url</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (<span class="string">'WebSocket'</span> <span class="keyword">in</span> <span class="built_in">window</span>) &#123;</span><br><span class="line">            ws = <span class="keyword">new</span> WebSocket(url);</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (<span class="string">'MozWebSocket'</span> <span class="keyword">in</span> <span class="built_in">window</span>) &#123;</span><br><span class="line">            ws = <span class="keyword">new</span> MozWebSocket(url);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            url = <span class="string">"http://"</span> + <span class="string">'xxxxxxx'</span>;</span><br><span class="line">            ws = <span class="keyword">new</span> SockJS(url);</span><br><span class="line">        &#125;</span><br><span class="line"> </span><br><span class="line">        initEventHandle();</span><br><span class="line">    &#125; <span class="keyword">catch</span> (e) &#123;</span><br><span class="line">        reconnect(url);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">initEventHandle</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    ws.onclose = <span class="function"><span class="keyword">function</span> (<span class="params">evnt</span>) </span>&#123;</span><br><span class="line">        <span class="comment">//console.log('websocket服务关闭了');</span></span><br><span class="line">        reconnect(wsUrl);</span><br><span class="line">    &#125;;</span><br><span class="line">    ws.onerror = <span class="function"><span class="keyword">function</span> (<span class="params">evnt</span>) </span>&#123;</span><br><span class="line">        <span class="comment">//console.log('websocket服务出错了');</span></span><br><span class="line">        reconnect(wsUrl);</span><br><span class="line">    &#125;;</span><br><span class="line">    ws.onopen = <span class="function"><span class="keyword">function</span> (<span class="params">evnt</span>) </span>&#123;</span><br><span class="line">        <span class="comment">//心跳检测重置</span></span><br><span class="line">        heartCheck.reset().start();</span><br><span class="line">    &#125;;</span><br><span class="line">    ws.onmessage = <span class="function"><span class="keyword">function</span> (<span class="params">evnt</span>) </span>&#123;</span><br><span class="line">        <span class="comment">//如果获取到消息，心跳检测重置</span></span><br><span class="line">        <span class="comment">//拿到任何消息都说明当前连接是正常的</span></span><br><span class="line">        <span class="comment">//console.log('websocket服务获得数据了');</span></span><br><span class="line">        <span class="comment">//接受消息后的UI变化</span></span><br><span class="line">        doWithMsg(evnt.data);</span><br><span class="line">        heartCheck.reset().start();</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    <span class="comment">//收到消息推送</span></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">doWithMsg</span>(<span class="params">msg</span>) </span>&#123;</span><br><span class="line">        <span class="comment">//......</span></span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">reconnect</span>(<span class="params">url</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(lockReconnect) <span class="keyword">return</span>;</span><br><span class="line">    lockReconnect = <span class="literal">true</span>;</span><br><span class="line">    <span class="comment">//没连接上会一直重连，设置延迟避免请求过多</span></span><br><span class="line">    setTimeout(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        createWebSocket(url);</span><br><span class="line">        lockReconnect = <span class="literal">false</span>;</span><br><span class="line">    &#125;, <span class="number">2000</span>);</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="comment">//心跳检测</span></span><br><span class="line"><span class="keyword">var</span> heartCheck = &#123;</span><br><span class="line">    timeout: <span class="number">60000</span>,<span class="comment">//60秒</span></span><br><span class="line">    timeoutObj: <span class="literal">null</span>,</span><br><span class="line">    serverTimeoutObj: <span class="literal">null</span>,</span><br><span class="line">    reset: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        clearTimeout(<span class="keyword">this</span>.timeoutObj);</span><br><span class="line">        clearTimeout(<span class="keyword">this</span>.serverTimeoutObj);</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">this</span>;</span><br><span class="line">    &#125;,</span><br><span class="line">    start: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">var</span> self = <span class="keyword">this</span>;</span><br><span class="line">        <span class="keyword">this</span>.timeoutObj = setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">            <span class="comment">//这里发送一个心跳，后端收到后，返回一个心跳消息，</span></span><br><span class="line">            <span class="comment">//onmessage拿到返回的心跳就说明连接正常</span></span><br><span class="line">            ws.send(<span class="string">"HeartBeat"</span>);</span><br><span class="line">            self.serverTimeoutObj = setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;<span class="comment">//如果超过一定时间还没重置，说明后端主动断开了</span></span><br><span class="line">                ws.close();<span class="comment">//如果onclose会执行reconnect，我们执行ws.close()就行了.如果直接执行reconnect 会触发onclose导致重连两次</span></span><br><span class="line">            &#125;, self.timeout)</span><br><span class="line">        &#125;, <span class="keyword">this</span>.timeout)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="comment">//初始化websocket</span></span><br><span class="line">createWebSocket(wsUrl);</span><br></pre></td></tr></table></figure>
 
-</li>
-</ul>
 
       
     </div>
@@ -260,13 +253,13 @@
   
     
     <div class="copyright">
-        <p><span>Title:</span><a href="/2021/12/23/Vue-count-down/">一个倒计时组件</a></p>
+        <p><span>Title:</span><a href="/2022/06/22/websocket断线重连/">websocket断线重连机制</a></p>
         <p><span>Author:</span><a href="/" title="Back to Homepage">Mr.Huang</a></p>
-        <p><span>Created:</span>2021-12-23, 11:01:27</p>
-        <p><span>Updated:</span>2021-12-23, 11:07:39</p>
+        <p><span>Created:</span>2022-06-22, 14:10:29</p>
+        <p><span>Updated:</span>2022-06-22, 14:10:16</p>
         <p>
-            <span>Full URL:</span><a class="post-url" href="/2021/12/23/Vue-count-down/" title="一个倒计时组件">http://yoursite.com/2021/12/23/Vue-count-down/</a>
-            <span class="copy-path" data-clipboard-text="From http://yoursite.com/2021/12/23/Vue-count-down/　　By Mr.Huang" title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
+            <span>Full URL:</span><a class="post-url" href="/2022/06/22/websocket断线重连/" title="websocket断线重连机制">http://yoursite.com/2022/06/22/websocket断线重连/</a>
+            <span class="copy-path" data-clipboard-text="From http://yoursite.com/2022/06/22/websocket断线重连/　　By Mr.Huang" title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -278,16 +271,10 @@
 
     <nav id="article-nav">
         
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2021/12/23/Vue-Video-发布订阅/">
-                    一个关于video播放暂停的发布订阅模式
-                </a>
-            </div>
-        
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2021/11/04/Vue-use/">
-                    Vue.use()的理解
+                <a href="/2022/05/24/小程序消息订阅/">
+                    小程序订阅消息
                 </a>
             </div>
         
@@ -299,7 +286,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-            
+            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#websocket断线重连机制"><span class="toc-number">1.</span> <span class="toc-text">websocket断线重连机制</span></a></li></ol>
         
     </div>
     <style>
@@ -335,7 +322,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"一个倒计时组件　| 个人博客　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"websocket断线重连机制　| 个人博客　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -355,15 +342,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2021/12/23/Vue-Video-发布订阅/" title="Pre: 一个关于video播放暂停的发布订阅模式">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="Back to Homepage"><i class="fa fa-home"></i></a>
         
 
         <a title="Mini Archives"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2021/11/04/Vue-use/" title="Next: Vue.use()的理解">
+            <a href="/2022/05/24/小程序消息订阅/" title="Next: 小程序订阅消息">
                 <i class="fa fa-angle-right"></i>
             </a>
         
