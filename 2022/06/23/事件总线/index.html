@@ -15,17 +15,17 @@
 
 
 
-<meta name="description" content="vue中.sync的用法 v-model实现组件数据双向绑定">
+<meta name="description" content="事件总线 + 单例模式 发布订阅">
 <meta property="og:type" content="article">
-<meta property="og:title" content="vue">
-<meta property="og:url" content="http://yoursite.com/2021/01/30/vue中.sync的用法/index.html">
+<meta property="og:title" content="事件总线 + 单例模式">
+<meta property="og:url" content="http://yoursite.com/2022/06/23/事件总线/index.html">
 <meta property="og:site_name" content="个人博客">
-<meta property="og:description" content="vue中.sync的用法 v-model实现组件数据双向绑定">
+<meta property="og:description" content="事件总线 + 单例模式 发布订阅">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2022-07-07T07:48:27.136Z">
+<meta property="og:updated_time" content="2022-07-07T07:49:08.040Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="vue">
-<meta name="twitter:description" content="vue中.sync的用法 v-model实现组件数据双向绑定">
+<meta name="twitter:title" content="事件总线 + 单例模式">
+<meta name="twitter:description" content="事件总线 + 单例模式 发布订阅">
 
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
@@ -57,7 +57,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>vue | 个人博客</title>
+<title>事件总线 + 单例模式 | 个人博客</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -204,11 +204,11 @@
     </div>
     <link class="menu-list" tags="Tags" friends="Friends" about="About Me"/>
 </nav>
-      <div class="body-wrap"><article id="post-vue中.sync的用法" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-事件总线" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2021/01/30/vue中.sync的用法/" class="article-date">
-      <time datetime="2021-01-30T03:55:30.711Z" itemprop="datePublished">2021-01-30</time>
+      <a href="/2022/06/23/事件总线/" class="article-date">
+      <time datetime="2022-06-23T07:59:40.720Z" itemprop="datePublished">2022-06-23</time>
 </a>
 
 
@@ -223,7 +223,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      vue
+      事件总线 + 单例模式
     </h1>
   
 
@@ -240,10 +240,12 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>vue中.sync的用法 v-model实现组件数据双向绑定</p>
+        <p>事件总线 + 单例模式 发布订阅</p>
 <a id="more"></a>
 
-<h3 id="sync的用法"><a href="#sync的用法" class="headerlink" title=".sync的用法"></a>.sync的用法</h3><pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=&quot;app&quot;&gt;</span><br><span class="line">    &lt;h1 v-show=&quot;isShow&quot;&gt;我是父组件&lt;/h1&gt;</span><br><span class="line">    &lt;button&gt;点我&lt;/button&gt;</span><br><span class="line">    &lt;br&gt;</span><br><span class="line">    &lt;br&gt;</span><br><span class="line">    &lt;child :show.sync=&apos;isShow&apos;&gt;&lt;/child&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;script src=&quot;./js/vue.min.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">    Vue.component(&apos;child&apos;, &#123;</span><br><span class="line">        props: &#123;</span><br><span class="line">            show: &#123;</span><br><span class="line">                type: Boolean,</span><br><span class="line">                default: false</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;,</span><br><span class="line">        template: `</span><br><span class="line">        &lt;div&gt;</span><br><span class="line">            &lt;div&gt;我是子组件&lt;/div&gt;</span><br><span class="line">            &lt;h1&gt;&#123;&#123;  show &#125;&#125;&lt;/h1&gt;</span><br><span class="line">            &lt;button @click=&quot;handleClick&quot;&gt;.sync改变父组件的状态&lt;/button&gt;&lt;/div&gt;</span><br><span class="line">           </span><br><span class="line">        `,</span><br><span class="line">        methods: &#123;</span><br><span class="line">            handleClick() &#123;</span><br><span class="line">                this.$emit(&apos;update:show&apos;, !this.show)</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">    var vm = new Vue(&#123;</span><br><span class="line">        el: &apos;#app&apos;,</span><br><span class="line">        data() &#123;</span><br><span class="line">            return &#123;</span><br><span class="line">                isShow: true</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;,</span><br><span class="line">    &#125;)</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure></code></pre><h3 id="v-model实现组件数据双向绑定"><a href="#v-model实现组件数据双向绑定" class="headerlink" title="v-model实现组件数据双向绑定"></a>v-model实现组件数据双向绑定</h3><pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line">父组件</span><br><span class="line">&lt;template&gt;</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">        &lt;p&gt;v-model封装组件&lt;/p&gt;</span><br><span class="line">        &lt;increase v-model=&quot;index&quot;&gt;&lt;/increase&gt;</span><br><span class="line">        &lt;div&gt;&#123;&#123; index &#125;&#125;&lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">import increase from &quot;@/components/increase&quot;;</span><br><span class="line">export default &#123;</span><br><span class="line">    name: &quot;Home&quot;,</span><br><span class="line">    components: &#123;</span><br><span class="line">        increase,</span><br><span class="line">    &#125;,</span><br><span class="line">    data() &#123;</span><br><span class="line">        return &#123;</span><br><span class="line">            index: 0,</span><br><span class="line">        &#125;;</span><br><span class="line">    &#125;,</span><br><span class="line"></span><br><span class="line">&#125;;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">子组件</span><br><span class="line"></span><br><span class="line">&lt;template&gt;</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">        &lt;button @click=&quot;increase&quot; style=&quot;border: 1px solid black&quot;&gt;increase&lt;/button&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">    export default &#123;</span><br><span class="line">        name: &quot;vmodel&quot;,</span><br><span class="line">        props: &#123;</span><br><span class="line">            value: &#123;</span><br><span class="line">                type: Number,</span><br><span class="line">                default: 0,</span><br><span class="line">             &#125;,</span><br><span class="line">        &#125;,</span><br><span class="line">        methods: &#123;</span><br><span class="line">            increase() &#123;</span><br><span class="line">                this.$emit(&quot;input&quot;, this.value + 1);</span><br><span class="line">            &#125;,</span><br><span class="line">        &#125;,</span><br><span class="line">    &#125;;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure></code></pre>
+<h3 id="事件总线-单例模式"><a href="#事件总线-单例模式" class="headerlink" title="事件总线 + 单例模式"></a>事件总线 + 单例模式</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">EventBus</span></span>&#123;</span><br><span class="line">		<span class="keyword">static</span> obj <span class="comment">//单例模式所有的eventobj应该是同一个对象</span></span><br><span class="line">		<span class="keyword">constructor</span>&#123;</span><br><span class="line">        	<span class="keyword">this</span>.init()</span><br><span class="line">    	&#125;</span><br><span class="line">		init()&#123;</span><br><span class="line">            <span class="keyword">if</span>(!EventBus.obj)&#123;</span><br><span class="line">                EventBus.obj = &#123;&#125;</span><br><span class="line">                <span class="keyword">this</span>.eventObj = EventBus.obj</span><br><span class="line">                <span class="keyword">return</span></span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">this</span>.eventObj = EventBus.obj</span><br><span class="line">            </span><br><span class="line">            </span><br><span class="line">        &#125;</span><br><span class="line">		$on(name,callback)&#123;</span><br><span class="line">            <span class="keyword">if</span>(!<span class="keyword">this</span>.eventObj[name])&#123;</span><br><span class="line">                <span class="keyword">this</span>.eventObj[name] = []</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">this</span>.eventObj[name].push(callback)</span><br><span class="line">        &#125;,</span><br><span class="line">        $emit(name)&#123;</span><br><span class="line">            <span class="keyword">const</span> eventlIst = <span class="keyword">this</span>.eventObj[name];</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">const</span> callback <span class="keyword">of</span> eventList)&#123;</span><br><span class="line">                callback()</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
       
     </div>
     
@@ -251,13 +253,13 @@
   
     
     <div class="copyright">
-        <p><span>Title:</span><a href="/2021/01/30/vue中.sync的用法/">vue</a></p>
+        <p><span>Title:</span><a href="/2022/06/23/事件总线/">事件总线 + 单例模式</a></p>
         <p><span>Author:</span><a href="/" title="Back to Homepage">Mr.Huang</a></p>
-        <p><span>Created:</span>2021-01-30, 11:55:30</p>
-        <p><span>Updated:</span>2022-07-07, 15:48:27</p>
+        <p><span>Created:</span>2022-06-23, 15:59:40</p>
+        <p><span>Updated:</span>2022-07-07, 15:49:08</p>
         <p>
-            <span>Full URL:</span><a class="post-url" href="/2021/01/30/vue中.sync的用法/" title="vue">http://yoursite.com/2021/01/30/vue中.sync的用法/</a>
-            <span class="copy-path" data-clipboard-text="From http://yoursite.com/2021/01/30/vue中.sync的用法/　　By Mr.Huang" title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
+            <span>Full URL:</span><a class="post-url" href="/2022/06/23/事件总线/" title="事件总线 + 单例模式">http://yoursite.com/2022/06/23/事件总线/</a>
+            <span class="copy-path" data-clipboard-text="From http://yoursite.com/2022/06/23/事件总线/　　By Mr.Huang" title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -270,15 +272,15 @@
     <nav id="article-nav">
         
             <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2021/10/25/百度地图/">
-                    百度地图
+                <a href="/2022/07/07/vue2-attrs/">
+                    vue2-attrs的用法
                 </a>
             </div>
         
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2021/01/26/react学习/">
-                    react的基础学习
+                <a href="/2022/06/22/websocket断线重连/">
+                    websocket断线重连机制
                 </a>
             </div>
         
@@ -290,7 +292,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#sync的用法"><span class="toc-number">1.</span> <span class="toc-text">.sync的用法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#v-model实现组件数据双向绑定"><span class="toc-number">2.</span> <span class="toc-text">v-model实现组件数据双向绑定</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#事件总线-单例模式"><span class="toc-number">1.</span> <span class="toc-text">事件总线 + 单例模式</span></a></li></ol>
         
     </div>
     <style>
@@ -326,7 +328,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"vue　| 个人博客　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"事件总线 + 单例模式　| 个人博客　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -346,7 +348,7 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2021/10/25/百度地图/" title="Pre: 百度地图">
+            <a href="/2022/07/07/vue2-attrs/" title="Pre: vue2-attrs的用法">
                 <i class="fa fa-angle-left"></i>
             </a>
         
@@ -354,7 +356,7 @@
         <a title="Mini Archives"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2021/01/26/react学习/" title="Next: react的基础学习">
+            <a href="/2022/06/22/websocket断线重连/" title="Next: websocket断线重连机制">
                 <i class="fa fa-angle-right"></i>
             </a>
         
