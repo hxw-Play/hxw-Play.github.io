@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.9.0">
+
+    <!--[if lt IE 9]>
+        <style>body {display: none; background: none !important} </style>
+        <meta http-equiv="Refresh" Content="0; url=//outdatedbrowser.com/" />
+    <![endif]-->
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="author" content="Mr.Huang">
+
+
+
+<meta name="description" content="react-redux学习">
+<meta property="og:type" content="article">
+<meta property="og:title" content="react-redux">
+<meta property="og:url" content="http://yoursite.com/2022/08/17/react-redux/index.html">
+<meta property="og:site_name" content="个人博客">
+<meta property="og:description" content="react-redux学习">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="http://yoursite.com/.com//F:%5Cblog%5ChxwBlog%5Csource_posts%5Cimg%5Ch1.png">
+<meta property="og:updated_time" content="2022-08-17T06:20:12.757Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="react-redux">
+<meta name="twitter:description" content="react-redux学习">
+<meta name="twitter:image" content="http://yoursite.com/.com//F:%5Cblog%5ChxwBlog%5Csource_posts%5Cimg%5Ch1.png">
+
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+
+    <link rel="alternate" href="/atom.xml" title="个人博客" type="application/atom+xml">
+
+
+
+    <link rel="shortcut icon" href="/favicon.png">
+
+
+
+    <link href="//cdn.bootcss.com/animate.css/3.5.1/animate.min.css" rel="stylesheet">
+
+
+
+    <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
+
+
+
+    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+    <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+
+<link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+
+<title>react-redux | 个人博客</title>
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+<script>
+    var yiliaConfig = {
+        fancybox: true,
+        animate: true,
+        isHome: false,
+        isPost: true,
+        isArchive: false,
+        isTag: false,
+        isCategory: false,
+        fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
+        scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
+        search: true
+    }
+</script>
+
+
+    <script> yiliaConfig.jquery_ui = [false]; </script>
+
+
+
+    <script> yiliaConfig.rootUrl = "\/";</script>
+
+
+
+
+
+
+</head></html>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            <img src="/img/avatar.png" class="animated zoomIn">
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">Mr.Huang</a></h1>
+        </hgroup>
+
+        
+        <p class="header-subtitle">君子好学,自强不息</p>
+        
+
+        
+            <form id="search-form">
+            <input type="text" id="local-search-input" name="q" placeholder="search..." class="search form-control" autocomplete="off" autocorrect="off" searchonload="false" />
+            <i class="fa fa-times" onclick="resetSearch()"></i>
+            </form>
+            <div id="local-search-result"></div>
+            <p class='no-result'>No results found <i class='fa fa-spinner fa-pulse'></i></p>
+        
+
+
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/">主页</a></li>
+                        
+                            <li><a href="/archives/">所有文章</a></li>
+                        
+                            <li><a href="/tags/">标签云</a></li>
+                        
+                            <li><a href="/about/">关于我</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" href="mailto:123@123.com" title="Email"></a>
+                            
+                                <a class="fa GitHub" href="#" title="GitHub"></a>
+                            
+                                <a class="fa RSS" href="/atom.xml" title="RSS"></a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                
+                
+
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">Mr.Huang</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                <img src="/img/avatar.png" class="animated zoomIn">
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">Mr.Huang</a></h1>
+            </hgroup>
+            
+            <p class="header-subtitle">君子好学,自强不息</p>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/">主页</a></li>
+                
+                    <li><a href="/archives/">所有文章</a></li>
+                
+                    <li><a href="/tags/">标签云</a></li>
+                
+                    <li><a href="/about/">关于我</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" target="_blank" href="mailto:123@123.com" title="Email"></a>
+                            
+                                <a class="fa GitHub" target="_blank" href="#" title="GitHub"></a>
+                            
+                                <a class="fa RSS" target="_blank" href="/atom.xml" title="RSS"></a>
+                            
+                        </ul>
+            </nav>
+        </header>                
+    </div>
+    <link class="menu-list" tags="Tags" friends="Friends" about="About Me"/>
+</nav>
+      <div class="body-wrap"><article id="post-react-redux" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2022/08/17/react-redux/" class="article-date">
+      <time datetime="2022-08-17T06:18:49.795Z" itemprop="datePublished">2022-08-17</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      react-redux
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+
+        
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>react-redux学习</p>
+<a id="more"></a>
+
+<h3 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h3><h4 id="项目依赖"><a href="#项目依赖" class="headerlink" title="项目依赖"></a>项目依赖</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">react-redux</span><br><span class="line">redux</span><br><span class="line">redux-thunk</span><br></pre></td></tr></table></figure>
+
+<p><a href="https://blog.csdn.net/qq_41880073/article/details/122180052?spm=1001.2101.3001.6661.1&utm_medium=distribute.pc_relevant_t0.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-1-122180052-blog-104352176.pc_relevant_layer_s&depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-1-122180052-blog-104352176.pc_relevant_layer_s&utm_relevant_index=1" target="_blank" rel="noopener">更多请点击此处</a></p>
+<h4 id="入口文件引入"><a href="#入口文件引入" class="headerlink" title="入口文件引入"></a>入口文件引入</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">"react"</span>;</span><br><span class="line"><span class="keyword">import</span> ReactDOM <span class="keyword">from</span> <span class="string">"react-dom"</span>;</span><br><span class="line"><span class="keyword">import</span> App <span class="keyword">from</span> <span class="string">"./App"</span>;</span><br><span class="line"><span class="keyword">import</span> store <span class="keyword">from</span> <span class="string">"./redux/store"</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; Provider &#125; <span class="keyword">from</span> <span class="string">"react-redux"</span>;</span><br><span class="line">ReactDOM.render(</span><br><span class="line">  <span class="comment">/* 此处需要用Provider包裹App，目的是让App所有的后代容器组件都能接收到store */</span></span><br><span class="line"></span><br><span class="line">  &lt;Provider store=&#123;store&#125;&gt;</span><br><span class="line">      &lt;App /&gt;</span><br><span class="line">  &lt;<span class="regexp">/Provider&gt;,</span></span><br><span class="line"><span class="regexp">  document.getElementById("root")</span></span><br><span class="line"><span class="regexp">);</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="src下新建redux文件夹（如下目录）"><a href="#src下新建redux文件夹（如下目录）" class="headerlink" title="src下新建redux文件夹（如下目录）"></a>src下新建redux文件夹（如下目录）</h4><p>汇总reducer</p>
+<p><img src="/.com//F:%5Cblog%5ChxwBlog%5Csource_posts%5Cimg%5Ch1.png" alt="h1"></p>
+<p>store.js</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">import</span> &#123;createStore,applyMiddleware&#125; <span class="keyword">from</span> <span class="string">'redux'</span></span><br><span class="line"><span class="keyword">import</span> reducer <span class="keyword">from</span> <span class="string">'./reducers'</span></span><br><span class="line"><span class="keyword">import</span> thunk <span class="keyword">from</span> <span class="string">'redux-thunk'</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> createStore(reducer,applyMiddleware(thunk))</span><br></pre></td></tr></table></figure>
+
+<p>actions文件件下的count.js</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">/* </span></span><br><span class="line"><span class="comment">	该文件专门为Count组件生成action对象</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="keyword">import</span> &#123; INCREMENT, DECREMENT &#125; <span class="keyword">from</span> <span class="string">"../constant"</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//同步action，就是指action的值为Object类型的一般对象</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> increment = <span class="function">(<span class="params">data</span>) =&gt;</span> (&#123; <span class="attr">type</span>: INCREMENT, data &#125;);</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> decrement = <span class="function">(<span class="params">data</span>) =&gt;</span> (&#123; <span class="attr">type</span>: DECREMENT, data &#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">//异步action，就是指action的值为函数,异步action中一般都会调用同步action，异步action不是必须要用的。</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> incrementAsync = <span class="function">(<span class="params">data, time</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="function">(<span class="params">dispatch</span>) =&gt;</span> &#123;</span><br><span class="line">    setTimeout(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">      dispatch(increment(data));</span><br><span class="line">    &#125;, time);</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>reducers文件下的count.js</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* </span></span><br><span class="line"><span class="comment">	1.该文件是用于创建一个为Count组件服务的reducer，reducer的本质就是一个函数</span></span><br><span class="line"><span class="comment">	2.reducer函数会接到两个参数，分别为：之前的状态(preState)，动作对象(action)</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="keyword">import</span> &#123;INCREMENT,DECREMENT&#125; <span class="keyword">from</span> <span class="string">'../constant'</span></span><br><span class="line"><span class="keyword">const</span> initState = <span class="number">1</span> <span class="comment">//初始化状态</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="function"><span class="keyword">function</span> <span class="title">countReducer</span>(<span class="params">preState=initState,action</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">const</span> &#123;type,data&#125; = action</span><br><span class="line">	<span class="keyword">switch</span> (type) &#123;</span><br><span class="line">		<span class="keyword">case</span> INCREMENT: </span><br><span class="line">			<span class="keyword">return</span> preState + data</span><br><span class="line">		<span class="keyword">case</span> DECREMENT: </span><br><span class="line">			<span class="keyword">return</span> preState - data</span><br><span class="line">		<span class="keyword">default</span>:</span><br><span class="line">			<span class="keyword">return</span> preState</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React, &#123; Component &#125; <span class="keyword">from</span> <span class="string">"react"</span>;</span><br><span class="line"><span class="comment">//引入action</span></span><br><span class="line"><span class="keyword">import</span> &#123;</span><br><span class="line">  increment,</span><br><span class="line">  decrement,</span><br><span class="line">  incrementAsync,</span><br><span class="line">&#125; <span class="keyword">from</span> <span class="string">"../../redux/actions/count"</span>;</span><br><span class="line"><span class="comment">//引入connect用于连接UI组件与redux</span></span><br><span class="line"><span class="keyword">import</span> &#123; connect &#125; <span class="keyword">from</span> <span class="string">"react-redux"</span>;</span><br><span class="line"><span class="comment">//定义UI组件</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Count</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</span><br><span class="line">  state = &#123; <span class="attr">carName</span>: <span class="string">"奔驰c63"</span> &#125;;</span><br><span class="line">  <span class="comment">//加法</span></span><br><span class="line">  increment = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> &#123; value &#125; = <span class="keyword">this</span>.selectNumber;</span><br><span class="line">    <span class="keyword">this</span>.props.increment(value * <span class="number">1</span>);</span><br><span class="line">  &#125;;</span><br><span class="line">  <span class="comment">//减法</span></span><br><span class="line">  decrement = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> &#123; value &#125; = <span class="keyword">this</span>.selectNumber;</span><br><span class="line">    <span class="keyword">this</span>.props.decrement(value * <span class="number">1</span>);</span><br><span class="line">  &#125;;</span><br><span class="line">  <span class="comment">//奇数再加</span></span><br><span class="line">  incrementIfOdd = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> &#123; value &#125; = <span class="keyword">this</span>.selectNumber;</span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">this</span>.props.count % <span class="number">2</span> !== <span class="number">0</span>) &#123;</span><br><span class="line">      <span class="keyword">this</span>.props.increment(value * <span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;;</span><br><span class="line">  <span class="comment">//异步加</span></span><br><span class="line">  incrementAsync = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> &#123; value &#125; = <span class="keyword">this</span>.selectNumber;</span><br><span class="line">    <span class="keyword">this</span>.props.incrementAsync(value * <span class="number">1</span>, <span class="number">500</span>);</span><br><span class="line">  &#125;;</span><br><span class="line">  render() &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>.props);</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">      &lt;div&gt;</span><br><span class="line">        &lt;h1&gt;分类的数据是&#123;<span class="keyword">this</span>.props.num&#125;&lt;<span class="regexp">/h1&gt;</span></span><br><span class="line"><span class="regexp">        &lt;select ref=&#123;(c) =&gt; (this.selectNumber = c)&#125;&gt;</span></span><br><span class="line"><span class="regexp">          &lt;option value="1"&gt;1&lt;/</span>option&gt;</span><br><span class="line">          &lt;option value=<span class="string">"2"</span>&gt;<span class="number">2</span>&lt;<span class="regexp">/option&gt;</span></span><br><span class="line"><span class="regexp">          &lt;option value="3"&gt;3&lt;/</span>option&gt;</span><br><span class="line">        &lt;<span class="regexp">/select&gt;</span></span><br><span class="line"><span class="regexp">        &amp;nbsp;</span></span><br><span class="line"><span class="regexp">        &lt;button onClick=&#123;this.increment&#125;&gt;+&lt;/</span>button&gt;&amp;nbsp;</span><br><span class="line">        &lt;button onClick=&#123;<span class="keyword">this</span>.decrement&#125;&gt;-<span class="xml"><span class="tag">&lt;/<span class="name">button</span>&gt;</span></span>&amp;nbsp;</span><br><span class="line">        &lt;button onClick=&#123;<span class="keyword">this</span>.incrementIfOdd&#125;&gt;当前求和为奇数再加&lt;<span class="regexp">/button&gt;&amp;nbsp;</span></span><br><span class="line"><span class="regexp">        &lt;button onClick=&#123;this.incrementAsync&#125;&gt;异步加&lt;/</span>button&gt;&amp;nbsp;</span><br><span class="line">        &lt;h1&gt;加的和为&#123;<span class="keyword">this</span>.props.count&#125;&lt;<span class="regexp">/h1&gt;</span></span><br><span class="line"><span class="regexp">      &lt;/</span>div&gt;</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//使用connect()()创建并暴露一个Count的容器组件</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> connect(</span><br><span class="line">  (state) =&gt; (&#123;</span><br><span class="line">    count: state.count,      <span class="comment">//count: reducers文件下count.js 默认值 preState</span></span><br><span class="line">    num: state.num,		</span><br><span class="line">  &#125;),</span><br><span class="line">  &#123; increment, decrement, incrementAsync &#125;   <span class="comment">//对应action里的方法</span></span><br><span class="line">)(Count);</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>Title:</span><a href="/2022/08/17/react-redux/">react-redux</a></p>
+        <p><span>Author:</span><a href="/" title="Back to Homepage">Mr.Huang</a></p>
+        <p><span>Created:</span>2022-08-17, 14:18:49</p>
+        <p><span>Updated:</span>2022-08-17, 14:20:12</p>
+        <p>
+            <span>Full URL:</span><a class="post-url" href="/2022/08/17/react-redux/" title="react-redux">http://yoursite.com/2022/08/17/react-redux/</a>
+            <span class="copy-path" data-clipboard-text="From http://yoursite.com/2022/08/17/react-redux/　　By Mr.Huang" title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>License:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"CC BY-NC-SA 4.0"</a> Keep Link &amp; Author if Distribute.
+        </p>
+    </div>
+
+
+
+    <nav id="article-nav">
+        
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/2022/08/17/vue是否滚动到底部/">
+                    vue操作DOM判断某个区域是否在顶部和底部
+                </a>
+            </div>
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2022/08/16/vue3部分使用/">
+                    vue3的学习
+                </a>
+            </div>
+        
+    </nav>
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+        <strong class="toc-title">Contents</strong>
+        
+            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#目录"><span class="toc-number">1.</span> <span class="toc-text">目录</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#项目依赖"><span class="toc-number">1.1.</span> <span class="toc-text">项目依赖</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#入口文件引入"><span class="toc-number">1.2.</span> <span class="toc-text">入口文件引入</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#src下新建redux文件夹（如下目录）"><span class="toc-number">1.3.</span> <span class="toc-text">src下新建redux文件夹（如下目录）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#使用"><span class="toc-number">1.4.</span> <span class="toc-text">使用</span></a></li></ol></li></ol>
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-3 i,
+        .toc-level-3 ol {
+            display: none !important;
+        }
+    </style>
+
+    <input type="button" id="tocButton" value="Hide"  title="Show or Hide Table of Contents">
+
+    <script>
+        yiliaConfig.toc = ["Hide", "Show", !!"false"];
+    </script>
+
+
+
+    
+<div class="share">
+    
+        <div class="bdsharebuttonbox">
+            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
+            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
+            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></i></a>
+        </div>
+        <script>
+            window._bd_share_config={
+                "common":{"bdSnsKey":{},"bdText":"react-redux　| 个人博客　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
+    
+
+    
+</div>
+
+
+
+
+
+
+
+    
+
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/2022/08/17/vue是否滚动到底部/" title="Pre: vue操作DOM判断某个区域是否在顶部和底部">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+
+        <a title="Mini Archives"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2022/08/16/vue3部分使用/" title="Next: vue3的学习">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2022/08/26/umijs学习/">umi.js的基础学习</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/08/17/vue是否滚动到底部/">vue操作DOM判断某个区域是否在顶部和底部</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/08/17/react-redux/">react-redux</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/08/16/vue3部分使用/">vue3的学习</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/08/15/react实战/">react实战</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/06/23/事件总线/">事件总线 + 单例模式</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/06/22/websocket断线重连/">websocket断线重连机制</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/05/24/小程序消息订阅/">小程序订阅消息</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/05/24/vue的语法/">vue的那些事</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/05/24/uniapp那些东西/">uniapp的一些东西</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/03/18/简单的大文件上传/">简单的大文件切片上传</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/03/18/并发/">一个简单的上传控制并发</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/03/02/webpack学习/">webpack</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/12/28/浏览器缓存/">浏览器的缓存</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/12/23/Vue-Video-发布订阅/">一个关于video播放暂停的发布订阅模式</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/12/23/Vue-count-down/">一个倒计时组件</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/11/04/Vue-use/">Vue.use()的理解</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/11/02/vue-extend/">Vue.extend的理解</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/10/25/百度地图/">百度地图</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/01/30/vue中.sync的用法/">vue</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/01/26/react学习/">react的基础学习</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/08/29/后台管理系统权限/">elementUI + vue全家桶  权限</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/03/07/upload上传/">关于上传的那些事</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/21/双向数据绑定/">vue双向数据绑定</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/14/vue路由钩子函数/">vue路由钩子函数</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/14/存储以及cookie/">localStorage ,sessionStorage ,Cookie</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/07/跨域处理/">跨域</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/06/手动封装ajax/">ajax</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/06/什么是原型链/">原型链、继承?</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/06/最简单的双向数据绑定/">最简单的双向数据绑定</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/01/02/js总结/">js</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/10/29/滚动到底部/">滚动到底部</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/29/排序和递归算法/">排序和递归</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/24/CSS3/">CSS3</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/20/git/">git如何上传到github</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/18/base/">关于HTML的基本知识</a></li></ul>
+
+
+
+
+    <script>
+        
+    </script>
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                <i class="fa fa-copyright"></i> 
+                2016-2022 Mr.Huang
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank" title="A fast, simple &amp; powerful blog framework">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="Another simple and elegant theme for Hexo  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" title="Site Visitors"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>| </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit"  title="Page Hits"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+    </div>
+    
+<script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var iPad = window.navigator.userAgent.indexOf('iPad');
+            if (iPad > -1 || $(".left-col").css("display") === "none") {
+                var bgColorList = ["#9db3f4", "#414141", "#e5a859", "#f5dfc6", "#c084a0", "#847e72", "#cd8390", "#996731"];
+                var bgColor = Math.ceil(Math.random() * (bgColorList.length - 1));
+                $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
+            }
+            else {
+                var backgroundnum = 5;
+                var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+                $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
+            }
+        })
+    </script>
+
+
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#" title="Back to Top"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide();" title="Comments"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="Go to Bottom"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    // Open in New Window
+    
+        var oOpenInNew = {
+            
+            
+            
+            
+            
+            
+             archives: ".archive-article-title", 
+             miniArchives: "a.post-list-link", 
+            
+             friends: "#js-friends a", 
+             socail: ".social a" 
+        }
+        for (var x in oOpenInNew) {
+            $(oOpenInNew[x]).attr("target", "_blank");
+        }
+    
+</script>
+
+    <script>
+        var originTitle = document.title;
+        var titleTime;
+        document.addEventListener("visibilitychange", function() {
+            if (document.hidden) {
+                document.title = "(つェ⊂) 我藏好了哦~ " + originTitle;
+                clearTimeout(titleTime);
+            }
+            else {
+                document.title = "(*´∇｀*) 被你发现啦~ " + originTitle;
+                titleTime = setTimeout(function() {
+                    document.title = originTitle;
+                }, 2000);
+            }
+        })
+    </script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+  </div>
+</body>
+</html>

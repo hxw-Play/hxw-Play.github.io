@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.9.0">
+
+    <!--[if lt IE 9]>
+        <style>body {display: none; background: none !important} </style>
+        <meta http-equiv="Refresh" Content="0; url=//outdatedbrowser.com/" />
+    <![endif]-->
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="author" content="Mr.Huang">
+
+
+
+<meta name="description" content="umi.js">
+<meta property="og:type" content="article">
+<meta property="og:title" content="umi.js的基础学习">
+<meta property="og:url" content="http://yoursite.com/2022/08/26/umijs学习/index.html">
+<meta property="og:site_name" content="个人博客">
+<meta property="og:description" content="umi.js">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2022-08-26T02:35:43.159Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="umi.js的基础学习">
+<meta name="twitter:description" content="umi.js">
+
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+
+    <link rel="alternate" href="/atom.xml" title="个人博客" type="application/atom+xml">
+
+
+
+    <link rel="shortcut icon" href="/favicon.png">
+
+
+
+    <link href="//cdn.bootcss.com/animate.css/3.5.1/animate.min.css" rel="stylesheet">
+
+
+
+    <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
+
+
+
+    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+    <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+
+<link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+
+<title>umi.js的基础学习 | 个人博客</title>
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+<script>
+    var yiliaConfig = {
+        fancybox: true,
+        animate: true,
+        isHome: false,
+        isPost: true,
+        isArchive: false,
+        isTag: false,
+        isCategory: false,
+        fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
+        scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
+        search: true
+    }
+</script>
+
+
+    <script> yiliaConfig.jquery_ui = [false]; </script>
+
+
+
+    <script> yiliaConfig.rootUrl = "\/";</script>
+
+
+
+
+
+
+</head></html>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            <img src="/img/avatar.png" class="animated zoomIn">
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">Mr.Huang</a></h1>
+        </hgroup>
+
+        
+        <p class="header-subtitle">君子好学,自强不息</p>
+        
+
+        
+            <form id="search-form">
+            <input type="text" id="local-search-input" name="q" placeholder="search..." class="search form-control" autocomplete="off" autocorrect="off" searchonload="false" />
+            <i class="fa fa-times" onclick="resetSearch()"></i>
+            </form>
+            <div id="local-search-result"></div>
+            <p class='no-result'>No results found <i class='fa fa-spinner fa-pulse'></i></p>
+        
+
+
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/">主页</a></li>
+                        
+                            <li><a href="/archives/">所有文章</a></li>
+                        
+                            <li><a href="/tags/">标签云</a></li>
+                        
+                            <li><a href="/about/">关于我</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" href="mailto:123@123.com" title="Email"></a>
+                            
+                                <a class="fa GitHub" href="#" title="GitHub"></a>
+                            
+                                <a class="fa RSS" href="/atom.xml" title="RSS"></a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                
+                
+
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">Mr.Huang</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                <img src="/img/avatar.png" class="animated zoomIn">
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">Mr.Huang</a></h1>
+            </hgroup>
+            
+            <p class="header-subtitle">君子好学,自强不息</p>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/">主页</a></li>
+                
+                    <li><a href="/archives/">所有文章</a></li>
+                
+                    <li><a href="/tags/">标签云</a></li>
+                
+                    <li><a href="/about/">关于我</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" target="_blank" href="mailto:123@123.com" title="Email"></a>
+                            
+                                <a class="fa GitHub" target="_blank" href="#" title="GitHub"></a>
+                            
+                                <a class="fa RSS" target="_blank" href="/atom.xml" title="RSS"></a>
+                            
+                        </ul>
+            </nav>
+        </header>                
+    </div>
+    <link class="menu-list" tags="Tags" friends="Friends" about="About Me"/>
+</nav>
+      <div class="body-wrap"><article id="post-umijs学习" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2022/08/26/umijs学习/" class="article-date">
+      <time datetime="2022-08-26T02:35:43.261Z" itemprop="datePublished">2022-08-26</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      umi.js的基础学习
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+
+        
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>umi.js</p>
+<a id="more"></a>
+
+
+<h3 id="umi-js中dva的使用"><a href="#umi-js中dva的使用" class="headerlink" title="umi.js中dva的使用"></a>umi.js中dva的使用</h3><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">'react'</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; Button &#125; <span class="keyword">from</span> <span class="string">'antd'</span></span><br><span class="line"><span class="keyword">import</span> &#123; connect &#125; <span class="keyword">from</span> <span class="string">'umi'</span>;</span><br><span class="line"><span class="keyword">const</span> Dva = <span class="function">(<span class="params">props</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> &#123;dispatch&#125; = props</span><br><span class="line">    <span class="keyword">const</span> info  = props.info.info || <span class="string">''</span></span><br><span class="line">    <span class="keyword">const</span> num  = props.info.num</span><br><span class="line">    <span class="keyword">const</span> getInfo = <span class="function"><span class="params">()</span>=&gt;</span>&#123;  <span class="comment">//这一步是获取异步请求 需要调取dva中的models effects</span></span><br><span class="line">        dispatch(&#123;</span><br><span class="line">            type:<span class="string">'info/fetchInfo'</span>,  <span class="comment">//命名空间加方法</span></span><br><span class="line">            payload:<span class="string">'1213'</span> <span class="comment">//传递的参数</span></span><br><span class="line">        &#125;)</span><br><span class="line">    &#125; </span><br><span class="line">    <span class="keyword">const</span> changeNUm = <span class="function"><span class="params">()</span>=&gt;</span>&#123;   <span class="comment">//同步 调用dva中的models reducers</span></span><br><span class="line">        dispatch(&#123;</span><br><span class="line">            type:<span class="string">'info/changeStateNum'</span>,  <span class="comment">//命名空间加方法</span></span><br><span class="line">            payload:<span class="number">1213</span> <span class="comment">//传递的参数</span></span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">        &lt;div&gt;</span><br><span class="line">            Dva的使用</span><br><span class="line">            &lt;Button onClick=&#123;getInfo&#125;&gt;获取info&lt;<span class="regexp">/Button&gt;</span></span><br><span class="line"><span class="regexp">            &#123;</span></span><br><span class="line"><span class="regexp">                info?&lt;p&gt;&#123;info.name&#125;&#123;info.title&#125;&lt;/</span>p&gt;:<span class="xml"><span class="tag">&lt;<span class="name">p</span>&gt;</span>没有数据<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span></span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            &lt;Button onClick=&#123;changeNUm&#125;&gt;改变num&lt;<span class="regexp">/Button&gt;</span></span><br><span class="line"><span class="regexp">            &#123;num&#125;</span></span><br><span class="line"><span class="regexp">        &lt;/</span>div&gt;</span><br><span class="line">    );</span><br><span class="line">&#125;;    </span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> connect(<span class="function">(<span class="params">&#123;info&#125;</span>)=&gt;</span>(&#123;info&#125;))(Dva);</span><br><span class="line"><span class="comment">// 另外一种写法</span></span><br><span class="line"><span class="comment">// export default connect( state =&gt;(&#123;</span></span><br><span class="line"><span class="comment">//         num: state.num,</span></span><br><span class="line"><span class="comment">//         info:state.info,</span></span><br><span class="line"><span class="comment">// &#125;)</span></span><br><span class="line"><span class="comment">// )(Dva);</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; request &#125; <span class="keyword">from</span> <span class="string">"umi"</span>;</span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">getInfo</span>(<span class="params"></span>)</span>&#123; <span class="comment">//模拟ajax请求</span></span><br><span class="line">    <span class="keyword">return</span> request(<span class="string">'/api/index'</span>)</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">export</span> <span class="keyword">default</span>  &#123;</span><br><span class="line">    namespace: <span class="string">'info'</span>,  <span class="comment">//命名空间</span></span><br><span class="line">    state: &#123;   <span class="comment">//改变state需要reduces进行改变</span></span><br><span class="line">      info: <span class="string">''</span>,</span><br><span class="line">      num:<span class="number">0</span></span><br><span class="line">    &#125;,</span><br><span class="line">    effects: &#123; <span class="comment">// 主要用来异步请求</span></span><br><span class="line">        *fetchInfo(&#123;payload,cb&#125;,&#123;put,call&#125;)&#123;</span><br><span class="line">            <span class="keyword">const</span> res = <span class="keyword">yield</span> call(getInfo);   <span class="comment">// 异步变同步</span></span><br><span class="line">            <span class="keyword">yield</span> put(&#123;</span><br><span class="line">                type:<span class="string">'getInfo1'</span>,</span><br><span class="line">                payload:res</span><br><span class="line">            &#125;)</span><br><span class="line">        &#125;,</span><br><span class="line">    &#125;,</span><br><span class="line">    reducers: &#123;</span><br><span class="line">        getInfo1(state,action)&#123;</span><br><span class="line">            <span class="keyword">return</span> &#123;...state,<span class="attr">info</span>:action.payload&#125;</span><br><span class="line">        &#125;,</span><br><span class="line">        changeStateNum(state,action)&#123;</span><br><span class="line">          <span class="keyword">return</span> &#123;...state,<span class="attr">num</span>:action.payload+=state.num&#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;;</span><br></pre></td></tr></table></figure>
+
+<h3 id="添加动态路由"><a href="#添加动态路由" class="headerlink" title="添加动态路由"></a>添加动态路由</h3><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> extraRoutes;</span><br><span class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">patchRoutes</span>(<span class="params">&#123; routes &#125;</span>) </span>&#123;</span><br><span class="line"><span class="comment">//   merge(routes, extraRoutes);</span></span><br><span class="line">  extraRoutes.map(<span class="function">(<span class="params">item</span>)=&gt;</span>&#123;</span><br><span class="line">      <span class="built_in">console</span>.log(item.component)</span><br><span class="line">      routes.unshift(&#123;</span><br><span class="line">          path:item.path,</span><br><span class="line">          component:<span class="built_in">require</span>(<span class="string">`@/pages<span class="subst">$&#123;item.component&#125;</span>`</span>).default</span><br><span class="line">      &#125;)</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">render</span>(<span class="params">oldRender</span>) </span>&#123;</span><br><span class="line">    extraRoutes = [&#123;<span class="attr">path</span>:<span class="string">'/user/dva1'</span>, <span class="attr">component</span>: <span class="string">'/dva'</span>&#125;]</span><br><span class="line">    oldRender();</span><br><span class="line"><span class="comment">//   fetch('/api/routes').then(res=&gt;res.json()).then((res) =&gt; &#123; </span></span><br><span class="line"><span class="comment">//     extraRoutes = res.routes;</span></span><br><span class="line"><span class="comment">//     oldRender();</span></span><br><span class="line"><span class="comment">//   &#125;)</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="wangEditor5-react使用"><a href="#wangEditor5-react使用" class="headerlink" title="wangEditor5 react使用"></a>wangEditor5 react使用</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">yarn add @wangeditor/editor</span><br><span class="line"># 或者 npm install @wangeditor/editor --save</span><br><span class="line">yarn add @wangeditor/editor-for-react</span><br><span class="line"># 或者 npm install @wangeditor/editor-for-react --save</span><br></pre></td></tr></table></figure>
+
+<h3 id="基本功能"><a href="#基本功能" class="headerlink" title="基本功能"></a>基本功能</h3><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> styles <span class="keyword">from</span> <span class="string">'./index.less'</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; Rate, Button &#125; <span class="keyword">from</span> <span class="string">'antd'</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; useState, useEffect &#125; <span class="keyword">from</span> <span class="string">'react'</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; request &#125; <span class="keyword">from</span> <span class="string">'umi'</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> <span class="string">'@wangeditor/editor/dist/css/style.css'</span>; <span class="comment">// 引入 css</span></span><br><span class="line"><span class="keyword">import</span> &#123; Editor, Toolbar &#125; <span class="keyword">from</span> <span class="string">'@wangeditor/editor-for-react'</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; DomEditor, IEditorConfig, IToolbarConfig &#125; <span class="keyword">from</span> <span class="string">'@wangeditor/editor'</span>;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="function"><span class="keyword">function</span> <span class="title">IndexPage</span>(<span class="params">props</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// editor 实例</span></span><br><span class="line">  <span class="keyword">const</span> [editor, setEditor] = useState(<span class="literal">null</span>); <span class="comment">// TS 语法</span></span><br><span class="line">  <span class="comment">// const [editor, setEditor] = useState(null)                   // JS 语法</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">// 编辑器内容</span></span><br><span class="line">  <span class="keyword">const</span> [html, setHtml] = useState(<span class="string">'&lt;p&gt;hello&lt;/p&gt;'</span>);</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 模拟 ajax 请求，异步设置 html</span></span><br><span class="line">  useEffect(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">    setTimeout(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">      setHtml(<span class="string">'&lt;p&gt;hello world&lt;/p&gt;'</span>);</span><br><span class="line">    &#125;, <span class="number">1500</span>);</span><br><span class="line">  &#125;, []);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> toolbarConfig = &#123;&#125;;</span><br><span class="line">  <span class="comment">// 编辑器配置</span></span><br><span class="line">  <span class="keyword">const</span> editorConfig = &#123;</span><br><span class="line">    <span class="comment">// JS 语法</span></span><br><span class="line">    placeholder: <span class="string">'请输入内容...'</span>,</span><br><span class="line">    MENU_CONF: &#123;</span><br><span class="line">      uploadImage: &#123;</span><br><span class="line">        <span class="comment">// server: '/api/upload',</span></span><br><span class="line">        <span class="comment">// 自定义上传</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">async</span> customUpload(file, insertFn) &#123;</span><br><span class="line">          <span class="built_in">console</span>.log(file); <span class="comment">// JS 语法</span></span><br><span class="line">          <span class="built_in">console</span>.log(insertFn); <span class="comment">// JS 语法</span></span><br><span class="line">          <span class="comment">// file 即选中的文件</span></span><br><span class="line">          <span class="comment">// 自己实现上传，并得到图片 url alt href</span></span><br><span class="line">          <span class="comment">// 最后插入图片</span></span><br><span class="line">          <span class="comment">// insertFn(url, alt, href)</span></span><br><span class="line">        &#125;,</span><br><span class="line">      &#125;,</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 及时销毁 editor ，重要！</span></span><br><span class="line">  useEffect(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">      <span class="keyword">if</span> (editor == <span class="literal">null</span>) <span class="keyword">return</span>;</span><br><span class="line">      editor.destroy();</span><br><span class="line">      setEditor(<span class="literal">null</span>);</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;, [editor]);</span><br><span class="line">  <span class="keyword">const</span> handleClick = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(editor.getText());</span><br><span class="line">    <span class="built_in">console</span>.log(editor.getHtml());</span><br><span class="line">    <span class="built_in">console</span>.log(editor.getAllMenuKeys());</span><br><span class="line">    <span class="comment">// let editorHtml = editor.getText();</span></span><br><span class="line">    <span class="comment">// console.log('从多个中获取一个:', editorHtml);</span></span><br><span class="line">  &#125;;</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">      &lt;h1 className=&#123;styles.title&#125;&gt;Page index&lt;<span class="regexp">/h1&gt;</span></span><br><span class="line"><span class="regexp">      &lt;div style=&#123;&#123; border: '1px solid #ccc', zIndex: 100 &#125;&#125;&gt;</span></span><br><span class="line"><span class="regexp">        &lt;Toolbar</span></span><br><span class="line"><span class="regexp">          editor=&#123;editor&#125;</span></span><br><span class="line"><span class="regexp">          defaultConfig=&#123;toolbarConfig&#125;</span></span><br><span class="line"><span class="regexp">          mode="default"</span></span><br><span class="line"><span class="regexp">          style=&#123;&#123; borderBottom: '1px solid #ccc' &#125;&#125;</span></span><br><span class="line"><span class="regexp">        /</span>&gt;</span><br><span class="line">        &lt;Editor</span><br><span class="line">          defaultConfig=&#123;editorConfig&#125;</span><br><span class="line">          value=&#123;html&#125;</span><br><span class="line">          onCreated=&#123;setEditor&#125;</span><br><span class="line">          onChange=&#123;(editor) =&gt; setHtml(editor.getHtml())&#125;</span><br><span class="line">          mode=<span class="string">"default"</span></span><br><span class="line">          style=&#123;&#123; <span class="attr">height</span>: <span class="string">'500px'</span>, <span class="attr">overflowY</span>: <span class="string">'hidden'</span> &#125;&#125;</span><br><span class="line">        /&gt;</span><br><span class="line">      &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">      &lt;button onClick=&#123;handleClick&#125;&gt;获取内容&lt;/</span>button&gt;</span><br><span class="line">    &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">  );</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br></pre></td><td class="code"><pre><span class="line">toolbarKeys =[</span><br><span class="line">    <span class="string">"bold"</span>,</span><br><span class="line">    <span class="string">"underline"</span>,</span><br><span class="line">    <span class="string">"italic"</span>,</span><br><span class="line">    <span class="string">"through"</span>,</span><br><span class="line">    <span class="string">"code"</span>,</span><br><span class="line">    <span class="string">"sub"</span>,</span><br><span class="line">    <span class="string">"sup"</span>,</span><br><span class="line">    <span class="string">"clearStyle"</span>,</span><br><span class="line">    <span class="string">"color"</span>,</span><br><span class="line">    <span class="string">"bgColor"</span>,</span><br><span class="line">    <span class="string">"fontSize"</span>,</span><br><span class="line">    <span class="string">"fontFamily"</span>,</span><br><span class="line">    <span class="string">"indent"</span>,</span><br><span class="line">    <span class="string">"delIndent"</span>,</span><br><span class="line">    <span class="string">"justifyLeft"</span>,</span><br><span class="line">    <span class="string">"justifyRight"</span>,</span><br><span class="line">    <span class="string">"justifyCenter"</span>,</span><br><span class="line">    <span class="string">"justifyJustify"</span>,</span><br><span class="line">    <span class="string">"lineHeight"</span>,</span><br><span class="line">    <span class="string">"insertImage"</span>,</span><br><span class="line">    <span class="string">"deleteImage"</span>,</span><br><span class="line">    <span class="string">"editImage"</span>,</span><br><span class="line">    <span class="string">"viewImageLink"</span>,</span><br><span class="line">    <span class="string">"imageWidth30"</span>,</span><br><span class="line">    <span class="string">"imageWidth50"</span>,</span><br><span class="line">    <span class="string">"imageWidth100"</span>,</span><br><span class="line">    <span class="string">"divider"</span>,</span><br><span class="line">    <span class="string">"emotion"</span>,</span><br><span class="line">    <span class="string">"insertLink"</span>,</span><br><span class="line">    <span class="string">"editLink"</span>,</span><br><span class="line">    <span class="string">"unLink"</span>,</span><br><span class="line">    <span class="string">"viewLink"</span>,</span><br><span class="line">    <span class="string">"codeBlock"</span>,</span><br><span class="line">    <span class="string">"blockquote"</span>,</span><br><span class="line">    <span class="string">"headerSelect"</span>,</span><br><span class="line">    <span class="string">"header1"</span>,</span><br><span class="line">    <span class="string">"header2"</span>,</span><br><span class="line">    <span class="string">"header3"</span>,</span><br><span class="line">    <span class="string">"header4"</span>,</span><br><span class="line">    <span class="string">"header5"</span>,</span><br><span class="line">    <span class="string">"todo"</span>,</span><br><span class="line">    <span class="string">"redo"</span>,</span><br><span class="line">    <span class="string">"undo"</span>,</span><br><span class="line">    <span class="string">"fullScreen"</span>,</span><br><span class="line">    <span class="string">"enter"</span>,</span><br><span class="line">    <span class="string">"bulletedList"</span>,</span><br><span class="line">    <span class="string">"numberedList"</span>,</span><br><span class="line">    <span class="string">"insertTable"</span>,</span><br><span class="line">    <span class="string">"deleteTable"</span>,</span><br><span class="line">    <span class="string">"insertTableRow"</span>,</span><br><span class="line">    <span class="string">"deleteTableRow"</span>,</span><br><span class="line">    <span class="string">"insertTableCol"</span>,</span><br><span class="line">    <span class="string">"deleteTableCol"</span>,</span><br><span class="line">    <span class="string">"tableHeader"</span>,</span><br><span class="line">    <span class="string">"tableFullWidth"</span>,</span><br><span class="line">    <span class="string">"insertVideo"</span>,</span><br><span class="line">    <span class="string">"uploadVideo"</span>,</span><br><span class="line">    <span class="string">"editVideoSize"</span>,</span><br><span class="line">    <span class="string">"uploadImage"</span>,</span><br><span class="line">    <span class="string">"codeSelectLang"</span></span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>Title:</span><a href="/2022/08/26/umijs学习/">umi.js的基础学习</a></p>
+        <p><span>Author:</span><a href="/" title="Back to Homepage">Mr.Huang</a></p>
+        <p><span>Created:</span>2022-08-26, 10:35:43</p>
+        <p><span>Updated:</span>2022-08-26, 10:35:43</p>
+        <p>
+            <span>Full URL:</span><a class="post-url" href="/2022/08/26/umijs学习/" title="umi.js的基础学习">http://yoursite.com/2022/08/26/umijs学习/</a>
+            <span class="copy-path" data-clipboard-text="From http://yoursite.com/2022/08/26/umijs学习/　　By Mr.Huang" title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>License:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"CC BY-NC-SA 4.0"</a> Keep Link &amp; Author if Distribute.
+        </p>
+    </div>
+
+
+
+    <nav id="article-nav">
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2022/08/17/vue是否滚动到底部/">
+                    vue操作DOM判断某个区域是否在顶部和底部
+                </a>
+            </div>
+        
+    </nav>
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+        <strong class="toc-title">Contents</strong>
+        
+            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#umi-js中dva的使用"><span class="toc-number">1.</span> <span class="toc-text">umi.js中dva的使用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#添加动态路由"><span class="toc-number">2.</span> <span class="toc-text">添加动态路由</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#wangEditor5-react使用"><span class="toc-number">3.</span> <span class="toc-text">wangEditor5 react使用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#基本功能"><span class="toc-number">4.</span> <span class="toc-text">基本功能</span></a></li></ol>
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-3 i,
+        .toc-level-3 ol {
+            display: none !important;
+        }
+    </style>
+
+    <input type="button" id="tocButton" value="Hide"  title="Show or Hide Table of Contents">
+
+    <script>
+        yiliaConfig.toc = ["Hide", "Show", !!"false"];
+    </script>
+
+
+
+    
+<div class="share">
+    
+        <div class="bdsharebuttonbox">
+            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
+            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
+            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></i></a>
+        </div>
+        <script>
+            window._bd_share_config={
+                "common":{"bdSnsKey":{},"bdText":"umi.js的基础学习　| 个人博客　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
+    
+
+    
+</div>
+
+
+
+
+
+
+
+    
+
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/" title="Back to Homepage"><i class="fa fa-home"></i></a>
+        
+
+        <a title="Mini Archives"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2022/08/17/vue是否滚动到底部/" title="Next: vue操作DOM判断某个区域是否在顶部和底部">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2022/08/26/umijs学习/">umi.js的基础学习</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/08/17/vue是否滚动到底部/">vue操作DOM判断某个区域是否在顶部和底部</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/08/17/react-redux/">react-redux</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/08/16/vue3部分使用/">vue3的学习</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/08/15/react实战/">react实战</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/06/23/事件总线/">事件总线 + 单例模式</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/06/22/websocket断线重连/">websocket断线重连机制</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/05/24/小程序消息订阅/">小程序订阅消息</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/05/24/vue的语法/">vue的那些事</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/05/24/uniapp那些东西/">uniapp的一些东西</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/03/18/简单的大文件上传/">简单的大文件切片上传</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/03/18/并发/">一个简单的上传控制并发</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/03/02/webpack学习/">webpack</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/12/28/浏览器缓存/">浏览器的缓存</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/12/23/Vue-Video-发布订阅/">一个关于video播放暂停的发布订阅模式</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/12/23/Vue-count-down/">一个倒计时组件</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/11/04/Vue-use/">Vue.use()的理解</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/11/02/vue-extend/">Vue.extend的理解</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/10/25/百度地图/">百度地图</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/01/30/vue中.sync的用法/">vue</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/01/26/react学习/">react的基础学习</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/08/29/后台管理系统权限/">elementUI + vue全家桶  权限</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/03/07/upload上传/">关于上传的那些事</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/21/双向数据绑定/">vue双向数据绑定</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/14/vue路由钩子函数/">vue路由钩子函数</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/14/存储以及cookie/">localStorage ,sessionStorage ,Cookie</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/07/跨域处理/">跨域</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/06/手动封装ajax/">ajax</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/06/什么是原型链/">原型链、继承?</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/06/最简单的双向数据绑定/">最简单的双向数据绑定</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/01/02/js总结/">js</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/10/29/滚动到底部/">滚动到底部</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/29/排序和递归算法/">排序和递归</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/24/CSS3/">CSS3</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/20/git/">git如何上传到github</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/18/base/">关于HTML的基本知识</a></li></ul>
+
+
+
+
+    <script>
+        
+    </script>
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                <i class="fa fa-copyright"></i> 
+                2016-2022 Mr.Huang
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank" title="A fast, simple &amp; powerful blog framework">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="Another simple and elegant theme for Hexo  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" title="Site Visitors"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>| </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit"  title="Page Hits"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+    </div>
+    
+<script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var iPad = window.navigator.userAgent.indexOf('iPad');
+            if (iPad > -1 || $(".left-col").css("display") === "none") {
+                var bgColorList = ["#9db3f4", "#414141", "#e5a859", "#f5dfc6", "#c084a0", "#847e72", "#cd8390", "#996731"];
+                var bgColor = Math.ceil(Math.random() * (bgColorList.length - 1));
+                $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
+            }
+            else {
+                var backgroundnum = 5;
+                var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+                $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
+            }
+        })
+    </script>
+
+
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#" title="Back to Top"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide();" title="Comments"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="Go to Bottom"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    // Open in New Window
+    
+        var oOpenInNew = {
+            
+            
+            
+            
+            
+            
+             archives: ".archive-article-title", 
+             miniArchives: "a.post-list-link", 
+            
+             friends: "#js-friends a", 
+             socail: ".social a" 
+        }
+        for (var x in oOpenInNew) {
+            $(oOpenInNew[x]).attr("target", "_blank");
+        }
+    
+</script>
+
+    <script>
+        var originTitle = document.title;
+        var titleTime;
+        document.addEventListener("visibilitychange", function() {
+            if (document.hidden) {
+                document.title = "(つェ⊂) 我藏好了哦~ " + originTitle;
+                clearTimeout(titleTime);
+            }
+            else {
+                document.title = "(*´∇｀*) 被你发现啦~ " + originTitle;
+                titleTime = setTimeout(function() {
+                    document.title = originTitle;
+                }, 2000);
+            }
+        })
+    </script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+  </div>
+</body>
+</html>
